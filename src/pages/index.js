@@ -1,21 +1,43 @@
 import React from "react"
-import { Link } from "gatsby"
+import { graphql } from "gatsby"
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+import Layout from '../layouts/Layout'
+import { HomeHero } from '../components/homeHero'
+import { HomeIntro } from '../components/homeIntro'
+import { HomeTestimonials } from '../components/homeTestimonials'
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
+const IndexPage = ({ data }) => (
+	<Layout>
+		<HomeHero src={data.heroImage.childImageSharp.fluid}/>
+		<HomeIntro />
+		<HomeTestimonials />
+	</Layout>
 )
 
 export default IndexPage
+
+export const query = graphql`
+  query indexQuery {
+    heroImage:file(relativePath: { eq: "man-stars-night.png" }) {
+      childImageSharp {
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+		ownerImage:file(relativePath: { eq: "open-shop.png" }) {
+      childImageSharp {
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+		coderImage:file(relativePath: { eq: "desk-laptop.png" }) {
+      childImageSharp {
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`;
