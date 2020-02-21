@@ -7,7 +7,6 @@ import {
 	StyledNav,
 	StyledBrand,
 	StyledLogo,
-	StyledBrandName,
 
 } from './style'
 

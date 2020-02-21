@@ -1,13 +1,9 @@
 import React, { useState } from "react"
 
-import Icon from '../../images/svg/menu-icon.svg'
-
 import { Button } from '../button'
 import { MenuIcon } from '../menuIcon'
 import {
 	StyledContainer,
-	StyledMenuButton,
-	StyledMenuIcon,
 	StyledMenu,
 	StyledLink,
 	StyledButtonContainer

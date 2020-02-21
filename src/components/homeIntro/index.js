@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { ContainerStatic, Row, Column } from '../grid'
+import { ContainerStatic } from '../grid'
 import { HeaderClose } from '../header'
 
 import { StyledText } from './style'

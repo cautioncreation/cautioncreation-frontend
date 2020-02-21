@@ -29,7 +29,7 @@ export const StyledColumn = styled.div`
 
 	@media(min-width: ${props => props.theme.breakpoints.sm}) {
 		min-height: 1px;
-		padding-bottom: 40px;
+		padding-bottom: 30px;
 		width: ${props => props.sm ? props.sm /0.12 + "%" : null};
 		min-height: ${props => props.sm === '0' ? "0" : null};
 		min-height: ${props => props.sm === '0' ? "0" : null};
@@ -37,7 +37,7 @@ export const StyledColumn = styled.div`
 
 	@media(min-width: ${props => props.theme.breakpoints.md}) {
 		min-height: 1px;
-		padding-bottom: 40px;
+		padding-bottom: 30px;
 		width: ${props => props.md ? props.md /0.12 + "%" : null};
 		min-height: ${props => props.md === '0' ? "0" : null};
 		min-height: ${props => props.md === '0' ? "0" : null};
@@ -45,7 +45,7 @@ export const StyledColumn = styled.div`
 
 	@media(min-width: ${props => props.theme.breakpoints.lg}) {
 		min-height: 1px;
-		padding-bottom: 40px;
+		padding-bottom: 30px;
 		width: ${props => props.lg ? props.lg /0.12 + "%" : null};
 		min-height: ${props => props.lg === '0' ? "0" : null};
 		min-height: ${props => props.lg === '0' ? "0" : null};
@@ -53,7 +53,7 @@ export const StyledColumn = styled.div`
 
 	@media(min-width: ${props => props.theme.breakpoints.xl}) {
 		min-height: 1px;
-		padding-bottom: 40px;
+		padding-bottom: 30px;
 		width: ${props => props.xl ? (props.xl /0.12 + "%") : null};
 		min-height: ${props => props.xl === '0' ? "0" : null};
 		min-height: ${props => props.xl === '0' ? "0" : null};

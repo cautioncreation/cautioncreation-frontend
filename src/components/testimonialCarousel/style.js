@@ -5,38 +5,32 @@ export const StyledWrapper = styled.div`
 	overflow: hidden;
 `
 
-export const StyledArrow = styled.img`
-	width: 40px;
-	height: 20px;
-	position: absolute;
-	z-index: 10000;
-	top: 50%;
-	&:nth-of-type(1) {
-		transform: rotate(270deg);
-		left: -5px;
-	}
-
-	&:nth-of-type(2) {
-		transform: rotate(90deg);
-		right: -5px;
-	}
-`
-
 export const StyledContainer = styled.div`
 	position: relative;
-	width: 300%;
-	transition: left 0.4s;
-	display: flex;
+	width: 100%;
+	padding: 2rem 0;
 `
 
 export const StyledTestimonial = styled.div`
 	background: ${props => props.theme.colors.white};
 	border: 2px solid ${props => props.theme.colors.mediumGrey};
 	border-radius: 0.5rem;
-	margin: 1rem 15px;
 	padding: 1rem;
 	width: 100%;
 	position: relative;
+	transition: top 1.5s;
+	display: none;
+	animation-name: move;
+  animation-duration: 1s;
+	&.active {
+		display: block;
+	}
+
+	@keyframes move {
+		0% {left: -100%; display: block;}
+		99% {left: 0%;}
+		100% {display: none;}
+	}
 `
 
 export const StyledText = styled.p`
@@ -55,4 +49,25 @@ export const StyledCompany = styled.p`
 	margin: 0;
 	font-size: 1.25rem;
 	text-align: center;
+`
+
+export const StyledIconContainer = styled.div`
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+`
+
+export const StyledIcon = styled.div`
+	width: 24px;
+	height: 24px;
+	background: ${props => props.theme.colors.white};
+	border-radius: 50%;
+	margin: 0 8px;
+	&.active {
+		background: ${props => props.theme.colors.yellow};
+	}
 `
