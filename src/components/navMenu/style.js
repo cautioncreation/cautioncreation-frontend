@@ -8,45 +8,46 @@ export const StyledContainer = styled.div`
 
 export const StyledMenu = styled.div`
 	display: flex;
-	opacity: 0;
-	visibility: hidden;
 	align-items: center;
+	flex-direction: column;
 	justify-content: center;
-	overflow: hidden;
-	position: absolute;
-	top: 64px;
-	left: 0;
-	right: 0;
+	position: fixed;
 	z-index: 1;
+	top: 64px;
+	right: 0;
+	bottom: 0;
+	width: 0;
+	overflow-x: hidden;
+	transition: 0.5s;
+	opacity: 0;
 	@media(min-width: ${props => props.theme.breakpoints.lg}) {
-		opacity: 1;
-		visibility: visible;
+		flex-direction: row;
 		position: static;
-	}
-	&.active {
+		width: auto;
 		opacity: 1;
-		visibility: visible;
-
-		flex-direction: column;
-		background: ${props => props.theme.gradients.lightGrey};
-		padding: 8px;
-		transition: all 0.5s ease-in-out
 	}
 
-	@keyframe menu {
-		from {height: 0px;}
-		to {height: 200px;}
+	&.active {
+		width: 100%;
+		opacity: 1;
+		background: ${props => props.theme.colors.black};
 	}
 `
 
 export const StyledLink = styled.a`
-	padding: 8px;
+	padding: 16px;
 	font-size: 1.5rem;
 	color: white;
 	vertical-align: middle;
 	text-decoration: none;
+	@media(min-width: ${props => props.theme.breakpoints.lg}) {
+		padding: 8px;
+	}
 `
 
 export const StyledButtonContainer = styled.div`
-	padding-left: 8px;
+	padding: 16px;
+	@media(min-width: ${props => props.theme.breakpoints.lg}) {
+		padding: 4px 0px 4px 16px;
+	}
 `

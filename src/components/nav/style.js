@@ -7,7 +7,7 @@ export const StyledNav = styled.nav`
 	top: 0;
 	left: 0;
 	right: 0;
-	z-index: 2;
+	z-index: 10;
 	padding: 8px 16px;
 	background: ${props => props.theme.colors.black};
 	@media(min-width: ${props => props.theme.breakpoints.lg}) {
