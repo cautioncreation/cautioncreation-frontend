@@ -18,7 +18,7 @@ export const StyledMenu = styled.div`
 	bottom: 0;
 	width: 0;
 	overflow-x: hidden;
-	transition: 0.5s;
+	transition: 0.4s;
 	opacity: 0;
 	@media(min-width: ${props => props.theme.breakpoints.lg}) {
 		flex-direction: row;
