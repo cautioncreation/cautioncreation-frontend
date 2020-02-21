@@ -4,30 +4,28 @@ import ArrowIcon from '../../images/svg/arrow.svg'
 
 import {
 	StyledWrapper,
+	StyledArrow,
 	StyledContainer,
-	StyledArrowOne,
-	StyledArrowTwo,
-	StyledTestimonialContainer,
 	StyledTestimonial,
 	StyledText,
 	StyledName,
 	StyledCompany
 } from './style'
 
-export const TestimonialCarousel = (props) => (
-	<StyledWrapper>
-		<StyledContainer>
-			<StyledArrowOne src={ArrowIcon}/>
-			<StyledTestimonialContainer>
-				<StyledTestimonial>
-					<StyledText>
-						"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since...  Lorem the industry's standard dummy text ever since"
-					</StyledText>
-					<StyledName></StyledName>
-					<StyledCompany></StyledCompany>
-				</StyledTestimonial>
-			</StyledTestimonialContainer>
-			<StyledArrowTwo src={ArrowIcon}/>
-		</StyledContainer>
-	</StyledWrapper>
-)
+export const TestimonialCarousel = (props) => {
+	return (
+		<StyledWrapper>
+			<StyledArrow src={ArrowIcon}/>
+			<StyledContainer>
+				{props.testimonials.map(({ node }) => (
+					<StyledTestimonial>
+						<StyledText>"{node.testimonial}"</StyledText>
+						<StyledName>{node.name}</StyledName>
+						<StyledCompany>{node.position} at {node.company}</StyledCompany>
+					</StyledTestimonial>
+				))}
+			</StyledContainer>
+			<StyledArrow src={ArrowIcon}/>
+		</StyledWrapper>
+	)	
+}

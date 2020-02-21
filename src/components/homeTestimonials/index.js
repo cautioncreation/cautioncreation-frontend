@@ -18,9 +18,7 @@ export const HomeTestimonials = (props) => (
 				</StyledTitle>
 			</Column>
 			<Column xs="12" lg="8" flex center noPadding>
-				<TestimonialCarousel>
-					
-				</TestimonialCarousel>
+				<TestimonialCarousel testimonials={props.data}/>
 			</Column>
 		</Row>
 	</ContainerStatic>

@@ -10,7 +10,7 @@ const IndexPage = ({ data }) => (
 	<Layout>
 		<HomeHero src={data.heroImage.childImageSharp.fluid}/>
 		<HomeIntro />
-		<HomeTestimonials />
+		<HomeTestimonials data={data.allStrapiTestimonial.edges}/>
 	</Layout>
 )
 
@@ -25,5 +25,16 @@ export const query = graphql`
         }
       }
     }
+	  allStrapiTestimonial {
+	    edges {
+	      node {
+					id
+	        name
+	        testimonial
+	        position
+	        company
+    		}
+  		}
+		}
   }
 `;
