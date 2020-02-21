@@ -47,24 +47,6 @@ export const StyledLink = styled.a`
 	text-decoration: none;
 `
 
-export const StyledMenuButton = styled.button`
-	height: 48px;
-	width: 48px;
-	border: none;
-	background: none;
-	padding: 0;
-	margin-left: auto;
-	@media(min-width: ${props => props.theme.breakpoints.lg}) {
-		display: none;
-	}
-`
-
-export const StyledMenuIcon = styled.img`
-	height: 48px;
-	border-radius: 2px;
-	border: 2px solid ${props => props.theme.colors.white};
-`
-
 export const StyledButtonContainer = styled.div`
 	padding-left: 8px;
 `

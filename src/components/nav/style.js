@@ -9,8 +9,10 @@ export const StyledNav = styled.nav`
 	right: 0;
 	z-index: 2;
 	padding: 8px 16px;
-	background: ${props => props.scrollPosition === 0 ? 'none' : props.theme.colors.black};
-
+	background: ${props => props.theme.colors.black};
+	@media(min-width: ${props => props.theme.breakpoints.lg}) {
+		background: ${props => props.scrollPosition === 0 ? 'none' : props.theme.colors.black};
+	}
 `
 export const StyledBrand = styled.a`
 	display: flex;

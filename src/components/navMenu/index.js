@@ -3,6 +3,7 @@ import React, { useState } from "react"
 import Icon from '../../images/svg/menu-icon.svg'
 
 import { Button } from '../button'
+import { MenuIcon } from '../menuIcon'
 import {
 	StyledContainer,
 	StyledMenuButton,
@@ -19,9 +20,7 @@ export const NavMenu = (props) => {
 
 	return (
 		<StyledContainer>
-			<StyledMenuButton onClick={() => setMenuOpen(!isMenuOpen)}>
-				<StyledMenuIcon src={Icon} />
-			</StyledMenuButton>
+			<MenuIcon  onClick={() => setMenuOpen(!isMenuOpen)}/>
 			<StyledMenu className={activeClass} >
 				<StyledLink href="/about">About</StyledLink>
 				<StyledLink href="/services">Services</StyledLink>
