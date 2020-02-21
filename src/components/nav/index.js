@@ -30,7 +30,6 @@ export const Nav = () => {
 		<StyledNav scrollPosition={scrollPosition}>
 			<StyledBrand href="/">
 				<StyledLogo src={Logo} alt="Logo"/>
-				<StyledBrandName>Caution Creation</StyledBrandName>
 			</StyledBrand>
 			<NavMenu />
 		</StyledNav>

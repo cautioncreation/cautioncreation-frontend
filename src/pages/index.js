@@ -20,21 +20,7 @@ export const query = graphql`
   query indexQuery {
     heroImage:file(relativePath: { eq: "man-stars-night.png" }) {
       childImageSharp {
-        fluid(quality: 100) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-		ownerImage:file(relativePath: { eq: "open-shop.png" }) {
-      childImageSharp {
-        fluid(quality: 100) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-		coderImage:file(relativePath: { eq: "desk-laptop.png" }) {
-      childImageSharp {
-        fluid(quality: 100) {
+        fluid(quality: 50) {
           ...GatsbyImageSharpFluid
         }
       }

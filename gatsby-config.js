@@ -32,5 +32,13 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`,
       },
     },*/
+		{
+	    resolve: `gatsby-source-strapi`,
+	    options: {
+	      apiURL: `https://cautioncreation-backend.herokuapp.com`,
+	      queryLimit: 1000, // Default to 100
+	      contentTypes: [`article`, `user`, 'portfolio', 'testimonial'],
+	    },
+		},
   ],
 }
