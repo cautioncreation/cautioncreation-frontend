@@ -5,6 +5,7 @@ import { Nav } from '../components/nav'
 
 const Layout = ({ children }) => (
 	<Theme>
+		<Nav />
 		{children}
 	</Theme>
 )
