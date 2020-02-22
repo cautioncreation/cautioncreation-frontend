@@ -9,6 +9,7 @@ import {
 	StyledCompany,
 	StyledIconContainer,
 	StyledIcon,
+	StyledIconSlider,
 } from './style'
 
 export const TestimonialCarousel = (props) => {
@@ -62,7 +63,12 @@ export const TestimonialCarousel = (props) => {
 			</StyledContainer>
 			<StyledIconContainer>
 				{props.testimonials.map((item, i) => (
-					<StyledIcon className={i === 0 ? "testimonial-icon active" : "testimonial-icon"} key={i} onClick={() => handleClick(i)}/>
+					<StyledIcon key={i} onClick={() => handleClick(i)} >
+						<StyledIconSlider
+							time={props.interval + "s"}
+							className={i === 0 ? "testimonial-icon active" : "testimonial-icon"}
+						/>
+					</StyledIcon>
 				))}
 			</StyledIconContainer>
 		</StyledWrapper>

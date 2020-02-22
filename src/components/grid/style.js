@@ -11,25 +11,18 @@ export const StyledColumn = styled.div`
 	position: relative;
 	width: 100%;
 	min-height: 1px;
-	display: ${props => props.flex ? 'flex' : null};
-	flex-direction: ${props => props.row && props.flex ? 'row' : 'column'};
-	align-items: ${props => props.center ? 'center' : null};
-	justify-content: ${props => props.center ? 'center' : null};
 	padding-left: 15px;
 	padding-right: 15px;
-	padding-bottom: ${props => props.noPadding ? '0px !important' : null};
 
 	@media(min-width: ${props => props.theme.breakpoints.xs}) {
 		min-height: 1px;
 		width: 	${props => props.xs ? props.xs /0.12 + "%" : null};
 		min-height: ${props => props.xs === '0' ? "0" : null};
-		padding-bottom: ${props => props.xs === '0' ? "0" : null};
 	}
 
 	@media(min-width: ${props => props.theme.breakpoints.sm}) {
 		min-height: 1px;
 		width: ${props => props.sm ? props.sm /0.12 + "%" : null};
-		min-height: ${props => props.sm === '0' ? "0" : null};
 		min-height: ${props => props.sm === '0' ? "0" : null};
 	}
 
@@ -37,13 +30,11 @@ export const StyledColumn = styled.div`
 		min-height: 1px;
 		width: ${props => props.md ? props.md /0.12 + "%" : null};
 		min-height: ${props => props.md === '0' ? "0" : null};
-		min-height: ${props => props.md === '0' ? "0" : null};
 	}
 
 	@media(min-width: ${props => props.theme.breakpoints.lg}) {
 		min-height: 1px;
 		width: ${props => props.lg ? props.lg /0.12 + "%" : null};
-		min-height: ${props => props.lg === '0' ? "0" : null};
 		min-height: ${props => props.lg === '0' ? "0" : null};
 	}
 
@@ -51,25 +42,15 @@ export const StyledColumn = styled.div`
 		min-height: 1px;
 		width: ${props => props.xl ? (props.xl /0.12 + "%") : null};
 		min-height: ${props => props.xl === '0' ? "0" : null};
-		min-height: ${props => props.xl === '0' ? "0" : null};
 	}
 `
 
-export const StyledContainer = styled.section.attrs(props => ({
-  marginTop: props.fluid ? '0px' : '40px',
-	background: props.type && props.background ? props.theme[props.type][props.background] : null,
-	boxShadow: props.shadow ? props.theme.shadows.light : null,
-	padding: props.noPadding ? '0' : null
-}))`
+export const StyledContainer = styled.section`
 	width: 100%;
-	margin-top: ${props => props.marginTop};
 	padding-right: 15px;
 	padding-left: 15px;
-	margin-right: auto;
-	margin-left: auto;
-	background: ${props => props.background};
-	box-shadow: ${props => props.boxShadow};
-	padding: ${props => props.padding}
+	margin-top: 60px;
+	margin-bottom: 100px;
 `
 
 export const StyledContainerStatic = styled.div`

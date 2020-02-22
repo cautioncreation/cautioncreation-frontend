@@ -1,5 +1,27 @@
 import styled from 'styled-components'
 
+import {
+	StyledColumn as Column,
+	StyledContainer as Container,
+	StyledContainerStatic as ContainerStatic
+} from '../grid/style'
+
+export const StyledContainer = styled(Container)`
+	background: ${props => props.theme.gradients.black};
+`
+
+export const StyledContainerStatic = styled(ContainerStatic)`
+	background: ${props => props.theme.gradients.black};
+`
+
+export const StyledColumn = styled(Column)`
+	display: flex;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	justify-content: center;
+`
+
+
 export const StyledTitle = styled.h1`
 	font-size: 3rem;
 	color: ${props => props.theme.colors.white};
@@ -12,27 +34,4 @@ export const StyledLine = styled.hr`
 	width: 40%;
 	border: none;
 	border-bottom: 5px solid ${props => props.theme.colors.yellow};
-`
-export const StyledContainer = styled.div`
-
-`
-
-export const StyledIconOne = styled.img`
-	transform: rotate(270deg);
-`
-
-export const StyledIconTwo = styled.img`
-	transform: rotate(90deg);
-`
-
-export const StyledSliderContainer = styled.div`
-
-`
-
-export const StyledText = styled.div`
-
-`
-
-export const StyledInfo = styled.div`
-
 `

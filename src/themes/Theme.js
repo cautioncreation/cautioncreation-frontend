@@ -38,6 +38,10 @@ const theme = {
 		md: "768px",
 		lg: "992px",
 		xl: "1200px",
+		smDown: "575px",
+		mdDown: "767px",
+		lgDown: "991px",
+		xlDown: "1199px",
 	},
 	shadows: {
 		light: "2px 2px 10px 5px rgba(0,0,0,0.5)",

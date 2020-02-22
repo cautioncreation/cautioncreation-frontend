@@ -45,7 +45,7 @@ export const HomeServices = ({ src }) => (
 				</StyledParagraph>
 			</StyledColumn>
 			<Column xs="12" lg="4">
-				<Image fluid={src[1]} />
+				<Image fluid={src[2]} />
 			</Column>
 			<Column xs="0" lg="1"/>
 		</Row>

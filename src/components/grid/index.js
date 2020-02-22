@@ -13,20 +13,20 @@ export const Row = ({ children }) => (
 	</StyledRow>
 )
 
-export const Column = ({ children, xs, sm, md, lg, xl, noPadding, flex, row, center }) => (
-	<StyledColumn xs={xs} sm={sm} md={md} lg={lg} xl={xl} noPadding={noPadding} flex={flex} row={row} center={center}>
+export const Column = ({ children, xs, sm, md, lg, xl }) => (
+	<StyledColumn xs={xs} sm={sm} md={md} lg={lg} xl={xl}>
 		{children}
 	</StyledColumn>
 )
 
-export const Container = ({ fluid, type, background, shadow, children, noPadding }) => (
-	<StyledContainer fluid={fluid} type={type} background={background} shadow={shadow} noPadding={noPadding}>
+export const Container = ({ children }) => (
+	<StyledContainer>
 		{children}
 	</StyledContainer>
 )
 
-export const ContainerStatic = ({ fluid, type, background, shadow, children, noPadding }) => (
-	<StyledContainer fluid={fluid} type={type} background={background} shadow={shadow} noPadding={noPadding}>
+export const ContainerStatic = ({ children }) => (
+	<StyledContainer>
 		<StyledContainerStatic>
 			{children}
 		</StyledContainerStatic>

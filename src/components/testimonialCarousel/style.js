@@ -3,6 +3,7 @@ import styled from 'styled-components'
 export const StyledWrapper = styled.div`
 	width: 100%;
 	overflow: hidden;
+	position: relative;
 `
 
 export const StyledContainer = styled.div`
@@ -55,18 +56,33 @@ export const StyledIconContainer = styled.div`
 	justify-content: center;
 	align-items: center;
 	position: absolute;
-	bottom: 0;
+	bottom: 2px;
 	left: 0;
 	right: 0;
 `
 
 export const StyledIcon = styled.div`
-	width: 24px;
-	height: 24px;
+	width: 40px;
+	height: 16px;
 	background: ${props => props.theme.colors.white};
-	border-radius: 50%;
+	border-radius: 10px;
 	margin: 0 8px;
+	overflow: hidden;
+}
+`
+
+export const StyledIconSlider = styled.div`
+	width: 0px;
+	height: 16px;
+	margin-left: auto;
+	background: ${props => props.theme.colors.yellow};
 	&.active {
-		background: ${props => props.theme.colors.yellow};
+		animation-name: iconAnimate;
+		animation-duration: ${props => props.time};
 	}
+
+	@keyframes iconAnimate {
+    from {width: 40px}
+    to {width: 0px}
+}
 `
