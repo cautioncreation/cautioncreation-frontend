@@ -46,6 +46,10 @@ const theme = {
 
 const GlobalStyle = createGlobalStyle`
   ${normalize}
+	body {
+		width: 100%;
+		min-height: 100%;
+	}
 
 	@import url('https://fonts.googleapis.com/css?family=Dosis|Exo&display=swap');
 	*, ::after, ::before {
