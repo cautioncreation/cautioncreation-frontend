@@ -5,7 +5,6 @@ import { Column } from '../grid'
 import { Button } from '../button'
 import {
 	StyledTitle,
-	StyledText,
 	StyledContainer
 } from './style'
 

@@ -4,6 +4,7 @@ import { StyledColumn as Column } from '../grid/style'
 
 export const StyledColumn = styled(Column)`
 	display: flex;
+	flex-direction: column;
 	align-items: flex-start;
 	justify-content: center;
 	order: 1;
@@ -12,11 +13,10 @@ export const StyledColumn = styled(Column)`
 	}
 `
 
-export const StyledColumnRight = styled(Column)`
-	display: flex;
-	align-items: flex-start;
-	justify-content: center;
-	order: 1;
+export const StyledColumnRight = styled(StyledColumn)`
+	@media(min-width: ${props => props.theme.breakpoints.lg}) {
+		order: 1;
+	}
 `
 
 

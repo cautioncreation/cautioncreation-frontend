@@ -1,7 +1,5 @@
 import React from 'react'
 
-
-import { Row } from '../grid'
 import {
 	StyledContainer,
 	StyledBackground,

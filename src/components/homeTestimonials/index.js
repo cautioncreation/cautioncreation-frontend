@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Row, Column } from '../grid'
+import { Row } from '../grid'
 import { TestimonialCarousel } from '../testimonialCarousel'
 
 import {
