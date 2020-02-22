@@ -6,6 +6,7 @@ import { HomeHero } from '../components/homeHero'
 import { HomeIntro } from '../components/homeIntro'
 import { HomeTestimonials } from '../components/homeTestimonials'
 import { HomeServices } from '../components/homeServices'
+import { HomeWhy } from '../components/homeWhy'
 
 const IndexPage = ({ data }) => (
 	<Layout>
@@ -19,6 +20,7 @@ const IndexPage = ({ data }) => (
 				data.maintenanceImage.childImageSharp.fluid
 			]}
 		/>
+		<HomeWhy />
 	</Layout>
 )
 
