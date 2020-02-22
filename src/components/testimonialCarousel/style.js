@@ -27,9 +27,8 @@ export const StyledTestimonial = styled.div`
 	}
 
 	@keyframes move {
-		0% {left: -100%; display: block;}
-		99% {left: 0%;}
-		100% {display: none;}
+		from {right: -100%; display: block;}
+		to {right: 0%;}
 	}
 `
 

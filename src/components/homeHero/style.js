@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const StyledTitle = styled.h1`
 	text-align: center;
 	color: ${props => props.theme.colors.white};
-	font-size: 2.5rem;
+	font-size: 2rem;
 	margin: 0;
 	margin-bottom: 1rem;
 	font-weight: 600;
