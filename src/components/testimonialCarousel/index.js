@@ -23,6 +23,7 @@ export const TestimonialCarousel = (props) => {
 	}
 
 	function nextTestimonial() {
+		console.log('hello')
 		let items = document.getElementById('testimonialContainer').children
 		let icons = document.getElementsByClassName('testimonial-icon')
 		let iconContainers = document.getElementsByClassName('testimonial-icon-container')
@@ -71,6 +72,7 @@ export const TestimonialCarousel = (props) => {
 			container.style.marginLeft = (((length - 1) / 2) * -100 + "%")
 		}
 		container.style.width = (length * 100 + "%")
+		clearTimeout(timer)
 		nextTestimonial()
 	})
 	return (
