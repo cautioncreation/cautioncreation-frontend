@@ -18,9 +18,9 @@ export default IndexPage
 
 export const query = graphql`
   query indexQuery {
-    heroImage:file(relativePath: { eq: "man-stars-night.png" }) {
+    heroImage:file(relativePath: { eq: "chair-and-wall.jpeg" }) {
       childImageSharp {
-        fluid(quality: 50) {
+        fluid(quality: 90) {
           ...GatsbyImageSharpFluid
         }
       }
