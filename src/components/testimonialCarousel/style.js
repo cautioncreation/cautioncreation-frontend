@@ -2,13 +2,13 @@ import styled from 'styled-components'
 
 export const StyledWrapper = styled.div`
 	width: 100%;
-	overflow: hidden;
 	position: relative;
+	overflow: hidden;
 `
 
 export const StyledContainer = styled.div`
 	position: relative;
-	width: 100%;
+	display: flex;
 	padding: 2rem 0;
 `
 
@@ -18,18 +18,12 @@ export const StyledTestimonial = styled.div`
 	border-radius: 0.5rem;
 	padding: 1rem;
 	width: 100%;
+	display: flex;
+	flex-direction: column;
 	position: relative;
-	transition: top 1.5s;
-	display: none;
-	animation-name: move;
-  animation-duration: 1s;
+	transition: left 1s;
 	&.active {
-		display: block;
-	}
-
-	@keyframes move {
-		from {right: -100%; display: block;}
-		to {right: 0%;}
+		z-index: 2;
 	}
 `
 
@@ -41,6 +35,7 @@ export const StyledText = styled.p`
 
 export const StyledName = styled.h2`
 	margin: 0;
+	margin-top: auto;
 	font-weight: 500;
 	text-align: center;
 `
@@ -62,27 +57,31 @@ export const StyledIconContainer = styled.div`
 `
 
 export const StyledIcon = styled.div`
-	width: 40px;
+	width: 16px;
 	height: 16px;
 	background: ${props => props.theme.colors.white};
 	border-radius: 10px;
 	margin: 0 8px;
 	overflow: hidden;
+	transition: width 1s;
+	&.active {
+		width: 48px;
+	}
 }
 `
 
 export const StyledIconSlider = styled.div`
 	width: 0px;
 	height: 16px;
-	margin-left: auto;
 	background: ${props => props.theme.colors.yellow};
 	&.active {
 		animation-name: iconAnimate;
+		animation-timing-function: linear;
 		animation-duration: ${props => props.time};
 	}
 
 	@keyframes iconAnimate {
-    from {width: 40px}
-    to {width: 0px}
+    from {width: 0px}
+    to {width: 48px}
 }
 `

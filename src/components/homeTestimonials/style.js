@@ -8,17 +8,17 @@ import {
 
 export const StyledContainer = styled(Container)`
 	background: ${props => props.theme.gradients.black};
+	padding-bottom: 40px;
 `
 
 export const StyledContainerStatic = styled(ContainerStatic)`
-	background: ${props => props.theme.gradients.black};
 `
 
 export const StyledColumn = styled(Column)`
 	display: flex;
 	padding-top: 1rem;
-	padding-bottom: 1rem;
 	justify-content: center;
+	align-items: center;
 `
 
 
@@ -27,6 +27,7 @@ export const StyledTitle = styled.h1`
 	color: ${props => props.theme.colors.white};
 	font-weight: 700;
 	text-align: center;
+	margin: 0;
 `
 
 export const StyledLine = styled.hr`
