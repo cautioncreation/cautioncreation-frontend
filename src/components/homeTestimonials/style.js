@@ -7,7 +7,7 @@ import {
 } from '../grid/style'
 
 export const StyledContainer = styled(Container)`
-	background: ${props => props.theme.gradients.black};
+	background: ${props => props.theme.colors.darkBlue};
 	padding-bottom: 40px;
 `
 

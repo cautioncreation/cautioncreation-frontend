@@ -13,7 +13,7 @@ export const HomeIntro = () => (
 		<StyledTitle>Edmonton Web Development</StyledTitle>
 		<StyledSubTitle>Development · Branding & Design · Maintenance</StyledSubTitle>
 		<StyledText>
-			Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever
+			Caution Creation is a web development agency which specializes in responsive web applications for small businesses and startups.
 		</StyledText>
 	</ContainerStatic>
 

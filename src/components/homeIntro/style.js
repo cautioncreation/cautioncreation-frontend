@@ -21,11 +21,11 @@ export const StyledSubTitle = styled.h2`
 `
 
 export const StyledText = styled.p`
-	font-size: 1.375rem;
-	text-align: left;
+	text-align: center;
+	font-size: 1.25rem;
 	margin-top: 0;
+	font-weight: 400;
 	@media(min-width: ${props => props.theme.breakpoints.md}) {
 		font-size: 1.5rem;
-		text-align: center;
 	}
 `

@@ -28,7 +28,7 @@ export const StyledTestimonial = styled.div`
 `
 
 export const StyledText = styled.p`
-	font-size: 1.25rem;
+	font-size: 1.125rem;
 	text-align: center;
 	margin-top: 0;
 	font-weight: 400;
@@ -46,10 +46,10 @@ export const StyledName = styled.h2`
 
 export const StyledCompany = styled.p`
 	margin: 0;
-	font-size: 1.25rem;
+	font-size: 1.125rem;
 	text-align: center;
 	span {
-		color: ${props => props.theme.colors.blue};
+		color: ${props => props.theme.colors.black};
 		font-weight: 500;
 	}
 `

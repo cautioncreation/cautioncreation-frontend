@@ -1,5 +1,15 @@
 import React from 'react'
 
+import { ContainerStatic, Row, Column } from '../grid'
+
+import {
+
+} from './style'
+
 export const HomeQuestions = () => (
-	<div></div>
+	<ContainerStatic>
+		<Row>
+			
+		</Row>
+	</ContainerStatic>
 )

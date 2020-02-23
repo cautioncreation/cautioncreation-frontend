@@ -7,7 +7,7 @@ import {
 } from '../grid/style'
 
 export const StyledContainer = styled(Container)`
-	background: ${props => props.theme.gradients.black};
+	background: ${props => props.theme.colors.darkBlue};
 `
 
 export const StyledContainerStatic = styled(ContainerStatic)`
@@ -24,9 +24,10 @@ export const StyledColumn = styled(Column)`
 `
 
 export const StyledSVG = styled.img`
-	
+	width: 60px;
+	height: 60px;
 `
-export const StyledTitle = styled.h1`
+export const StyledTitle = styled.h2`
 	color: ${props => props.theme.colors.white};
 	margin-bottom: 0;
 	font-weight: 500;
@@ -34,7 +35,7 @@ export const StyledTitle = styled.h1`
 `
 export const StyledText = styled.p`
 	color: ${props => props.theme.colors.white};
-	font-size: 1.5rem;
+	font-size: 1.25rem;
 	margin-bottom: 0;
-	text-align: center;
+	text-align: left;
 `

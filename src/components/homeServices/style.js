@@ -53,7 +53,7 @@ export const StyledHeaderRight = styled(StyledHeader)`
 `
 
 export const StyledParagraph = styled.p`
-	font-size: 1.375rem;
+	font-size: 1.125rem;
 	margin-bottom: 0;
 	font-weight: 300;
 	@media(min-width: ${props => props.theme.breakpoints.md}) {
