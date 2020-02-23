@@ -13,6 +13,7 @@ import {
 	StyledTitle,
 	StyledContainer,
 	StyledSocialContainer,
+	StyledSocialLink,
 	StyledSocialIcon,
 	StyledArrowContainer,
 	StyledArrowText,
@@ -30,10 +31,18 @@ export const HomeHero = ({ src }) => (
 			</Column>
 			<Column xs='0' md='1' lg='2'/>
 			<StyledSocialContainer>
-				<StyledSocialIcon src={Facebook} />
-				<StyledSocialIcon src={Instagram} />
-				<StyledSocialIcon src={LinkedIn} />
-				<StyledSocialIcon src={Twitter} />
+				<StyledSocialLink href="facebook.com/cautioncreation">
+					<StyledSocialIcon src={Facebook} />
+				</StyledSocialLink>
+				<StyledSocialLink>
+					<StyledSocialIcon src={Instagram} />
+				</StyledSocialLink>
+				<StyledSocialLink>
+					<StyledSocialIcon src={LinkedIn} />
+				</StyledSocialLink>
+				<StyledSocialLink>
+					<StyledSocialIcon src={Twitter} />
+				</StyledSocialLink>
 			</StyledSocialContainer>
 			<StyledArrowContainer>
 				<StyledArrowIcon src={DownArrow}/>

@@ -3,6 +3,7 @@ import React from 'react'
 import {
 	StyledRow,
 	StyledColumn,
+	StyledSection,
 	StyledContainer,
 	StyledContainerStatic,
 } from './style'
@@ -19,10 +20,24 @@ export const Column = ({ children, xs, sm, md, lg, xl }) => (
 	</StyledColumn>
 )
 
+export const Section = ({ children }) => (
+	<StyledSection>
+		{children}
+	</StyledSection>
+)
+
 export const Container = ({ children }) => (
 	<StyledContainer>
 		{children}
 	</StyledContainer>
+)
+
+export const SectionStatic = ({ children }) => (
+	<StyledSection>
+		<StyledContainerStatic>
+			{children}
+		</StyledContainerStatic>
+	</StyledSection>
 )
 
 export const ContainerStatic = ({ children }) => (

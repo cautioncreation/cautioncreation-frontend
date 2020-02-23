@@ -7,7 +7,7 @@ import Chart from '../../images/svg/chart.svg'
 import Browser from '../../images/svg/browser.svg'
 
 import {
-	StyledContainer,
+	StyledSection,
 	StyledContainerStatic,
 	StyledColumn,
 	StyledSVG,
@@ -16,7 +16,7 @@ import {
 } from './style'
 
 export const HomeWhy = () => (
-	<StyledContainer>
+	<StyledSection>
 		<StyledContainerStatic>
 			<Row>
 				<StyledColumn xs="12" lg="4">
@@ -42,5 +42,5 @@ export const HomeWhy = () => (
 				</StyledColumn>
 			</Row>
 		</StyledContainerStatic>
-	</StyledContainer>
+	</StyledSection>
 )

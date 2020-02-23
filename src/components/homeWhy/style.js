@@ -2,11 +2,11 @@ import styled from 'styled-components'
 
 import {
 	StyledColumn as Column,
-	StyledContainer as Container,
+	StyledSection as Section,
 	StyledContainerStatic as ContainerStatic
 } from '../grid/style'
 
-export const StyledContainer = styled(Container)`
+export const StyledSection = styled(Section)`
 	background: ${props => props.theme.colors.darkBlue};
 `
 
@@ -37,5 +37,5 @@ export const StyledText = styled.p`
 	color: ${props => props.theme.colors.white};
 	font-size: 1.25rem;
 	margin-bottom: 0;
-	text-align: left;
+	text-align: center;
 `

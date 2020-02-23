@@ -2,16 +2,17 @@ import styled from 'styled-components'
 
 import {
 	StyledColumn as Column,
-	StyledContainer as Container,
-	StyledContainerStatic as ContainerStatic
+	StyledSection as Section,
+	StyledContainerStatic as ContainerStatic,
 } from '../grid/style'
 
-export const StyledContainer = styled(Container)`
+export const StyledSection = styled(Section)`
 	background: ${props => props.theme.colors.darkBlue};
 	padding-bottom: 40px;
 `
 
 export const StyledContainerStatic = styled(ContainerStatic)`
+
 `
 
 export const StyledColumn = styled(Column)`

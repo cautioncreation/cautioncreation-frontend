@@ -37,6 +37,12 @@ export const StyledButton = styled.button.attrs(props => ({
 
 	&:hover {
 		background: ${props => props.theme.colors.blue};
-		color: ${props => props.theme.colors.white}
+		color: ${props => props.theme.colors.white};
+		animation: buttonBackground 0.75s;
+	}
+
+	@keyframes buttonBackground {
+		from {background: none}
+		to {background: ${props => props.theme.colors.blue}}
 	}
 `

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { ContainerStatic, Column, Row } from '../grid'
+import { SectionStatic, Column, Row } from '../grid'
 import {
 	StyledColumn,
 	StyledColumnRight,
@@ -12,7 +12,7 @@ import {
 } from './style'
 
 export const HomeServices = ({ src }) => (
-	<ContainerStatic>
+	<SectionStatic>
 		<Row>
 			<Column xs="0" lg="1"/>
 			<StyledColumn xs="12" lg="6">
@@ -52,5 +52,5 @@ export const HomeServices = ({ src }) => (
 			</Column>
 			<Column xs="0" lg="1"/>
 		</Row>
-	</ContainerStatic>
+	</SectionStatic>
 )

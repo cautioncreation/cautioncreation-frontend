@@ -1,13 +1,6 @@
 import styled from 'styled-components'
 import BackgroundImage from 'gatsby-background-image'
 
-import { StyledContainer as Container } from '../grid/style'
-
-export const StyledContainer = styled(Container)`
-	margin-top: 0;
-	margin-bottom: 0;
-`
-
 export const StyledBackground = styled(BackgroundImage)`
 	display: flex;
 	justify-content: center;

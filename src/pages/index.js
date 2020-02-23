@@ -22,7 +22,7 @@ const IndexPage = ({ data }) => (
 			]}
 		/>
 		<HomeWhy />
-		<HomeQuestions />
+		<HomeQuestions data={data.allStrapiQuestion.edges}/>
 	</Layout>
 )
 
@@ -66,6 +66,15 @@ export const query = graphql`
 	        testimonial
 	        position
 	        company
+    		}
+  		}
+		}
+		allStrapiQuestion {
+	    edges {
+	      node {
+					id
+	        title
+	        answer
     		}
   		}
 		}

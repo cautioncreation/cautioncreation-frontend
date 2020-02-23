@@ -17,7 +17,7 @@ export const StyledMenu = styled.div`
 	right: 0;
 	bottom: 0;
 	width: 0;
-	overflow-x: hidden;
+	overflow: hidden;
 	transition: 0.4s;
 	opacity: 0;
 	@media(min-width: ${props => props.theme.breakpoints.lg}) {
@@ -40,8 +40,25 @@ export const StyledLink = styled.a`
 	color: white;
 	vertical-align: middle;
 	text-decoration: none;
+	transition: width 1s;
 	@media(min-width: ${props => props.theme.breakpoints.lg}) {
 		padding: 8px;
+	}
+	&:hover {
+		position: relative;
+		top: 1px;
+		&:after {
+		  content: '';
+		  display: block;
+		  border-top: 2px solid ${props => props.theme.colors.yellow};
+			width: 100%;
+			animation: line 0.7s;
+		}
+	}
+
+	@keyframes line {
+		from {width: 0}
+		to {width: 100%}
 	}
 `
 

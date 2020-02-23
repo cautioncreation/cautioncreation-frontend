@@ -72,15 +72,20 @@ export const StyledIcon = styled.div`
 	margin: 0 8px;
 	overflow: hidden;
 	transition: width 1s;
+	transition: transform 0.5s;
 	&.active {
 		width: 48px;
+	}
+	&:hover {
+		cursor: pointer;
+		transform: scale(1.25);
 	}
 }
 `
 
 export const StyledIconSlider = styled.div`
-	width: 0px;
-	height: 16px;
+	width: 0%;
+	height: 100%;
 	background: ${props => props.theme.colors.blue};
 	&.active {
 		animation-name: iconAnimate;
@@ -89,7 +94,7 @@ export const StyledIconSlider = styled.div`
 	}
 
 	@keyframes iconAnimate {
-    from {width: 0px}
-    to {width: 48px}
+    from {width: 0%}
+    to {width: 100%}
 }
 `

@@ -4,7 +4,7 @@ import { Row } from '../grid'
 import { TestimonialCarousel } from '../testimonialCarousel'
 
 import {
-	StyledContainer,
+	StyledSection,
 	StyledContainerStatic,
 	StyledColumn,
 	StyledTitle,
@@ -12,7 +12,7 @@ import {
 } from './style'
 
 export const HomeTestimonials = (props) => (
-	<StyledContainer>
+	<StyledSection>
 		<StyledContainerStatic>
 			<Row>
 				<StyledColumn xs="12" lg="4" flex center noPadding>
@@ -22,10 +22,10 @@ export const HomeTestimonials = (props) => (
 					</StyledTitle>
 				</StyledColumn>
 				<StyledColumn xs="12" lg="8" flex center noPadding>
-					<TestimonialCarousel testimonials={props.data} interval="15"/>
+					<TestimonialCarousel testimonials={props.data} interval="12"/>
 				</StyledColumn>
 			</Row>
 		</StyledContainerStatic>
-	</StyledContainer>
+	</StyledSection>
 
 )

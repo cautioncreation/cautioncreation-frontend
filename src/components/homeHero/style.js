@@ -43,7 +43,15 @@ export const StyledSocialContainer = styled.div`
 	display: flex;
 	justify-content: space-around;
 	@media (min-width: ${props => props.theme.breakpoints.md}) {
-		justify-content: flex-end;
+		justify-content: flex-start;
+	}
+`
+
+export const StyledSocialLink = styled.a`
+	transition: all 1s;
+
+	&:hover {
+		transform: scale(1.1) rotate(360deg);
 	}
 `
 

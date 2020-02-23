@@ -45,7 +45,7 @@ export const StyledColumn = styled.div`
 	}
 `
 
-export const StyledContainer = styled.section`
+export const StyledSection = styled.section`
 	width: 100%;
 	padding-right: 15px;
 	padding-left: 15px;
@@ -53,7 +53,13 @@ export const StyledContainer = styled.section`
 	margin-bottom: 100px;
 `
 
-export const StyledContainerStatic = styled.div`
+export const StyledContainer = styled.div`
+	width: 100%;
+	padding-right: 15px;
+	padding-left: 15px;
+`
+
+export const StyledContainerStatic = styled(StyledContainer)`
 	margin-right: auto;
 	margin-left: auto;
 

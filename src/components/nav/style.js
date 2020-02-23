@@ -24,6 +24,14 @@ export const StyledBrand = styled.a`
 export const StyledLogo = styled.img`
 	height: 48px;
 	float: left;
+	&:hover {
+		animation: logoScale 0.5s infinite alternate;
+	}
+
+	@keyframes logoScale {
+		from {transform: scale(1)}
+		to {transform: scale(1.25)}
+	}
 `
 export const StyledBrandName = styled.h1`
 	display: none;
