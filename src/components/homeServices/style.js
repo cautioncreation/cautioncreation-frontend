@@ -47,6 +47,7 @@ export const StyledHeader = styled.h1`
 `
 
 export const StyledHeaderRight = styled(StyledHeader)`
+	text-align: right;
 	&:after {
 		margin-left: auto;
 	}
