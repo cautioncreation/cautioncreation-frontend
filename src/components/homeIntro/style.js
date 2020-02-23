@@ -12,7 +12,7 @@ export const StyledSubTitle = styled.h2`
 	text-align: center;
 	margin-top: 0;
 	font-weight: 500;
-	font-size: 1.5rem;
+	font-size: 1rem;
 	margin-bottom: 2rem;
 	color: ${props => props.theme.colors.blue};
 	@media(min-width: ${props => props.theme.breakpoints.md}) {
