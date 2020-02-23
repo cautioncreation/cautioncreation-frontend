@@ -25,7 +25,7 @@ const theme = {
   },
 	fonts: {
 		primary: ['"Exo", sans-serif'],
-	  secondary: ['"Dosis", sans-serif'],
+	  secondary: ['"Exo", sans-serif'],
 	},
 	gradients: {
 		black: "linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(112,112,112,1) 0%, rgba(54,54,54,1) 100%);",
@@ -58,8 +58,8 @@ const GlobalStyle = createGlobalStyle`
 	@import url('https://fonts.googleapis.com/css?family=Dosis|Exo&display=swap');
 	*, ::after, ::before {
 		font-family: ${props => props.theme.fonts.secondary};
-		color: ${props => props.theme.colors.darkGrey};
-		font-weight: 400;
+		color: ${props => props.theme.colors.mediumGrey};
+		font-weight: 300;
 		box-sizing: border-box;
 	}
 
@@ -68,6 +68,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
 	h1, h2, h3, h4, h5, h6 {
+		font-weight: 500;
 		font-family: ${props => props.theme.fonts.primary};
 		color: ${props => props.theme.colors.black};
 	}

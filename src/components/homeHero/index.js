@@ -1,11 +1,18 @@
 import React from 'react'
 
+import Facebook from '../../images/svg/facebook.svg'
+import Instagram from '../../images/svg/instagram.svg'
+import LinkedIn from '../../images/svg/linkedin.svg'
+import Twitter from '../../images/svg/twitter.svg'
+
 import { Hero } from '../hero'
 import { Column } from '../grid'
 import { Button } from '../button'
 import {
 	StyledTitle,
-	StyledContainer
+	StyledContainer,
+	StyledSocialContainer,
+	StyledSocialIcon,
 } from './style'
 
 export const HomeHero = ({ src }) => (
@@ -18,5 +25,11 @@ export const HomeHero = ({ src }) => (
 				</StyledContainer>
 			</Column>
 			<Column xs='0' md='1' lg='2'/>
+			<StyledSocialContainer>
+				<StyledSocialIcon src={Facebook} />
+				<StyledSocialIcon src={Instagram} />
+				<StyledSocialIcon src={LinkedIn} />
+				<StyledSocialIcon src={Twitter} />
+			</StyledSocialContainer>
 	</Hero>
 )

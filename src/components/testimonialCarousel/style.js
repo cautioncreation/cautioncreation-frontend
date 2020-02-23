@@ -28,9 +28,12 @@ export const StyledTestimonial = styled.div`
 `
 
 export const StyledText = styled.p`
-	font-size: 1.5rem;
+	font-size: 1.25rem;
 	text-align: center;
 	margin-top: 0;
+	@media(min-width: ${props => props.theme.breakpoints.md}) {
+		font-size: 1.5rem;
+	}
 `
 
 export const StyledName = styled.h2`

@@ -32,3 +32,23 @@ export const StyledContainer = styled.div`
 	align-items: center;
 	justify-content: space-around;
 `
+
+export const StyledSocialContainer = styled.div`
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+	padding:
+	display: none;
+	padding: 4px 16px;
+	border-radius: 28px;
+	background: rgba(0, 0, 0, 0.5);
+	@media (min-width: ${props => props.theme.breakpoints.md}) {
+		display: flex;
+	}
+`
+
+export const StyledSocialIcon = styled.img`
+	width: 40px;
+	height: 40px;
+	margin: 0px 16px;
+`

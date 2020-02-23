@@ -23,11 +23,14 @@ export const StyledColumn = styled(Column)`
 
 
 export const StyledTitle = styled.h1`
-	font-size: 3rem;
+	font-size: 2.5rem;
 	color: ${props => props.theme.colors.white};
 	font-weight: 700;
 	text-align: center;
 	margin: 0;
+	@media(min-width: ${props => props.theme.breakpoints.md}) {
+		font-size: 3rem;
+	}
 `
 
 export const StyledLine = styled.hr`

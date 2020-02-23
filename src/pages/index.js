@@ -7,6 +7,7 @@ import { HomeIntro } from '../components/homeIntro'
 import { HomeTestimonials } from '../components/homeTestimonials'
 import { HomeServices } from '../components/homeServices'
 import { HomeWhy } from '../components/homeWhy'
+import { HomeQuestions } from '../components/homeQuestions'
 
 const IndexPage = ({ data }) => (
 	<Layout>
@@ -21,6 +22,7 @@ const IndexPage = ({ data }) => (
 			]}
 		/>
 		<HomeWhy />
+		<HomeQuestions />
 	</Layout>
 )
 
@@ -30,28 +32,28 @@ export const query = graphql`
   query indexQuery {
     heroImage:file(relativePath: { eq: "chair-and-wall.jpeg" }) {
       childImageSharp {
-        fluid(quality: 90) {
+        fluid(quality: 95) {
           ...GatsbyImageSharpFluid
         }
       }
     }
 		developmentImage:file(relativePath: { eq: "development-illustration.png" }) {
       childImageSharp {
-        fluid(quality: 90) {
+        fluid(quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
     }
 		brandingImage:file(relativePath: { eq: "branding-illustration.png" }) {
       childImageSharp {
-        fluid(quality: 90) {
+        fluid(quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
     }
 		maintenanceImage:file(relativePath: { eq: "maintenance-illustration.png" }) {
       childImageSharp {
-        fluid(quality: 90) {
+        fluid(quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
