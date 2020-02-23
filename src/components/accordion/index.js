@@ -18,7 +18,7 @@ export const Accordion = ({ title, children }) => {
 	}
 	return (
 		<StyledWrapper>
-			<StyledHeaderContainer>
+			<StyledHeaderContainer active={isActive}>
 				<StyledTitle>{title}</StyledTitle>
 					<StyledVector viewBox="0 0 100 100" onClick={handleClick}>
 			  		<StyledRect active={isActive} x="45" y="10" width="10" height="80" ry="7.5" />

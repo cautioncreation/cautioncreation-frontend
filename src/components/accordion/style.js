@@ -9,19 +9,28 @@ export const StyledHeaderContainer = styled.div`
 	align-items: center;
 	justify-content: space-between;
 	background: ${props => props.theme.colors.darkBlue};
+	border-radius: 5px;
+	${props => props.active ? css`
+		border-top-left-radius: 5px;
+		border-top-right-radius: 5px;
+		border-bottom-left-radius: 0px;
+		border-bottom-right-radius: 0px;
+	` : null};
 `
 
 export const StyledTextContainer = styled.div`
-	border: 2px solid ${props => props.theme.colors.darkBlue};
 	border-top: none;
 	opacity: 0;
 	height: 0;
 	padding: 0 16px;
 	overflow: hidden;
 	transition: opacity 1s;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
 	${props => props.active ? css`
 		opacity: 1;
 		height: auto;
+		border: 2px solid ${props => props.theme.colors.darkBlue};
 	` : null};
 `
 
