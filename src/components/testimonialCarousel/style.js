@@ -31,6 +31,7 @@ export const StyledText = styled.p`
 	font-size: 1.25rem;
 	text-align: center;
 	margin-top: 0;
+	font-weight: 400;
 	@media(min-width: ${props => props.theme.breakpoints.md}) {
 		font-size: 1.5rem;
 	}
@@ -47,6 +48,10 @@ export const StyledCompany = styled.p`
 	margin: 0;
 	font-size: 1.25rem;
 	text-align: center;
+	span {
+		color: ${props => props.theme.colors.blue};
+		font-weight: 500;
+	}
 `
 
 export const StyledIconContainer = styled.div`
@@ -76,7 +81,7 @@ export const StyledIcon = styled.div`
 export const StyledIconSlider = styled.div`
 	width: 0px;
 	height: 16px;
-	background: ${props => props.theme.colors.yellow};
+	background: ${props => props.theme.colors.blue};
 	&.active {
 		animation-name: iconAnimate;
 		animation-timing-function: linear;

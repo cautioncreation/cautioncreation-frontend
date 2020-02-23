@@ -12,7 +12,7 @@ import {
 	StyledIconSlider,
 } from './style'
 
-export const TestimonialCarousel = (props) => {
+export const TestimonialCarousel = React.memo((props) => {
 	let count = 0
 	let timer = null
 
@@ -82,7 +82,9 @@ export const TestimonialCarousel = (props) => {
 					<StyledTestimonial key={node.id} className={i === 0 ? "active" : ""}>
 						<StyledText>"{node.testimonial}"</StyledText>
 						<StyledName>{node.name}</StyledName>
-						<StyledCompany>{node.position} at {node.company}</StyledCompany>
+						<StyledCompany>
+							<span>{node.position}</span> at <span>{node.company}</span>
+						</StyledCompany>
 					</StyledTestimonial>
 				))}
 			</StyledContainer>
@@ -102,4 +104,4 @@ export const TestimonialCarousel = (props) => {
 			</StyledIconContainer>
 		</StyledWrapper>
 	)
-}
+}, true)
