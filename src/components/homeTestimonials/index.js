@@ -2,7 +2,7 @@ import React from 'react'
 import { withTheme } from 'styled-components'
 
 import { SectionStatic, Row } from '../grid'
-import { Slider } from '../Slider'
+import { Slider } from '../slider'
 
 import {
 	StyledColumn,
