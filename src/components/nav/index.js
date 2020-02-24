@@ -10,7 +10,7 @@ import {
 
 } from './style'
 
-export const Nav = () => {
+export const Nav = ({ fade }) => {
 	const [scrollPosition, setScrollPosition] = useState(0)
 
 	function handleScrollPosition() {
@@ -26,7 +26,7 @@ export const Nav = () => {
 	})
 
 	return (
-		<StyledNav scrollPosition={scrollPosition}>
+		<StyledNav scrollPosition={scrollPosition} fade={fade}>
 			<StyledBrand href="/">
 				<StyledLogo src={Logo} alt="Logo"/>
 			</StyledBrand>

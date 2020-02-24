@@ -1,6 +1,12 @@
 import styled from 'styled-components'
 import BackgroundImage from 'gatsby-background-image'
 
+export const StyledContainer = styled.section`
+	width: 100%;
+	padding-left: 15px;
+	padding-right: 15px;
+`
+
 export const StyledBackground = styled(BackgroundImage)`
 	display: flex;
 	justify-content: center;

@@ -20,28 +20,28 @@ export const Column = ({ children, xs, sm, md, lg, xl }) => (
 	</StyledColumn>
 )
 
-export const Section = ({ children }) => (
-	<StyledSection>
+export const Section = ({ children, background }) => (
+	<StyledSection background={background}>
 		{children}
 	</StyledSection>
 )
 
-export const Container = ({ children }) => (
-	<StyledContainer>
+export const Container = ({ children, background }) => (
+	<StyledContainer background={background}>
 		{children}
 	</StyledContainer>
 )
 
-export const SectionStatic = ({ children }) => (
-	<StyledSection>
+export const SectionStatic = ({ children, background }) => (
+	<StyledSection background={background}>
 		<StyledContainerStatic>
 			{children}
 		</StyledContainerStatic>
 	</StyledSection>
 )
 
-export const ContainerStatic = ({ children }) => (
-	<StyledContainer>
+export const ContainerStatic = ({ children, background }) => (
+	<StyledContainer background={background}>
 		<StyledContainerStatic>
 			{children}
 		</StyledContainerStatic>

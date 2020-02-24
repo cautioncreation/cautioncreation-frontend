@@ -1,23 +1,9 @@
 import styled from 'styled-components'
 
-import {
-	StyledColumn as Column,
-	StyledSection as Section,
-	StyledContainerStatic as ContainerStatic,
-} from '../grid/style'
-
-export const StyledSection = styled(Section)`
-	background: ${props => props.theme.colors.darkBlue};
-	padding-bottom: 40px;
-`
-
-export const StyledContainerStatic = styled(ContainerStatic)`
-
-`
+import { StyledColumn as Column } from '../grid/style'
 
 export const StyledColumn = styled(Column)`
 	display: flex;
-	padding-top: 1rem;
 	justify-content: center;
 	align-items: center;
 `
@@ -39,4 +25,46 @@ export const StyledLine = styled.hr`
 	width: 40%;
 	border: none;
 	border-bottom: 5px solid ${props => props.theme.colors.yellow};
+`
+
+export const StyledTestimonial = styled.div`
+	background: ${props => props.theme.colors.white};
+	border: 2px solid ${props => props.theme.colors.mediumGrey};
+	border-radius: 0.5rem;
+	padding: 1rem;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	transition: left 1s;
+	&.active {
+		z-index: 2;
+	}
+`
+
+export const StyledText = styled.p`
+	font-size: 1.125rem;
+	text-align: center;
+	margin-top: 0;
+	font-weight: 400;
+	@media(min-width: ${props => props.theme.breakpoints.md}) {
+		font-size: 1.5rem;
+	}
+`
+
+export const StyledName = styled.h2`
+	margin: 0;
+	margin-top: auto;
+	font-weight: 500;
+	text-align: center;
+`
+
+export const StyledCompany = styled.p`
+	margin: 0;
+	font-size: 1.125rem;
+	text-align: center;
+	span {
+		color: ${props => props.theme.colors.black};
+		font-weight: 500;
+	}
 `

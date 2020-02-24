@@ -3,16 +3,12 @@ import React, { Component } from 'react'
 import {
 	StyledWrapper,
 	StyledContainer,
-	StyledTestimonial,
-	StyledText,
-	StyledName,
-	StyledCompany,
 	StyledIconContainer,
 	StyledIcon,
 	StyledIconSlider,
 } from './style'
 
-export class TestimonialCarousel extends Component {
+export class Slider extends Component {
 	constructor(props) {
 		super(props);
 
@@ -23,7 +19,7 @@ export class TestimonialCarousel extends Component {
 
 		this.timer = null
 		this.handleClick = this.handleClick.bind(this);
-		this.nextTestimonial = this.nextTestimonial.bind(this);
+		this.nextSlide = this.nextSlide.bind(this);
 	}
 
 	handleClick(iconIndex) {
@@ -33,11 +29,11 @@ export class TestimonialCarousel extends Component {
 		})
 	}
 
-	nextTestimonial() {
-		let icons = document.getElementsByClassName('testimonial-icon')
-		let items = document.getElementById('testimonialContainer').children
-		let iconContainers = document.getElementsByClassName('testimonial-icon-container')
-		let length = this.props.testimonials.length
+	nextSlide() {
+		let icons = document.getElementsByClassName('slider-icon')
+		let items = document.getElementById('sliderContainer').children
+		let iconContainers = document.getElementsByClassName('slider-icon-container')
+		let length = this.props.children.length
 
 		let increment = 100 / length;
 
@@ -78,9 +74,8 @@ export class TestimonialCarousel extends Component {
 	}
 
 	componentDidMount() {
-		console.log('component mounted')
-		let container = document.getElementById('testimonialContainer')
-		let length = this.props.testimonials.length
+		let container = document.getElementById('sliderContainer')
+		let length = this.props.children.length
 
 		if(length % 2 === 0) {
 			container.style.marginLeft = (((length - 2) / 2) * -100 + "%")
@@ -89,16 +84,16 @@ export class TestimonialCarousel extends Component {
 			container.style.marginLeft = (((length - 1) / 2) * -100 + "%")
 		}
 		container.style.width = (length * 100 + "%")
-		this.nextTestimonial()
+		this.nextSlide()
 	}
 
 	componentDidUpdate() {
 		if(this.state.isClicked === true) {
 			clearTimeout(this.timer)
-			this.nextTestimonial()
+			this.nextSlide()
 		}
 		else {
-			this.timer = setTimeout(() => {this.nextTestimonial()}, this.props.interval * 1000);
+			this.timer = setTimeout(() => {this.nextSlide()}, this.props.interval * 1000);
 			return () => clearTimeout(this.timer);
 		}
 	}
@@ -106,27 +101,19 @@ export class TestimonialCarousel extends Component {
 	render() {
 		return (
 			<StyledWrapper>
-				<StyledContainer id="testimonialContainer">
-					{this.props.testimonials.map(({ node }, i) => (
-						<StyledTestimonial key={node.id} className={i === 0 ? "active" : ""}>
-							<StyledText>"{node.testimonial}"</StyledText>
-							<StyledName>{node.name}</StyledName>
-							<StyledCompany>
-								<span>{node.position}</span> at <span>{node.company}</span>
-							</StyledCompany>
-						</StyledTestimonial>
-					))}
+				<StyledContainer id="sliderContainer">
+					{this.props.children}
 				</StyledContainer>
 				<StyledIconContainer>
-					{this.props.testimonials.map((item, i) => (
+					{this.props.children.map((item, i) => (
 						<StyledIcon
 							key={i}
 							onClick={() => this.handleClick(i)}
-							className={i === 0 ? "testimonial-icon-container active" : "testimonial-icon-container"}
+							className={i === 0 ? "slider-icon-container active" : "slider-icon-container"}
 							>
 							<StyledIconSlider
 								time={this.props.interval + "s"}
-								className={i === 0 ? "testimonial-icon active" : "testimonial-icon"}
+								className={i === 0 ? "slider-icon active" : "slider-icon"}
 							/>
 						</StyledIcon>
 					))}

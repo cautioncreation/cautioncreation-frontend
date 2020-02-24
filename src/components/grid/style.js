@@ -47,16 +47,16 @@ export const StyledColumn = styled.div`
 
 export const StyledSection = styled.section`
 	width: 100%;
-	padding-right: 15px;
-	padding-left: 15px;
+	padding: 15px;
 	margin-top: 60px;
 	margin-bottom: 100px;
+	background: ${props => props.background};
 `
 
 export const StyledContainer = styled.div`
 	width: 100%;
-	padding-right: 15px;
-	padding-left: 15px;
+	padding: 15px;
+	background: ${props => props.background};
 `
 
 export const StyledContainerStatic = styled(StyledContainer)`

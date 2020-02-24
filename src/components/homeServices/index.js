@@ -28,15 +28,15 @@ export const HomeServices = ({ src }) => (
 		</Row>
 		<Row>
 			<Column xs="0" lg="1"/>
+			<Column xs="12" lg="4">
+				<StyledImage fluid={src[1]} />
+			</Column>
 			<StyledColumnRight xs="12" lg="6">
 				<StyledHeaderRight>Branding & Design</StyledHeaderRight>
 				<StyledParagraphRight>
 					Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever
 				</StyledParagraphRight>
 			</StyledColumnRight>
-			<Column xs="12" lg="4">
-				<StyledImage fluid={src[1]} />
-			</Column>
 			<Column xs="0" lg="1"/>
 		</Row>
 		<Row>

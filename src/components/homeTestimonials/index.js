@@ -1,31 +1,42 @@
 import React from 'react'
+import { withTheme } from 'styled-components'
 
-import { Row } from '../grid'
-import { TestimonialCarousel } from '../testimonialCarousel'
+import { SectionStatic, Row } from '../grid'
+import { Slider } from '../Slider'
 
 import {
-	StyledSection,
-	StyledContainerStatic,
 	StyledColumn,
 	StyledTitle,
-	StyledLine
+	StyledLine,
+	StyledTestimonial,
+	StyledText,
+	StyledName,
+	StyledCompany,
 } from './style'
 
-export const HomeTestimonials = (props) => (
-	<StyledSection>
-		<StyledContainerStatic>
+export const HomeTestimonials = withTheme(({ data, theme }) => (
+	<SectionStatic background={theme.colors.darkBlue}>
 			<Row>
-				<StyledColumn xs="12" lg="4" flex center noPadding>
+				<StyledColumn xs="12" lg="4">
 					<StyledTitle>
 						What Our Clients Are Saying
 						<StyledLine />
 					</StyledTitle>
 				</StyledColumn>
-				<StyledColumn xs="12" lg="8" flex center noPadding>
-					<TestimonialCarousel testimonials={props.data} interval="12"/>
+				<StyledColumn xs="12" lg="8">
+					<Slider interval="12">
+						{data.map(({ node }, i) => (
+							<StyledTestimonial key={node.id}>
+								<StyledText>"{node.testimonial}"</StyledText>
+								<StyledName>{node.name}</StyledName>
+								<StyledCompany>
+									<span>{node.position}</span> at <span>{node.company}</span>
+								</StyledCompany>
+							</StyledTestimonial>
+						))}
+					</Slider>
 				</StyledColumn>
 			</Row>
-		</StyledContainerStatic>
-	</StyledSection>
+	</SectionStatic>
 
-)
+))

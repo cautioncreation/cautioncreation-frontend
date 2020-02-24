@@ -5,15 +5,14 @@ import {
 	StyledHeaderContainer,
 	StyledTextContainer,
 	StyledTitle,
-	StyledButton,
 	StyledVector,
 	StyledRect,
 } from './style'
 
-export const Accordion = ({ title, children }) => {
-	const [isActive, setIsActive] = useState(false)
+export const Accordion = ({ title, children, open }) => {
+	const [isActive, setIsActive] = useState(open === true ? true : false)
 
-	function handleClick(props) {
+	function handleClick() {
 		setIsActive(isActive === false ? true : false)
 	}
 	return (

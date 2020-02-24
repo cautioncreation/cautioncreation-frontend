@@ -9,49 +9,7 @@ export const StyledWrapper = styled.div`
 export const StyledContainer = styled.div`
 	position: relative;
 	display: flex;
-	padding: 2rem 0;
-`
-
-export const StyledTestimonial = styled.div`
-	background: ${props => props.theme.colors.white};
-	border: 2px solid ${props => props.theme.colors.mediumGrey};
-	border-radius: 0.5rem;
-	padding: 1rem;
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	position: relative;
-	transition: left 1s;
-	&.active {
-		z-index: 2;
-	}
-`
-
-export const StyledText = styled.p`
-	font-size: 1.125rem;
-	text-align: center;
-	margin-top: 0;
-	font-weight: 400;
-	@media(min-width: ${props => props.theme.breakpoints.md}) {
-		font-size: 1.5rem;
-	}
-`
-
-export const StyledName = styled.h2`
-	margin: 0;
-	margin-top: auto;
-	font-weight: 500;
-	text-align: center;
-`
-
-export const StyledCompany = styled.p`
-	margin: 0;
-	font-size: 1.125rem;
-	text-align: center;
-	span {
-		color: ${props => props.theme.colors.black};
-		font-weight: 500;
-	}
+	padding: 30px 0;
 `
 
 export const StyledIconContainer = styled.div`

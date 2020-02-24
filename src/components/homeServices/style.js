@@ -16,9 +16,6 @@ export const StyledColumn = styled(Column)`
 
 export const StyledColumnRight = styled(StyledColumn)`
 	align-items: flex-end;
-	@media(min-width: ${props => props.theme.breakpoints.lg}) {
-		order: 1;
-	}
 `
 
 export const StyledImage = styled(Image)`
