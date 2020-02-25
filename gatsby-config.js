@@ -20,23 +20,23 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    /*{
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
+        name: `Caution Creation`,
         short_name: `starter`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`,
+        icon: `src/images/svg/logo.svg`,
       },
-    },*/
+    },
 		{
 	    resolve: `gatsby-source-strapi`,
 	    options: {
 	      apiURL: `https://cautioncreation-backend.herokuapp.com`,
-	      queryLimit: 1000, // Default to 100
+	      queryLimit: 100, // Default to 100
 	      contentTypes: [`article`, `user`, 'portfolio', 'testimonial', 'question'],
 	    },
 		},
