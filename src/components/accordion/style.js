@@ -16,6 +16,9 @@ export const StyledHeaderContainer = styled.div`
 		border-bottom-left-radius: 0px;
 		border-bottom-right-radius: 0px;
 	` : null};
+	&:hover {
+		cursor: pointer;
+	}
 `
 
 export const StyledTextContainer = styled.div`
@@ -47,9 +50,6 @@ export const StyledVector = styled.svg`
 	min-width: 40px;
 	padding: 4px;
 	transform-origin: center;
-	&:hover {
-		cursor: pointer;
-	}
 `
 
 export const StyledRect = styled.rect`
