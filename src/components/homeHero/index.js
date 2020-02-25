@@ -46,7 +46,7 @@ export const HomeHero = ({ src }) => (
 			</StyledSocialContainer>
 			<StyledArrowContainer>
 				<StyledArrowIcon src={DownArrow}/>
-				<StyledArrowText>Scroll Down</StyledArrowText>
+				<StyledArrowText>Scroll</StyledArrowText>
 			</StyledArrowContainer>
 
 	</Hero>

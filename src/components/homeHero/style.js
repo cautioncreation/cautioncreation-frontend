@@ -41,7 +41,7 @@ export const StyledSocialContainer = styled.div`
 	padding: 4px 16px;
 	background: rgba(0, 0, 0, 0.5);
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
 	@media (min-width: ${props => props.theme.breakpoints.md}) {
 		justify-content: flex-start;
 	}
@@ -72,20 +72,26 @@ export const StyledArrowContainer = styled.div`
 `
 
 export const StyledArrowText = styled.span`
+	display: none;
 	color: ${props => props.theme.colors.lightGrey};
 	font-weight: 700;
 	font-size: 1.25rem;
+	@media (min-width: ${props => props.theme.breakpoints.md}) {
+		display: inline;
+	}
 `
 
 export const StyledArrowIcon = styled.img`
 	width: 48px;
 	height: 48px;
 	position: relative;
-	right: 0px;
+	animation-timing-function: ease-out;
 	animation: arrowMove .85s infinite alternate;
+
+
 
 	@keyframes arrowMove {
 		from {top: -5px;}
-		to {top: 5px;}
+		to {top: 0px;}
 	}
 `

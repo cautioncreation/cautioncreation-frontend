@@ -56,12 +56,21 @@ const theme = {
 
 const GlobalStyle = createGlobalStyle`
   ${normalize}
+	@import url('https://fonts.googleapis.com/css?family=Dosis|Exo&display=swap');
+
 	body {
 		width: 100%;
 		min-height: 100%;
 	}
 
-	@import url('https://fonts.googleapis.com/css?family=Dosis|Exo&display=swap');
+	a {
+		color: ${props => props.theme.colors.blue};
+		text-decoration: none;
+		&:hover {
+			
+		}
+	}
+
 	*, ::after, ::before {
 		font-family: ${props => props.theme.fonts.secondary};
 		color: ${props => props.theme.colors.mediumGrey};
