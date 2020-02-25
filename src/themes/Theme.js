@@ -30,7 +30,7 @@ const theme = {
 		mediumGrey: "#707070",
   },
 	fonts: {
-		primary: ['"Exo", sans-serif'],
+		primary: ['"Dosis", sans-serif'],
 	  secondary: ['"Exo", sans-serif'],
 	},
 	gradients: {
