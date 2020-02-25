@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
 
 export const StyledWrapper = styled.div`
-	padding: 15px 0;
+	padding-bottom: 15px;
 `
 
 export const StyledHeaderContainer = styled.div`
