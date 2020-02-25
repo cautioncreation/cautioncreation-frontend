@@ -55,7 +55,7 @@ export const StyledParagraph = styled.p`
 	margin-bottom: 0;
 	font-weight: 300;
 	@media(min-width: ${props => props.theme.breakpoints.md}) {
-		font-size: 1.75rem;
+		font-size: 1.5rem;
 		font-weight: 400;
 	}
 `

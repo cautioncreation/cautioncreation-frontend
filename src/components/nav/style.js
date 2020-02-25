@@ -9,9 +9,12 @@ export const StyledNav = styled.nav`
 	right: 0;
 	z-index: 10;
 	padding: 8px 16px;
-	background: ${props =>
-		(props.scrollPosition === 0 && props.fade === true) ? '0' : props.theme.colors.black
-	};
+	background: ${props => props.theme.colors.black};
+	@media (min-width: ${props => props.theme.breakpoints.lg}) {
+		background: ${props =>
+			(props.scrollPosition === 0 && props.fade === true) ? 'none' : props.theme.colors.black
+		};
+	}
 	transition: background 1s;
 	/*
 	background: ${props => props.theme.colors.black};

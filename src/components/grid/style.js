@@ -62,6 +62,7 @@ export const StyledContainer = styled.div`
 export const StyledContainerStatic = styled(StyledContainer)`
 	margin-right: auto;
 	margin-left: auto;
+	padding: 0;
 
 	@media(min-width: ${props => props.theme.breakpoints.sm}) {
 		max-width: 540px;

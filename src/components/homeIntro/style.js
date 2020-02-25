@@ -21,8 +21,8 @@ export const StyledSubTitle = styled.h2`
 `
 
 export const StyledText = styled.p`
-	text-align: center;
-	font-size: 1.25rem;
+	text-align: left;
+	font-size: 1.125rem;
 	margin-top: 0;
 	font-weight: 400;
 	@media(min-width: ${props => props.theme.breakpoints.md}) {

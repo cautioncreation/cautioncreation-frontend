@@ -44,7 +44,7 @@ export const StyledTestimonial = styled.div`
 
 export const StyledText = styled.p`
 	font-size: 1.125rem;
-	text-align: center;
+	text-align: left;
 	margin-top: 0;
 	font-weight: 400;
 	@media(min-width: ${props => props.theme.breakpoints.md}) {
