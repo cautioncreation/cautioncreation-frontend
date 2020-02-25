@@ -10,6 +10,12 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+		{
+      resolve: 'gatsby-plugin-html-attributes',
+      options: {
+        lang: 'en'
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

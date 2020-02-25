@@ -18,8 +18,8 @@ export const MenuIcon = (props) => {
 
 
 	return (
-		<StyledButton onClick={handleClick} name="Menu">
-			<StyledVector viewBox="0 0 100 100">
+		<StyledButton onClick={handleClick} aria-label="Open Menu">
+			<StyledVector viewBox="0 0 100 100" alt="Menu">
 	  		<StyledRect1 className={className} x="10" y="20" width="80" height="10" ry="7.5" />
 	  		<StyledRect2 className={className} x="10" y="45" width="80" height="10" ry="7.5" />
 		  	<StyledRect3 className={className} x="10" y="70" width="80" height="10" ry="7.5" />

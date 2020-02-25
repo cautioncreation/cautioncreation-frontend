@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
+import { Helmet } from 'react-helmet'
 
 import Layout from '../layouts'
 import { HomeHero } from '../components/homeHero'
@@ -11,6 +12,10 @@ import { HomeQuestions } from '../components/homeQuestions'
 
 const IndexPage = ({ data }) => (
 	<Layout>
+		<Helmet>
+			<title>Caution Creation | Home</title>
+			<meta name="description" content="Caution Creation is a web development agency which specializes in responsive web applications for small businesses and startups."></meta>
+		</Helmet>
 		<HomeHero src={data.heroImage.childImageSharp.fluid}/>
 		<HomeIntro />
 		<HomeTestimonials data={data.allStrapiTestimonial.edges}/>

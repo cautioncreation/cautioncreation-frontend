@@ -31,21 +31,21 @@ export const HomeHero = ({ src }) => (
 			</Column>
 			<Column xs='0' md='1' lg='2'/>
 			<StyledSocialContainer>
-				<StyledSocialLink href="facebook.com/cautioncreation">
-					<StyledSocialIcon src={Facebook} />
+				<StyledSocialLink href="facebook.com/cautioncreation" aria-label="facebook">
+					<StyledSocialIcon src={Facebook} alt="Facebook icon"/>
 				</StyledSocialLink>
-				<StyledSocialLink>
-					<StyledSocialIcon src={Instagram} />
+				<StyledSocialLink href="instagram.com/cautioncreation" aria-label="Instagram">
+					<StyledSocialIcon src={Instagram}  alt="Instagram icon"/>
 				</StyledSocialLink>
-				<StyledSocialLink>
-					<StyledSocialIcon src={LinkedIn} />
+				<StyledSocialLink href="linkedin.com/in/cautioncreation" aria-label="LinkedIn">
+					<StyledSocialIcon src={LinkedIn}  alt="LinkedIn icon"/>
 				</StyledSocialLink>
-				<StyledSocialLink>
-					<StyledSocialIcon src={Twitter} />
+				<StyledSocialLink href="twitter.com/cautioncreation" aria-label="Twitter">
+					<StyledSocialIcon src={Twitter}  alt="Twitter icon"/>
 				</StyledSocialLink>
 			</StyledSocialContainer>
 			<StyledArrowContainer>
-				<StyledArrowIcon src={DownArrow}/>
+				<StyledArrowIcon src={DownArrow} alt="Scroll Down Arrow"/>
 				<StyledArrowText>Scroll</StyledArrowText>
 			</StyledArrowContainer>
 
