@@ -26,8 +26,7 @@ export const HomeQuestions = (props) => (
 						{props.data.map(({ node }, i) => (
 							<Column key={i} xs="12" md="6">
 								<Accordion title={node.title}>
-									<StyledText>
-										{node.answer}
+									<StyledText dangerouslySetInnerHTML={{__html: node.answer}}>
 									</StyledText>
 								</Accordion>
 							</Column>
