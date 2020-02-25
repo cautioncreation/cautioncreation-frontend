@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Section, Container, Row, Column } from '../grid'
+import { SectionStatic, Container, Row, Column } from '../grid'
 
 import { Accordion } from '../accordion'
 
@@ -12,19 +12,19 @@ import {
 } from './style'
 
 export const HomeQuestions = (props) => (
-	<Section>
+	<SectionStatic>
 		<Row>
-			<Column xs="12" lg="3">
+			<Column xs="12" lg="4">
 				<StyledTitle>
 					Frequently Asked Questions
 					<StyledLine />
 				</StyledTitle>
 			</Column>
-			<StyledQuestionColumn xs="12" lg="9">
+			<StyledQuestionColumn xs="12" lg="8">
 				<Container>
 					<Row>
 						{props.data.map(({ node }, i) => (
-							<Column key={i} xs="12" md="6">
+							<Column key={i} xs="12">
 								<Accordion title={node.title}>
 									<StyledText dangerouslySetInnerHTML={{__html: node.answer}}>
 									</StyledText>
@@ -35,5 +35,5 @@ export const HomeQuestions = (props) => (
 				</Container>
 			</StyledQuestionColumn>
 		</Row>
-	</Section>
+	</SectionStatic>
 )
