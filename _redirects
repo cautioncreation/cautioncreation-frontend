@@ -1,8 +1,0 @@
-# These rules will change if you change your site’s custom domains or HTTPS settings
-
-# Redirect domain aliases to primary domain
-https://cautioncreation.ca/* https://cautioncreation.com/:splat 301!
-https://www.cautioncreation.ca/* https://cautioncreation.com/:splat 301!
-
-# Optional: Redirect default Netlify subdomain to primary domain
-https://cautioncreation.netlify.com/* https://cautioncreation.com/:splat 301!
