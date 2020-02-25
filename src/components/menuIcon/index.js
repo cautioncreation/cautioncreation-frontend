@@ -18,7 +18,7 @@ export const MenuIcon = (props) => {
 
 
 	return (
-		<StyledButton onClick={handleClick}>
+		<StyledButton onClick={handleClick} name="Menu">
 			<StyledVector viewBox="0 0 100 100">
 	  		<StyledRect1 className={className} x="10" y="20" width="80" height="10" ry="7.5" />
 	  		<StyledRect2 className={className} x="10" y="45" width="80" height="10" ry="7.5" />

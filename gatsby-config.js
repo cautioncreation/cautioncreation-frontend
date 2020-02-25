@@ -4,7 +4,12 @@ module.exports = {
     description: `Caution Creation is proud to provide the most streamlined web development services in the edmonton Area.`,
   },
   plugins: [
+		`gatsby-plugin-netlify`,
+		`gatsby-plugin-styled-components`,
+		`gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -12,14 +17,6 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-		{
-      resolve: `gatsby-plugin-styled-components`,
-      options: {
-        // Add any options here
-      },
-    },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

@@ -16,7 +16,7 @@ export const NavMenu = (props) => {
 
 	return (
 		<StyledContainer>
-			<MenuIcon  onClick={() => setMenuOpen(!isMenuOpen)}/>
+			<MenuIcon onClick={() => setMenuOpen(!isMenuOpen)}/>
 			<StyledMenu className={activeClass} >
 				<StyledLink href="/about">About</StyledLink>
 				<StyledLink href="/services">Services</StyledLink>
