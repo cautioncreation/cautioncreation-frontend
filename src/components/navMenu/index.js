@@ -23,7 +23,7 @@ export const NavMenu = (props) => {
 				<StyledLink href="/portfolio">Portfolio</StyledLink>
 				<StyledLink href="/contact">Contact</StyledLink>
 				<StyledButtonContainer>
-					<Button outline pill href="/contact#quote">Get Started</Button>
+					<Button outline pill href="/contact">Get Started</Button>
 				</StyledButtonContainer>
 			</StyledMenu>
 		</StyledContainer>

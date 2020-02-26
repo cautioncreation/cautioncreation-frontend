@@ -1,8 +1,11 @@
 import styled from 'styled-components'
 
 export const StyledInfoContainer = styled.div`
-	text-align: right;
+	text-align: left;
 	padding-bottom: 1rem;
+	@media(min-width: ${props => props.theme.breakpoints.md}) {
+		text-align: right;
+	}
 `
 
 export const StyledTitle = styled.h1`

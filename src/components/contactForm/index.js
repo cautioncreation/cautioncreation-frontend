@@ -53,7 +53,6 @@ export const ContactForm = ({ data }) => (
 								Submit
 							</Button>
 						</Column>
-
 					</Row>
 				</Form>
 			</Column>

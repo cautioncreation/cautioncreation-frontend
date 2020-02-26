@@ -1,22 +1,22 @@
 import React from 'react'
 
+import Pushpin from '../../images/svg/pushpin.svg'
+
 import {
 	StyledContainer,
-	StyledContainerClose,
-	StyledText,
 	StyledTitle,
+	StyledPin,
+	StyledText,
+	StyledLine,
 } from './style'
 
-export const Header = ({ title, text, titleColor, textColor }) => (
+export const Header = ({ title, text }) => (
 	<StyledContainer>
-		<StyledTitle color={titleColor}>{title}</StyledTitle>
-		<StyledText color={textColor}>{text}</StyledText>
-	</StyledContainer>
-)
-
-export const HeaderClose = ({ title, text, color }) => (
-	<StyledContainerClose color={color}>
-		<StyledTitle>{title}</StyledTitle>
+		<StyledTitle>
+			<StyledPin src={Pushpin}/>
+			{title}
+		</StyledTitle>
 		<StyledText>{text}</StyledText>
-	</StyledContainerClose>
+		<StyledLine />
+	</StyledContainer>
 )
