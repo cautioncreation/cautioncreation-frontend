@@ -10,7 +10,7 @@ const servicesPage = ({ data }) => (
 			<title>Caution Creation | Home</title>
 			<meta name="description" content="Caution Creation is a web development agency which specializes in responsive web applications for small businesses and startups."></meta>
 		</Helmet>
-		<Header title="Our Services" />
+		<Header title="Our Services" text="Development · Branding & Design · Maintenance"/>
 	</Layout>
 )
 

@@ -14,7 +14,7 @@ import {
 	StyledCompany,
 } from './style'
 
-export const HomeTestimonials = withTheme(({ data, theme }) => (
+export const Testimonials = withTheme(({ data, theme }) => (
 	<SectionStatic background={theme.colors.darkBlue}>
 			<Row>
 				<StyledColumn xs="12" lg="4">
@@ -38,5 +38,4 @@ export const HomeTestimonials = withTheme(({ data, theme }) => (
 				</StyledColumn>
 			</Row>
 	</SectionStatic>
-
 ))

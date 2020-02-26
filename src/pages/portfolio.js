@@ -10,7 +10,7 @@ const portfolioPage = ({ data }) => (
 			<title>Caution Creation | Home</title>
 			<meta name="description" content="Caution Creation is a web development agency which specializes in responsive web applications for small businesses and startups."></meta>
 		</Helmet>
-		<Header title="Our Portfolio" />
+		<Header title="Our Portfolio" text="Clients big and small, we build them all!"/>
 	</Layout>
 )
 

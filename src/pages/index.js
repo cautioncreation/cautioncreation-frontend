@@ -5,7 +5,7 @@ import { Helmet } from 'react-helmet'
 import Layout from '../layouts'
 import { HomeHero } from '../components/homeHero'
 import { HomeIntro } from '../components/homeIntro'
-import { HomeTestimonials } from '../components/homeTestimonials'
+import { Testimonials } from '../components/testimonials'
 import { HomeServices } from '../components/homeServices'
 import { HomeWhy } from '../components/homeWhy'
 import { HomeQuestions } from '../components/homeQuestions'
@@ -18,7 +18,7 @@ const IndexPage = ({ data, path }) => (
 		</Helmet>
 		<HomeHero src={data.heroImage.childImageSharp.fluid}/>
 		<HomeIntro />
-		<HomeTestimonials data={data.allStrapiTestimonial.edges}/>
+		<Testimonials data={data.allStrapiTestimonial.edges}/>
 		<HomeServices
 			src={[
 				data.developmentImage.childImageSharp.fluid,

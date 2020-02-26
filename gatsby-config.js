@@ -1,5 +1,6 @@
 module.exports = {
   siteMetadata: {
+		siteUrl: `https://cautioncreation.com`,
     title: `Caution Creation`,
     description: `Caution Creation is proud to provide the most streamlined web development services in the edmonton Area.`,
   },
@@ -10,6 +11,7 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+		`gatsby-plugin-sitemap`,
 		{
       resolve: 'gatsby-plugin-html-attributes',
       options: {
