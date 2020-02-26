@@ -21,6 +21,8 @@ export const StyledButton = styled.button.attrs(props => ({
 		(props.outline ? `2px solid ${props.theme.colors.blue}` : 'none'),
 	FontSize:
 		(props.large ? '2.25rem' : '1.5rem'),
+	Color:
+		(props.yellow ? props.theme.colors.black : props.theme.colors.white)
 
 
 }))`
@@ -29,20 +31,20 @@ export const StyledButton = styled.button.attrs(props => ({
 	font-size: ${props => props.FontSize};
 	line-height: 1;
 	cursor: pointer;
-	color: ${props => props.theme.colors.white};
+	color: ${props => props.Color};
 	padding: ${props => props.Padding};
 	background: ${props => props.Background};
 	border-radius: ${props => props.BorderRadius};
 	border: ${props => props.Border};
 
 	&:hover {
-		background: ${props => props.theme.colors.blue};
-		color: ${props => props.theme.colors.white};
+		background: ${props => props.Background};
+		color: ${props => props.color};
 		animation: buttonBackground 0.75s;
 	}
 
 	@keyframes buttonBackground {
-		from {background: none}
-		to {background: ${props => props.theme.colors.blue}}
+		from {background: inherit}
+		to {background: ${props => props.background}}
 	}
 `

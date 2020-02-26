@@ -10,8 +10,8 @@ import { HomeServices } from '../components/homeServices'
 import { HomeWhy } from '../components/homeWhy'
 import { HomeQuestions } from '../components/homeQuestions'
 
-const IndexPage = ({ data }) => (
-	<Layout>
+const IndexPage = ({ data, path }) => (
+	<Layout hero path={path}>
 		<Helmet>
 			<title>Caution Creation | Home</title>
 			<meta name="description" content="Caution Creation is a web development agency which specializes in responsive web applications for small businesses and startups."></meta>

@@ -1,13 +1,18 @@
 import React from 'react'
 import { normalize } from 'styled-normalize'
+import { useStaticQuery, graphql } from 'gatsby'
 import { ThemeProvider, createGlobalStyle } from 'styled-components'
 
-const Theme = ({ children }) => (
-  <ThemeProvider theme={theme}>
-		<GlobalStyle />
-		{children}
-	</ThemeProvider>
-)
+const Theme = ({ children, path }) => {
+
+	return (
+		<ThemeProvider theme={theme}>
+			<GlobalStyle path={path}/>
+			{children}
+		</ThemeProvider>
+	)
+
+}
 
 export default Theme
 
@@ -61,13 +66,14 @@ const GlobalStyle = createGlobalStyle`
 	body {
 		width: 100%;
 		min-height: 100%;
+		padding-top: ${props => props.path === '/' ? '0px' : '64px'};
 	}
 
 	a {
-		color: ${props => props.theme.colors.blue};
+		color: ${props => props.theme.colors.darkGrey};
 		text-decoration: none;
 		&:hover {
-			
+
 		}
 	}
 
