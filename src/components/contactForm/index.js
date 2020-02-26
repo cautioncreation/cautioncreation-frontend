@@ -1,28 +1,17 @@
 import React from 'react'
 
-import Paperclip from '../../images/svg/paperclip.svg'
-
 import { Form, Input, Textarea, Checkbox } from '../form'
-import { Header } from '../header'
 import { Button } from '../button'
 import { ContainerStatic, Row, Column } from '../grid'
 
 import {
 	StyledInfoContainer,
-	StyledCheckboxText,
-	StyledAttachmentContainer,
-	StyledAttachment,
-	StyledSVG,
 	StyledTitle,
 	StyledInfo,
 } from './style'
 
 export const ContactForm = ({ data }) => (
 	<ContainerStatic>
-		<Header
-			title="Contact Us"
-			text="No matter your question, we're here to help!"
-		/>
 		<Row>
 			<Column xs="12" lg="8">
 				<Form>
@@ -43,13 +32,10 @@ export const ContactForm = ({ data }) => (
 							<Textarea rows="6" label="Your Message" id="messageInput" name="message" required/>
 						</Column>
 						<Column xs="12">
-							<StyledCheckboxText>
-								<Checkbox required/>
-								By checking this box, you are agreeing to the Privacy Policy and Cookie Policy.
-							</StyledCheckboxText>
+							<Checkbox label="By checking this box, you are agreeing to the Privacy Policy and Cookie Policy." id="agreementCheckbox" name="agreement_checkbox" required/>
 						</Column>
 						<Column xs="12">
-							<Button type="submit" yellow>
+							<Button type="submit" yellow pill>
 								Submit
 							</Button>
 						</Column>

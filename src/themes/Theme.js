@@ -1,7 +1,6 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import { normalize } from 'styled-normalize'
-import { useStaticQuery, graphql } from 'gatsby'
 import { ThemeProvider, createGlobalStyle } from 'styled-components'
 
 const Theme = ({ children, path }) => {
@@ -66,9 +65,12 @@ const theme = {
 const GlobalStyle = createGlobalStyle`
   ${normalize}
 
-	body {
+	body, html {
 		width: 100%;
-		min-height: 100%;
+		min-height: 100vh;
+	}
+
+	body {
 		padding-top: ${props => props.path === '/' ? '0px' : '64px'};
 	}
 

@@ -27,12 +27,19 @@ export const StyledTextarea = styled.textarea`
 	margin-bottom: 1rem;
 `
 
+export const StyledCheckboxContainer = styled.div`
+	margin-bottom: 1rem;
+`
+
 export const StyledCheckbox = styled.input`
-	width: 24px;
-	height: 24px;
 	margin-right: 4px;
+`
+
+export const StyledCheckboxLabel = styled.label`
+	margin: auto;
 `
 
 export const StyledFile = styled.input`
 	margin-bottom: 1rem;
+	vertical-align: center;
 `

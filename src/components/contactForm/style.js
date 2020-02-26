@@ -18,13 +18,6 @@ export const StyledInfo = styled.a`
 	font-weight: 500;
 `
 
-export const StyledCheckboxText = styled.p`
-	margin: auto;
-	display: flex;
-	align-items: center;
-	margin-bottom: 1rem;
-`
-
 export const StyledAttachmentContainer = styled.div`
 
 `

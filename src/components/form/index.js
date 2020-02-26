@@ -5,7 +5,9 @@ import {
 	StyledLabel,
 	StyledInput,
 	StyledTextarea,
+	StyledCheckboxContainer,
 	StyledCheckbox,
+	StyledCheckboxLabel,
 	StyledFile,
 } from './style'
 
@@ -34,10 +36,13 @@ export const Textarea = ({ children, id, label, name, required, rows }) => (
 	</>
 )
 
-export const Checkbox = ({ id, type, name, required, children }) => (
-	<>
+export const Checkbox = ({ id, label, type, name, required }) => (
+	<StyledCheckboxContainer>
 		<StyledCheckbox type="checkbox" id={id} name={name} required={required} />
-	</>
+		<StyledCheckboxLabel for={id} required={required}>
+			{label}
+		</StyledCheckboxLabel>
+	</StyledCheckboxContainer>
 )
 
 export const File = ({ id, type, name, required, children }) => (
