@@ -25,4 +25,10 @@ exports.createPages = ({ actions }) => {
     isPermanent: true,
     force: true
   });
+	createRedirect({
+    fromPath: "https://admin.cautioncreation.com",
+    toPath: "https://cautioncreation-backend.herokuapp.com/admin",
+    isPermanent: true,
+    force: true
+  });
 };
