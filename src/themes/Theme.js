@@ -1,4 +1,5 @@
 import React from 'react'
+import { Helmet } from 'react-helmet'
 import { normalize } from 'styled-normalize'
 import { useStaticQuery, graphql } from 'gatsby'
 import { ThemeProvider, createGlobalStyle } from 'styled-components'
@@ -8,6 +9,9 @@ const Theme = ({ children, path }) => {
 	return (
 		<ThemeProvider theme={theme}>
 			<GlobalStyle path={path}/>
+			<Helmet>
+				<link href="https://fonts.googleapis.com/css?family=Dosis|Exo&display=swap" rel="stylesheet" />
+			</Helmet>
 			{children}
 		</ThemeProvider>
 	)
@@ -61,7 +65,6 @@ const theme = {
 
 const GlobalStyle = createGlobalStyle`
   ${normalize}
-	@import url('https://fonts.googleapis.com/css?family=Dosis|Exo&display=swap');
 
 	body {
 		width: 100%;
