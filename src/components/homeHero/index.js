@@ -26,7 +26,7 @@ export const HomeHero = ({ src }) => (
 			<Column xs='12' md='10' lg='8' flex center>
 				<StyledTitle>Minimalism where it matters. Complexity when it counts.</StyledTitle>
 				<StyledContainer>
-					<Button href='/hello' outline pill>Request A Quote</Button>
+					<Button href='/hello' outline pill large>Request A Quote</Button>
 				</StyledContainer>
 			</Column>
 			<Column xs='0' md='1' lg='2'/>

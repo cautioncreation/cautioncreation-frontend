@@ -36,7 +36,7 @@ export const StyledMenu = styled.div`
 
 export const StyledLink = styled.a`
 	padding: 16px;
-	font-size: 1.5rem;
+	font-size: 1.25rem;
 	color: white;
 	vertical-align: middle;
 	text-decoration: none;

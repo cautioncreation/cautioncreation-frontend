@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 export const StyledLink = styled.a`
 	display: flex;
@@ -7,44 +7,54 @@ export const StyledLink = styled.a`
 	text-decoration: none;
 `
 
-export const StyledButton = styled.button.attrs(props => ({
-	Padding:
-		(props.large ? "0.625rem 1.375rem" : "") ||
-		(props.outline ? '0.375rem 0.875rem' : '0.5rem 1rem'),
-	Background:
-		(props.yellow ? props.theme.colors.yellow : '') ||
-		(props.outline ? 'none' : props.theme.colors.blue),
-	BorderRadius:
-		(props.pill ? '3rem' : '') ||
-		(props.outline ? '0.125rem' : ''),
-	Border:
-		(props.outline ? `2px solid ${props.theme.colors.blue}` : 'none'),
-	FontSize:
-		(props.large ? '2.25rem' : '1.5rem'),
-	Color:
-		(props.yellow ? props.theme.colors.black : props.theme.colors.white)
-
-
-}))`
-	font-weight: 500;
-	font-family: ${props => props.theme.fonts.primary};
-	font-size: ${props => props.FontSize};
+export const StyledButton = styled.button`
+	font-weight: 600;
+	font-size: 1.25rem;
+	font-family: ${props => props.theme.fonts.secondary};
 	line-height: 1;
 	cursor: pointer;
-	color: ${props => props.Color};
-	padding: ${props => props.Padding};
-	background: ${props => props.Background};
-	border-radius: ${props => props.BorderRadius};
-	border: ${props => props.Border};
-
+	border: 0.125rem solid ${props => props.theme.colors.blue};
+	padding: 0.5rem 1rem;
+	border-radius: 0.25rem;
+	transition: background 1s;
+	color: ${props => props.theme.colors.white};
+	background: ${props => props.theme.colors.blue};
 	&:hover {
-		background: ${props => props.Background};
-		color: ${props => props.color};
-		animation: buttonBackground 0.75s;
+		color: ${props => props.theme.colors.blue};
+		background: none;
 	}
 
-	@keyframes buttonBackground {
-		from {background: inherit}
-		to {background: ${props => props.background}}
-	}
+	${props => props.yellow ? css`
+		color: ${props => props.theme.colors.black};
+		border: 2px solid ${props => props.theme.colors.yellow};
+		background-color: ${props => props.theme.colors.yellow};
+		&:hover {
+			color: ${props => props.theme.colors.yellow};
+			background: none;
+		}
+	` : null}
+
+	${props => props.outline ? css`
+		background: none;
+		&:hover {
+			${props => props.yellow ? css`
+				color: ${props => props.theme.colors.black};
+				background: ${props => props.theme.colors.yellow};
+			` : css`
+				color: ${props => props.theme.colors.white};
+				background: ${props => props.theme.colors.blue};
+			`}
+		}
+	` : null}
+
+	${props => props.pill ? css`
+		border-radius: 20px;
+	` : null}
+
+	${props => props.large ? css`
+		font-size: 2rem;
+		${props => props.pill ? css`
+			border-radius: 26px;
+		` : null}
+	` : null}
 `

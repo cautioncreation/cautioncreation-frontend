@@ -18,11 +18,18 @@ export const StyledColumnRight = styled(StyledColumn)`
 	align-items: flex-end;
 `
 
-export const StyledImage = styled(Image)`
-	max-width: 240px;
-	margin: auto;
+export const StyledVectorWrapper = styled.div`
+	height: 100%;
+	display: flex;
+	align-items: center;
+`
+
+export const StyledVector = styled.img`
+	max-width: 100%;
+	max-height: 100%;
+	padding-top: 2rem;
 	@media(min-width: ${props => props.theme.breakpoints.md}) {
-		max-width: none;
+		padding: 2rem 0;
 	}
 `
 
@@ -52,10 +59,9 @@ export const StyledHeaderRight = styled(StyledHeader)`
 
 export const StyledParagraph = styled.p`
 	font-size: 1.125rem;
-	margin-bottom: 0;
 	font-weight: 300;
 	@media(min-width: ${props => props.theme.breakpoints.md}) {
-		font-size: 1.5rem;
+		font-size: 1.375rem;
 		font-weight: 400;
 	}
 `

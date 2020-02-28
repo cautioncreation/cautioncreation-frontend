@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 export const StyledContainer = styled.div`
 	display: flex;
@@ -20,18 +20,17 @@ export const StyledTitle = styled.h1`
 	margin-bottom: 0.25rem;
 	font-size: 2.5rem;
 	@media(min-width: ${props => props.theme.breakpoints.lg}) {
-		font-size: 3rem;
+		font-size: 3.5rem;
 	}
 `
 
-export const StyledText = styled.h1`
+export const StyledText = styled.p`
 	text-align: center;
 	margin-top: 0;
 	font-size: 1.25rem;
 	margin-bottom: 0.25rem;
-	color: ${props => props.theme.colors.blue};
 	@media(min-width: ${props => props.theme.breakpoints.lg}) {
-		font-size: 1.875rem;
+		font-size: 1.75rem;
 	}
 `
 

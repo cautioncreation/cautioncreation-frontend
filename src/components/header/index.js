@@ -1,4 +1,5 @@
 import React from 'react'
+import { withTheme } from 'styled-components'
 
 
 import { ContainerStatic } from '../grid'
@@ -12,7 +13,7 @@ import {
 	StyledLine,
 } from './style'
 
-export const Header = ({ title, text }) => (
+export const Header = withTheme(({ title, text, theme }) => (
 	<ContainerStatic>
 		<StyledContainer>
 			<StyledTitle>
@@ -20,7 +21,7 @@ export const Header = ({ title, text }) => (
 				{title}
 			</StyledTitle>
 			<StyledText>{text}</StyledText>
-			<StyledLine />
+			<StyledLine/>
 		</StyledContainer>
 	</ContainerStatic>
-)
+))

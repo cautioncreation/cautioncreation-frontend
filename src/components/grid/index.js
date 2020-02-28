@@ -14,8 +14,8 @@ export const Row = ({ children }) => (
 	</StyledRow>
 )
 
-export const Column = ({ children, xs, sm, md, lg, xl }) => (
-	<StyledColumn xs={xs} sm={sm} md={md} lg={lg} xl={xl}>
+export const Column = ({ children, xs, sm, md, lg, xl, spacer }) => (
+	<StyledColumn xs={xs} sm={sm} md={md} lg={lg} xl={xl} spacer={spacer}>
 		{children}
 	</StyledColumn>
 )

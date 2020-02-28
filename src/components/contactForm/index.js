@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Form, Input, Textarea, Checkbox } from '../form'
 import { Button } from '../button'
-import { ContainerStatic, Row, Column } from '../grid'
+import { SectionStatic, Row, Column } from '../grid'
 
 import {
 	StyledInfoContainer,
@@ -11,7 +11,7 @@ import {
 } from './style'
 
 export const ContactForm = ({ data }) => (
-	<ContainerStatic>
+	<SectionStatic>
 		<Row>
 			<Column xs="12" lg="8">
 				<Form>
@@ -65,5 +65,5 @@ export const ContactForm = ({ data }) => (
 				</StyledInfoContainer>
 			</Column>
 		</Row>
-	</ContainerStatic>
+	</SectionStatic>
 )

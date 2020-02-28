@@ -10,22 +10,16 @@ import { HomeServices } from '../components/homeServices'
 import { HomeWhy } from '../components/homeWhy'
 import { HomeQuestions } from '../components/homeQuestions'
 
-const IndexPage = ({ data, path }) => (
-	<Layout hero path={path}>
+const IndexPage = ({ data }) => (
+	<Layout transparentNav>
 		<Helmet>
-			<title>Caution Creation | Home</title>
-			<meta name="description" content="Caution Creation is a web development agency which specializes in responsive web applications for small businesses and startups."></meta>
+			<title>Caution Creation | Edmonton Web Development</title>
+			<meta name="description" content="Caution Creation is a web development agency that specializes in streamlined web applications for small businesses & startups. We offer development, branding & design, as well as maintenance services."></meta>
 		</Helmet>
 		<HomeHero src={data.heroImage.childImageSharp.fluid}/>
 		<HomeIntro />
 		<Testimonials data={data.allStrapiTestimonial.edges}/>
-		<HomeServices
-			src={[
-				data.developmentImage.childImageSharp.fluid,
-				data.brandingImage.childImageSharp.fluid,
-				data.maintenanceImage.childImageSharp.fluid
-			]}
-		/>
+		<HomeServices />
 		<HomeWhy />
 		<HomeQuestions data={data.allStrapiQuestion.edges}/>
 	</Layout>
@@ -38,27 +32,6 @@ export const query = graphql`
     heroImage:file(relativePath: { eq: "chair-and-wall.jpeg" }) {
       childImageSharp {
         fluid(quality: 95) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-		developmentImage:file(relativePath: { eq: "development-illustration.png" }) {
-      childImageSharp {
-        fluid(quality: 100) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-		brandingImage:file(relativePath: { eq: "branding-illustration.png" }) {
-      childImageSharp {
-        fluid(quality: 100) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-		maintenanceImage:file(relativePath: { eq: "maintenance-illustration.png" }) {
-      childImageSharp {
-        fluid(quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }

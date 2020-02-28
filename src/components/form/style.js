@@ -2,7 +2,6 @@ import styled, { css } from 'styled-components'
 
 export const StyledForm = styled.form`
 	width: 100%;
-	padding: 15px;
 `
 
 export const StyledLabel = styled.label`

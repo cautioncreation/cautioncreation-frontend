@@ -5,12 +5,12 @@ import Theme from '../themes/Theme'
 import { Nav } from '../components/nav'
 import { Footer } from '../components/footer'
 
-const Layout = ({ children, hero, path }) => (
-	<Theme path={path}>
+const Layout = ({ children, hero, transparentNav }) => (
+	<Theme transparentNav={transparentNav}>
 		<Helmet>
 			<meta charset="utf-8"></meta>
 		</Helmet>
-		<Nav fade={hero}/>
+		<Nav transparentNav={transparentNav}/>
 		{children}
 		<Footer />
 	</Theme>

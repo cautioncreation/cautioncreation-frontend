@@ -3,11 +3,11 @@ import { Helmet } from 'react-helmet'
 import { normalize } from 'styled-normalize'
 import { ThemeProvider, createGlobalStyle } from 'styled-components'
 
-const Theme = ({ children, path }) => {
+const Theme = ({ children, transparentNav }) => {
 
 	return (
 		<ThemeProvider theme={theme}>
-			<GlobalStyle path={path}/>
+			<GlobalStyle transparentNav={transparentNav}/>
 			<Helmet>
 				<link href="https://fonts.googleapis.com/css?family=Dosis|Exo&display=swap" rel="stylesheet" />
 			</Helmet>
@@ -71,7 +71,8 @@ const GlobalStyle = createGlobalStyle`
 	}
 
 	body {
-		padding-top: ${props => props.path === '/' ? '0px' : '64px'};
+		background-color: ${props => props.theme.colors.lightGrey};
+		padding-top: ${props => props.transparentNav === true ? '0px' : '64px'};
 	}
 
 	a {

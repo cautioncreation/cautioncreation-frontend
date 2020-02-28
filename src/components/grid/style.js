@@ -11,37 +11,36 @@ export const StyledColumn = styled.div`
 	position: relative;
 	width: 100%;
 	min-height: 1px;
-	padding-left: 15px;
-	padding-right: 15px;
+	padding: ${props => props.spacer ? '0 !important' : null};
 
 	@media(min-width: ${props => props.theme.breakpoints.xs}) {
-		min-height: 1px;
-		width: 	${props => props.xs ? props.xs /0.12 + "%" : null};
-		min-height: ${props => props.xs === '0' ? "0" : null};
+		width: ${props => props.xs ? props.xs /0.12 + "%" : null};
+		padding-left: ${props => (props.xs === 0 ? '0px' : (props.xs > 0 ? '15px' : null))};
+		padding-right: ${props => (props.xs === 0 ? '0px' : (props.xs > 0 ? '15px' : null))};
 	}
 
 	@media(min-width: ${props => props.theme.breakpoints.sm}) {
-		min-height: 1px;
 		width: ${props => props.sm ? props.sm /0.12 + "%" : null};
-		min-height: ${props => props.sm === '0' ? "0" : null};
+		padding-left: ${props => (props.sm === 0 ? '0px' : (props.sm > 0 ? '15px' : null))};
+		padding-right: ${props => (props.sm === 0 ? '0px' : (props.sm > 0 ? '15px' : null))};
 	}
 
 	@media(min-width: ${props => props.theme.breakpoints.md}) {
-		min-height: 1px;
 		width: ${props => props.md ? props.md /0.12 + "%" : null};
-		min-height: ${props => props.md === '0' ? "0" : null};
+		padding-left: ${props => (props.md === 0 ? '0px' : (props.md > 0 ? '15px' : null))};
+		padding-right: ${props => (props.md === 0 ? '0px' : (props.md > 0 ? '15px' : null))};
 	}
 
 	@media(min-width: ${props => props.theme.breakpoints.lg}) {
-		min-height: 1px;
 		width: ${props => props.lg ? props.lg /0.12 + "%" : null};
-		min-height: ${props => props.lg === '0' ? "0" : null};
+		padding-left: ${props => (props.lg === 0 ? '0px' : (props.lg > 0 ? '15px' : null))};
+		padding-right: ${props => (props.lg === 0 ? '0px' : (props.lg > 0 ? '15px' : null))};
 	}
 
 	@media(min-width: ${props => props.theme.breakpoints.xl}) {
-		min-height: 1px;
 		width: ${props => props.xl ? (props.xl /0.12 + "%") : null};
-		min-height: ${props => props.xl === '0' ? "0" : null};
+		padding-left: ${props => (props.xl === 0 ? '0px' : (props.xl > 0 ? '15px' : null))};
+		padding-right: ${props => (props.xl === 0 ? '0px' : (props.xl > 0 ? '15px' : null))};
 	}
 `
 

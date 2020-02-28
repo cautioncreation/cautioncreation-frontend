@@ -12,7 +12,7 @@ export const StyledNav = styled.nav`
 	background: ${props => props.theme.colors.black};
 	@media (min-width: ${props => props.theme.breakpoints.lg}) {
 		background: ${props =>
-			(props.scrollPosition === 0 && props.fade === true) ? 'none' : props.theme.colors.black
+			(props.scrollPosition === 0 && props.transparentNav === true) ? 'none' : props.theme.colors.black
 		};
 	}
 	transition: background 1s;
