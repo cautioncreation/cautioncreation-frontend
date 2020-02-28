@@ -18,7 +18,7 @@ import {
 	StyledParagraphRight,
 } from './style'
 
-export const HomeServices = ({ src }) => (
+export const ServicesDescription = ({ src }) => (
 	<SectionStatic>
 		<Row>
 			<Column xs="0" lg="1"/>

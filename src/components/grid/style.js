@@ -15,32 +15,32 @@ export const StyledColumn = styled.div`
 
 	@media(min-width: ${props => props.theme.breakpoints.xs}) {
 		width: ${props => props.xs ? props.xs /0.12 + "%" : null};
-		padding-left: ${props => (props.xs === 0 ? '0px' : (props.xs > 0 ? '15px' : null))};
-		padding-right: ${props => (props.xs === 0 ? '0px' : (props.xs > 0 ? '15px' : null))};
+		padding-left: ${props => (props.xs === '0' ? '0px' : (props.xs > 0 ? '15px' : null))};
+		padding-right: ${props => (props.xs === '0' ? '0px' : (props.xs > 0 ? '15px' : null))};
 	}
 
 	@media(min-width: ${props => props.theme.breakpoints.sm}) {
 		width: ${props => props.sm ? props.sm /0.12 + "%" : null};
-		padding-left: ${props => (props.sm === 0 ? '0px' : (props.sm > 0 ? '15px' : null))};
-		padding-right: ${props => (props.sm === 0 ? '0px' : (props.sm > 0 ? '15px' : null))};
+		padding-left: ${props => (props.sm === '0' ? '0px' : (props.sm > 0 ? '15px' : null))};
+		padding-right: ${props => (props.sm === '0' ? '0px' : (props.sm > 0 ? '15px' : null))};
 	}
 
 	@media(min-width: ${props => props.theme.breakpoints.md}) {
 		width: ${props => props.md ? props.md /0.12 + "%" : null};
-		padding-left: ${props => (props.md === 0 ? '0px' : (props.md > 0 ? '15px' : null))};
-		padding-right: ${props => (props.md === 0 ? '0px' : (props.md > 0 ? '15px' : null))};
+		padding-left: ${props => (props.md === '0' ? '0px' : (props.md > 0 ? '15px' : null))};
+		padding-right: ${props => (props.md === '0' ? '0px' : (props.md > 0 ? '15px' : null))};
 	}
 
 	@media(min-width: ${props => props.theme.breakpoints.lg}) {
 		width: ${props => props.lg ? props.lg /0.12 + "%" : null};
-		padding-left: ${props => (props.lg === 0 ? '0px' : (props.lg > 0 ? '15px' : null))};
-		padding-right: ${props => (props.lg === 0 ? '0px' : (props.lg > 0 ? '15px' : null))};
+		padding-left: ${props => (props.lg === '0' ? '0px' : (props.lg > 0 ? '15px' : null))};
+		padding-right: ${props => (props.lg === '0' ? '0px' : (props.lg > 0 ? '15px' : null))};
 	}
 
 	@media(min-width: ${props => props.theme.breakpoints.xl}) {
 		width: ${props => props.xl ? (props.xl /0.12 + "%") : null};
-		padding-left: ${props => (props.xl === 0 ? '0px' : (props.xl > 0 ? '15px' : null))};
-		padding-right: ${props => (props.xl === 0 ? '0px' : (props.xl > 0 ? '15px' : null))};
+		padding-left: ${props => (props.xl === '0' ? '0px' : (props.xl > 0 ? '15px' : null))};
+		padding-right: ${props => (props.xl === '0' ? '0px' : (props.xl > 0 ? '15px' : null))};
 	}
 `
 

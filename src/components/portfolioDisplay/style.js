@@ -7,10 +7,12 @@ export const StyledWrapperLink = styled.a`
 
 export const StyledBackground = styled(Image)`
 	margin-bottom: 30px;
+	border-radius: 1rem;
 `
 
 export const StyledTextContainer = styled.div`
 	margin-bottom: 3rem;
+	border-radius: 1rem;
 	@media(min-width: ${props => props.theme.breakpoints.lg}) {
 		display: flex;
 		margin-bottom: 0;

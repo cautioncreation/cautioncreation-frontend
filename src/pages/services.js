@@ -3,8 +3,9 @@ import { graphql } from "gatsby"
 import { Helmet } from 'react-helmet'
 
 import Layout from '../layouts'
-import { HeroSmall } from '../components/hero'
+import { ServicesHero } from '../components/servicesHero'
 import { Testimonials } from '../components/testimonials'
+import { ServicesDescription } from '../components/servicesDescription'
 
 const servicesPage = ({ data }) => (
 	<Layout>
@@ -12,11 +13,8 @@ const servicesPage = ({ data }) => (
 			<title>Caution Creation | Home</title>
 			<meta name="description" content="Caution Creation is a web development agency which specializes in responsive web applications for small businesses and startups."></meta>
 		</Helmet>
-		<HeroSmall
-			src={data.heroImage.childImageSharp.fluid}
-			text="Our Services"
-			light
-		/>
+		<ServicesHero />
+		<ServicesDescription />
 	</Layout>
 )
 

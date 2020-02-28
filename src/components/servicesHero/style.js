@@ -15,12 +15,11 @@ export const StyledTextColumn = styled(Column)`
 `
 
 export const StyledTextWrapper = styled.div`
-	border-left: 4px solid ${props => props.theme.colors.yellow};
+	border-left: 4px solid ${props => props.theme.colors.blue};
 	padding-left: 10px;
 `
 
 export const StyledSubTitle = styled.h3`
-	color: ${props => props.theme.colors.white};
 	margin: 0;
 	@media(min-width: ${props => props.theme.breakpoints.lg}) {
 		font-size: 2rem;
@@ -28,7 +27,6 @@ export const StyledSubTitle = styled.h3`
 `
 
 export const StyledTitle = styled.h1`
-	color: ${props => props.theme.colors.white};
 	font-family: ${props => props.theme.fonts.secondary};
 	margin: 0;
 	font-weight: 600;

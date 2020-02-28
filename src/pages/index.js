@@ -6,7 +6,7 @@ import Layout from '../layouts'
 import { HomeHero } from '../components/homeHero'
 import { HomeIntro } from '../components/homeIntro'
 import { Testimonials } from '../components/testimonials'
-import { HomeServices } from '../components/homeServices'
+import { ServicesDescription } from '../components/servicesDescription'
 import { HomeWhy } from '../components/homeWhy'
 import { HomeQuestions } from '../components/homeQuestions'
 
@@ -19,7 +19,7 @@ const IndexPage = ({ data }) => (
 		<HomeHero src={data.heroImage.childImageSharp.fluid}/>
 		<HomeIntro />
 		<Testimonials data={data.allStrapiTestimonial.edges}/>
-		<HomeServices />
+		<ServicesDescription />
 		<HomeWhy />
 		<HomeQuestions data={data.allStrapiQuestion.edges}/>
 	</Layout>

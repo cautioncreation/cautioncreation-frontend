@@ -12,13 +12,13 @@ import {
 		StyledDescription,
 } from './style'
 
-export const Portfolio = ({ data }) => (
+export const PortfolioDisplay = ({ data }) => (
 	<SectionStatic>
 		<Row>
 			{data.map(({ node }, i) => (
 				<Column xs="12" lg="6">
 					<StyledWrapperLink>
-						<StyledBackground fluid={node.image.childImageSharp.fluid} />
+						<StyledBackground fluid={node.image.childImageSharp.fluid} alt={node.company}/>
 					</StyledWrapperLink>
 					<StyledTextContainer>
 						<StyledService>
