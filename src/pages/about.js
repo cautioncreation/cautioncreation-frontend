@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet'
 
 import Layout from '../layouts'
 import { HeroSmall } from '../components/hero'
+import { OurPrinciples } from '../components/ourPrinciples'
 import { MeetManagement } from '../components/meetManagement'
 import { Testimonials } from '../components/testimonials'
 
@@ -19,8 +20,9 @@ const aboutPage = ({ data }) => (
 			text="We made a list of our priorities and our clients are at the top of it."
 			light
 		/>
-		<MeetManagement />
+		<OurPrinciples />
 		<Testimonials data={data.allStrapiTestimonial.edges}/>
+		<MeetManagement />
 	</Layout>
 )
 
