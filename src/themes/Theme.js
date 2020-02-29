@@ -30,7 +30,7 @@ const theme = {
 		yellow: "#E4EB17",
 		green: "#17EBAB",
 		darkGrey: "#3A3A3A",
-		lightGrey: "#F1F1F1",
+		lightGrey: "#E3E3E3",
 		mediumGrey: "#707070",
   },
 	fonts: {
@@ -67,7 +67,6 @@ const GlobalStyle = createGlobalStyle`
 	}
 
 	body {
-		background-color: ${props => props.theme.colors.lightGrey};
 		padding-top: ${props => props.transparentNav === true ? '0px' : '64px'};
 	}
 

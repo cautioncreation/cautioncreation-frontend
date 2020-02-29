@@ -14,7 +14,7 @@ import {
 } from './style'
 
 export const ServicesHero = withTheme(({theme}) => (
-	<ContainerStatic background={theme.colors.yellow}>
+	<ContainerStatic background={theme.colors.lightGrey}>
 		<Row>
 			<StyledTextColumn xs="12" lg="8">
 				<StyledTextWrapper>

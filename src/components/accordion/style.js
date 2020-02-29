@@ -8,7 +8,7 @@ export const StyledHeaderContainer = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	background: ${props => props.theme.colors.darkBlue};
+	background: ${props => props.theme.colors.mediumBlue};
 	border-radius: 5px;
 	${props => props.active ? css`
 		border-top-left-radius: 5px;
@@ -39,7 +39,8 @@ export const StyledTextContainer = styled.div`
 
 export const StyledTitle = styled.h3`
 	margin: 0;
-	font-size: 1.125rem;
+	font-weight: 500;
+	font-size: 1.25rem;
 	padding: 10px;
 	color: ${props => props.theme.colors.white};
 `

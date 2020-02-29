@@ -6,6 +6,7 @@ export const StyledForm = styled.form`
 
 export const StyledLabel = styled.label`
 	font-size: 1.5rem;
+	color: ${props => props.theme.colors.black};
 	${props => props.required? css`
 		&:after {
 			content: "*";
@@ -36,6 +37,7 @@ export const StyledCheckbox = styled.input`
 
 export const StyledCheckboxLabel = styled.label`
 	margin: auto;
+	color: ${props => props.theme.colors.black};
 `
 
 export const StyledFile = styled.input`

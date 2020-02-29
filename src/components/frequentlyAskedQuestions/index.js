@@ -11,7 +11,7 @@ import {
 	StyledText,
 } from './style'
 
-export const HomeQuestions = (props) => (
+export const FrequentlyAskedQuestions = (props) => (
 	<SectionStatic>
 		<Row>
 			<Column xs="12" lg="4">

@@ -15,7 +15,7 @@ import {
 } from './style'
 
 export const Testimonials = withTheme(({ data, theme }) => (
-	<SectionStatic background={theme.colors.darkBlue}>
+	<SectionStatic background={theme.colors.mediumBlue}>
 			<Row>
 				<StyledColumn xs="12" lg="4">
 					<StyledTitle>

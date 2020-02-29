@@ -8,7 +8,7 @@ import { HomeIntro } from '../components/homeIntro'
 import { Testimonials } from '../components/testimonials'
 import { ServicesDescription } from '../components/servicesDescription'
 import { HomeWhy } from '../components/homeWhy'
-import { HomeQuestions } from '../components/homeQuestions'
+import { FrequentlyAskedQuestions } from '../components/frequentlyAskedQuestions'
 
 const IndexPage = ({ data }) => (
 	<Layout transparentNav>
@@ -21,7 +21,7 @@ const IndexPage = ({ data }) => (
 		<Testimonials data={data.allStrapiTestimonial.edges}/>
 		<ServicesDescription />
 		<HomeWhy />
-		<HomeQuestions data={data.allStrapiQuestion.edges}/>
+		<FrequentlyAskedQuestions data={data.allStrapiQuestion.edges}/>
 	</Layout>
 )
 

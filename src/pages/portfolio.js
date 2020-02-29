@@ -8,6 +8,7 @@ import { Testimonials } from '../components/testimonials'
 import { PortfolioDisplay } from '../components/portfolioDisplay'
 import { PortfolioHero } from '../components/portfolioHero'
 import { PortfolioIntro } from '../components/portfolioIntro'
+import { FrequentlyAskedQuestions } from '../components/frequentlyAskedQuestions'
 import { Header } from '../components/header'
 
 const portfolioPage = ({ data }) => (
@@ -20,6 +21,7 @@ const portfolioPage = ({ data }) => (
 		<PortfolioDisplay
 			data={data.allStrapiPortfolio.edges}
 		/>
+		<FrequentlyAskedQuestions data={data.allStrapiQuestion.edges}/>
 	</Layout>
 )
 
@@ -44,5 +46,14 @@ export const query = graphql`
 	      }
 	    }
 	  }
+		allStrapiQuestion {
+	    edges {
+	      node {
+					id
+	        title
+	        answer
+    		}
+  		}
+		}
   }
 `;
