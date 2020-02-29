@@ -5,6 +5,7 @@ import { Helmet } from "react-helmet"
 import Layout from '../layouts'
 import { HeroSmall } from '../components/hero'
 import { Testimonials } from '../components/testimonials'
+import { CallToAction } from '../components/callToAction'
 import { PortfolioDisplay } from '../components/portfolioDisplay'
 import { PortfolioHero } from '../components/portfolioHero'
 import { PortfolioIntro } from '../components/portfolioIntro'
@@ -21,6 +22,7 @@ const portfolioPage = ({ data }) => (
 		<PortfolioDisplay
 			data={data.allStrapiPortfolio.edges}
 		/>
+		<CallToAction />
 		<FrequentlyAskedQuestions data={data.allStrapiQuestion.edges}/>
 	</Layout>
 )
