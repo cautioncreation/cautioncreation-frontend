@@ -3,14 +3,11 @@ import { graphql } from "gatsby"
 import { Helmet } from "react-helmet"
 
 import Layout from '../layouts'
-import { HeroSmall } from '../components/hero'
-import { Testimonials } from '../components/testimonials'
 import { CallToAction } from '../components/callToAction'
 import { PortfolioDisplay } from '../components/portfolioDisplay'
 import { PortfolioHero } from '../components/portfolioHero'
-import { PortfolioIntro } from '../components/portfolioIntro'
 import { FrequentlyAskedQuestions } from '../components/frequentlyAskedQuestions'
-import { Header } from '../components/header'
+import { Testimonials } from '../components/testimonials'
 
 const portfolioPage = ({ data }) => (
 	<Layout>
@@ -22,8 +19,9 @@ const portfolioPage = ({ data }) => (
 		<PortfolioDisplay
 			data={data.allStrapiPortfolio.edges}
 		/>
+		<Testimonials />
+		<FrequentlyAskedQuestions />
 		<CallToAction />
-		<FrequentlyAskedQuestions data={data.allStrapiQuestion.edges}/>
 	</Layout>
 )
 
@@ -48,14 +46,5 @@ export const query = graphql`
 	      }
 	    }
 	  }
-		allStrapiQuestion {
-	    edges {
-	      node {
-					id
-	        title
-	        answer
-    		}
-  		}
-		}
   }
 `;

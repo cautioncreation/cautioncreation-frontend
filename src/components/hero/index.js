@@ -5,7 +5,6 @@ import { Container, Row, Column } from '../grid'
 import {
 	StyledContainer,
 	StyledBackground,
-	StyledTextContainer,
 	StyledTitle,
 	StyledText
 } from './style'

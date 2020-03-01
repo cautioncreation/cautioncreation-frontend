@@ -4,7 +4,6 @@ import { Helmet } from 'react-helmet'
 
 import Layout from '../layouts'
 import { ServicesHero } from '../components/servicesHero'
-import { Testimonials } from '../components/testimonials'
 import { ServicesDescription } from '../components/servicesDescription'
 
 const servicesPage = ({ data }) => (

@@ -1,7 +1,13 @@
 import styled from 'styled-components'
-import Image from 'gatsby-image'
 
-import { StyledColumn as Column } from '../grid/style'
+import {
+	StyledColumn as Column,
+	StyledRow as Row,
+ } from '../grid/style'
+
+export const StyledRow = styled(Row)`
+	padding-bottom: 3rem;
+`
 
 export const StyledColumn = styled(Column)`
 	display: flex;

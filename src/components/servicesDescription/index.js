@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { SectionStatic, Column, Row } from '../grid'
+import { SectionStatic, Column } from '../grid'
 import { Button } from '../button'
 
 import WorkInProgress from '../../images/svg/undraw_work_in_progress.svg'
@@ -8,6 +8,7 @@ import MobileWireframe from '../../images/svg/undraw_mobile_wireframe.svg'
 import CleanUp from '../../images/svg/undraw_clean_up.svg'
 
 import {
+	StyledRow,
 	StyledColumn,
 	StyledColumnRight,
 	StyledVector,
@@ -20,7 +21,7 @@ import {
 
 export const ServicesDescription = ({ src }) => (
 	<SectionStatic>
-		<Row>
+		<StyledRow>
 			<Column xs="0" lg="1"/>
 			<StyledColumn xs="12" lg="6">
 				<StyledHeader>Development</StyledHeader>
@@ -35,8 +36,8 @@ export const ServicesDescription = ({ src }) => (
 				</StyledVectorWrapper>
 			</Column>
 			<Column xs="0" lg="1"/>
-		</Row>
-		<Row>
+		</StyledRow>
+		<StyledRow>
 			<Column xs="0" lg="1"/>
 			<Column xs="12" lg="4">
 				<StyledVectorWrapper>
@@ -51,8 +52,8 @@ export const ServicesDescription = ({ src }) => (
 				<Button href="/services/branding-and-design">Learn More</Button>
 			</StyledColumnRight>
 			<Column xs="0" lg="1"/>
-		</Row>
-		<Row>
+		</StyledRow>
+		<StyledRow>
 			<Column xs="0" lg="1"/>
 			<StyledColumn xs="12" lg="6">
 				<StyledHeader>Maintenance</StyledHeader>
@@ -67,6 +68,6 @@ export const ServicesDescription = ({ src }) => (
 				</StyledVectorWrapper>
 			</Column>
 			<Column xs="0" lg="1"/>
-		</Row>
+		</StyledRow>
 	</SectionStatic>
 )

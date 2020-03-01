@@ -1,7 +1,7 @@
 import React from 'react'
 import { withTheme } from 'styled-components'
 
-import { SectionStatic, Row } from '../grid'
+import { SectionStatic } from '../grid'
 import { Button } from '../button'
 
 import {

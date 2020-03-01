@@ -21,7 +21,7 @@ const aboutPage = ({ data }) => (
 			light
 		/>
 		<OurPrinciples />
-		<Testimonials data={data.allStrapiTestimonial.edges}/>
+		<Testimonials />
 		<MeetManagement />
 	</Layout>
 )
@@ -37,16 +37,5 @@ export const query = graphql`
         }
       }
     }
-	  allStrapiTestimonial {
-	    edges {
-	      node {
-					id
-	        name
-	        testimonial
-	        position
-	        company
-    		}
-  		}
-		}
   }
 `;

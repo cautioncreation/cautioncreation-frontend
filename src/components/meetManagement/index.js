@@ -25,7 +25,7 @@ export const MeetManagement = () => {
 	return (
 		<SectionStatic>
 			<Row>
-				<Column xs="2" lg="1" spacer/>
+				<Column xs="2" lg="0" spacer/>
 				<Column xs="8" lg="3">
 					<StyledImageWrapper>
 						<StyledImage fluid={data.portrait.childImageSharp.fluid}>
@@ -34,7 +34,7 @@ export const MeetManagement = () => {
 					</StyledImageWrapper>
 				</Column>
 				<Column xs="2" lg="0" spacer />
-				<Column xs="12" lg="7">
+				<Column xs="12" lg="9">
 					<StyledTextWrapper>
 						<StyledTitle>
 							Meet Management
@@ -50,7 +50,6 @@ export const MeetManagement = () => {
 						</StyledText>
 					</StyledTextWrapper>
 				</Column>
-				<Column xs="0" lg="1" spacer/>
 			</Row>
 		</SectionStatic>
 	)

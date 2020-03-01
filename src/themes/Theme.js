@@ -83,6 +83,7 @@ const GlobalStyle = createGlobalStyle`
 		color: ${props => props.theme.colors.mediumGrey};
 		font-weight: 300;
 		box-sizing: border-box;
+		line-height: 1.4;
 	}
 
 	input:focus, textarea:focus, select:focus, button:focus{
@@ -93,5 +94,6 @@ const GlobalStyle = createGlobalStyle`
 		font-weight: 500;
 		font-family: ${props => props.theme.fonts.primary};
 		color: ${props => props.theme.colors.black};
+		line-height: 1.15;
 	}
 `
