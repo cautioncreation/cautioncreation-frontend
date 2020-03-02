@@ -11,7 +11,9 @@ import { Hero } from '../hero'
 import { Column } from '../grid'
 import { Button } from '../button'
 import {
+	StyledHeroColumn,
 	StyledTitle,
+	StyledText,
 	StyledContainer,
 	StyledSocialContainer,
 	StyledSocialLink,
@@ -24,22 +26,24 @@ import {
 export const HomeHero = ({ src }) => (
 	<Hero src={src}>
 			<Column xs='0' md='1' lg='2'/>
-			<Column xs='12' md='10' lg='8' flex center>
-				<Typing loop={true}>
-					<StyledTitle>
-						<Typing.Delay ms={100} />
-						Minimalism when it matters.
-						<Typing.Delay ms={2000} />
-						<Typing.Backspace count={28} />
-						Complexity where it counts.
-						<Typing.Delay ms={2000} />
-						<Typing.Backspace count={28} />
-					</StyledTitle>
-				</Typing>
+			<StyledHeroColumn xs='12' md='10' lg='8'>
 				<StyledContainer>
+					<Typing loop={true} startDelay={100} speed={75}>
+						<StyledTitle>
+							Minimalism when it matters.
+							<Typing.Delay ms={2000} />
+							<Typing.Backspace count={28} />
+							Complexity where it counts.
+							<Typing.Delay ms={2000} />
+							<Typing.Backspace count={28} />
+						</StyledTitle>
+					</Typing>
+					<StyledText>
+						Caution Creation is a web development agency which specializes in responsive web applications for small businesses and startups.
+					</StyledText>
 					<Button href='/hello' outline pill large>Request A Quote</Button>
 				</StyledContainer>
-			</Column>
+			</StyledHeroColumn>
 			<Column xs='0' md='1' lg='2'/>
 			<StyledSocialContainer>
 				<StyledSocialLink href="https://facebook.com/cautioncreation" target="_blank" aria-label="facebook">
@@ -59,6 +63,5 @@ export const HomeHero = ({ src }) => (
 				<StyledArrowIcon src={DownArrow} alt="Scroll Down Arrow"/>
 				<StyledArrowText>Scroll</StyledArrowText>
 			</StyledArrowContainer>
-
 	</Hero>
 )

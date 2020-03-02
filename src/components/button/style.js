@@ -52,9 +52,16 @@ export const StyledButton = styled.button`
 	` : null}
 
 	${props => props.large ? css`
-		font-size: 2rem;
+		font-size: 1.5rem;
 		${props => props.pill ? css`
-			border-radius: 26px;
+			border-radius: 22px;
 		` : null}
+		@media(min-width: ${props => props.theme.breakpoints.lg}) {
+			font-size: 2rem;
+			${props => props.pill ? css`
+				border-radius: 26px;
+			` : null}
+		}
+
 	` : null}
 `
