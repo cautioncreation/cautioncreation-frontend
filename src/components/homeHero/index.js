@@ -1,4 +1,5 @@
 import React from 'react'
+import Typing from 'react-typing-animation';
 
 import Facebook from '../../images/svg/facebook.svg'
 import Instagram from '../../images/svg/instagram.svg'
@@ -24,7 +25,17 @@ export const HomeHero = ({ src }) => (
 	<Hero src={src}>
 			<Column xs='0' md='1' lg='2'/>
 			<Column xs='12' md='10' lg='8' flex center>
-				<StyledTitle>Minimalism where it matters. Complexity when it counts.</StyledTitle>
+				<Typing loop={true}>
+					<StyledTitle>
+						<Typing.Delay ms={100} />
+						Minimalism when it matters.
+						<Typing.Delay ms={2000} />
+						<Typing.Backspace count={28} />
+						Complexity where it counts.
+						<Typing.Delay ms={2000} />
+						<Typing.Backspace count={28} />
+					</StyledTitle>
+				</Typing>
 				<StyledContainer>
 					<Button href='/hello' outline pill large>Request A Quote</Button>
 				</StyledContainer>

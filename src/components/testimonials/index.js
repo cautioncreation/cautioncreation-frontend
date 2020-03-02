@@ -1,6 +1,6 @@
 import React from 'react'
 import { withTheme } from 'styled-components'
-import { useStaticQuery } from 'gatsby'
+import { useStaticQuery, graphql } from 'gatsby'
 
 import { SectionStatic, Row } from '../grid'
 import { Slider } from '../slider'
