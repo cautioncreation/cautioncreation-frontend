@@ -5,8 +5,11 @@ import { Container, Row, Column } from '../grid'
 import {
 	StyledContainer,
 	StyledBackground,
-	StyledTitle,
-	StyledText
+	StyledSmallBackground,
+	StyledTint,
+	StyledTextColumn,
+	StyledSubtitle,
+	StyledTitle
 } from './style'
 
 export const Hero = ({ children, src, alt }) => (
@@ -17,19 +20,20 @@ export const Hero = ({ children, src, alt }) => (
 	</StyledContainer>
 )
 
-export const HeroSmall = ({ children, src, alt, title, text, light }) => (
+export const HeroSmall = ({ children, src, alt, title, text, darken }) => (
 	<StyledContainer>
-		<StyledBackground Tag="div" fluid={src} alt={alt} height="50vh">
+		<StyledSmallBackground Tag="div" fluid={src} alt={alt}>
+			{darken ? <StyledTint darken={darken} /> : null}
 			<Container>
 				<Row>
-					<Column xs="0" lg="2" spacer />
-					<Column xs="12" lg="6">
-						<StyledTitle light={light}>{title}</StyledTitle>
-						<StyledText light={light}>{text}</StyledText>
-					</Column>
-					<Column xs="0" lg="4" spacer />
+					<Column xs="0" lg="1" spacer />
+					<StyledTextColumn xs="12" lg="6">
+						<StyledSubtitle>{title}</StyledSubtitle>
+						<StyledTitle>{text}</StyledTitle>
+					</StyledTextColumn>
+					<Column xs="0" lg="5" spacer />
 				</Row>
 			</Container>
-		</StyledBackground>
+		</StyledSmallBackground>
 	</StyledContainer>
 )

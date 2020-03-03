@@ -18,22 +18,24 @@ export const Form = ({ children }) => (
 	</StyledForm>
 )
 
-export const Input = ({ children, id, label, type, name, required }) => (
-	<>
-		<StyledLabel for={id} required={required}>
-			{label}
-		</StyledLabel>
-		<StyledInput type={type} id={id} name={name} required={required}/>
-	</>
+export const Input = ({ children, id, label, type, name, required, placeholder }) => (
+	<StyledInput
+		type={type}
+		id={id}
+		name={name}
+		required={required}
+		placeholder={placeholder}
+	/>
 )
 
-export const Textarea = ({ children, id, label, name, required, rows }) => (
-	<>
-		<StyledLabel for={id} required={required}>
-			{label}
-		</StyledLabel>
-		<StyledTextarea id={id} name={name} required={required} rows={rows}/>
-	</>
+export const Textarea = ({ children, id, label, name, required, rows, placeholder }) => (
+	<StyledTextarea
+		id={id}
+		name={name}
+		required={required}
+		rows={rows}
+		placeholder={placeholder}
+	/>
 )
 
 export const Checkbox = ({ id, label, type, name, required }) => (

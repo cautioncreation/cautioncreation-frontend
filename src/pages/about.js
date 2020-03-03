@@ -18,7 +18,7 @@ const aboutPage = ({ data }) => (
 			src={data.heroImage.childImageSharp.fluid}
 			title="About Us"
 			text="We made a list of our priorities and our clients are at the top of it."
-			light
+			darken="0.4"
 		/>
 		<OurPrinciples />
 		<Testimonials />
@@ -30,7 +30,7 @@ export default aboutPage
 
 export const query = graphql`
   query aboutQuery {
-		heroImage:file(relativePath: { eq: "meeting-board.jpg" }) {
+		heroImage:file(relativePath: { eq: "skyscrapers.jpeg" }) {
       childImageSharp {
         fluid(quality: 100) {
           ...GatsbyImageSharpFluid

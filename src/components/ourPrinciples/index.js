@@ -31,9 +31,9 @@ export const OurPrinciples = () => (
 				</StyledParagraph>
 			</Column>
 			<Column xs="12" lg="4">
-				<StyledSubtitle>Near Perfection</StyledSubtitle>
+				<StyledSubtitle>Simplicity</StyledSubtitle>
 				<StyledParagraph>
-
+					Never uderestimate the power of simplicity. A website designed with simplicity in mind will allow users to follow a more structured information flow, and interact with your site in a more meaningful way.
 				</StyledParagraph>
 			</Column>
 		</Row>

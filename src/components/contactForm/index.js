@@ -17,19 +17,19 @@ export const ContactForm = ({ data }) => (
 				<Form>
 					<Row>
 						<Column xs="12" md="6">
-							<Input type="text" label="First Name" id="firstNameInput" name="first_name" required/>
+							<Input type="text" placeholder="First Name" id="firstNameInput" name="first_name" required/>
 						</Column>
 						<Column xs="12" md="6">
-							<Input type="text" label="Last Name" id="lastNameInput" name="last_name" required/>
+							<Input type="text" placeholder="Last Name" id="lastNameInput" name="last_name" required/>
 						</Column>
 						<Column xs="12" md="6">
-							<Input type="email" label="Email Address" id="emailInput" name="email" required/>
+							<Input type="email" placeholder="Email Address" id="emailInput" name="email" required/>
 						</Column>
 						<Column xs="12" md="6">
-							<Input type="text" label="Business Name" id="businessNameInput" name="business_name"/>
+							<Input type="text" placeholder="Business Name" id="businessNameInput" name="business_name"/>
 						</Column>
 						<Column xs="12">
-							<Textarea rows="6" label="Your Message" id="messageInput" name="message" required/>
+							<Textarea rows="1" placeholder="Your Message" id="messageInput" name="message" required/>
 						</Column>
 						<Column xs="12">
 							<Checkbox label="By checking this box, you are agreeing to the Privacy Policy and Cookie Policy." id="agreementCheckbox" name="agreement_checkbox" required/>

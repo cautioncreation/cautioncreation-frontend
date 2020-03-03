@@ -18,13 +18,20 @@ export const StyledLabel = styled.label`
 
 export const StyledInput = styled.input`
 	width: 100%;
+	font-size: 1.25rem;
 	height: 2.5rem;
-	margin-bottom: 1rem;
+	margin-bottom: 2rem;
+	border: none;
+	border-bottom: 1px solid ${props => props.theme.colors.mediumGrey};
 `
 
 export const StyledTextarea = styled.textarea`
 	width: 100%;
-	margin-bottom: 1rem;
+	font-size: 1.25rem;
+	height: 2.5rem;
+	margin-bottom: 2rem;
+	border: none;
+	border-bottom: 1px solid ${props => props.theme.colors.mediumGrey};
 `
 
 export const StyledCheckboxContainer = styled.div`

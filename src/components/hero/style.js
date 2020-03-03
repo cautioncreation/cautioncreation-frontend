@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 import BackgroundImage from 'gatsby-background-image'
 
+import { StyledColumn as Column } from '../grid/style'
+
 export const StyledContainer = styled.section`
 	width: 100%;
 	padding-left: 15px;
@@ -13,43 +15,52 @@ export const StyledBackground = styled(BackgroundImage)`
 	justify-content: center;
 	align-content: center;
 	flex-wrap: wrap;
-	height: ${props => props.height ? props.height : '100vh'};
+	height: 100vh;
 	padding: 0;
 	margin-left: -15px;
 	margin-right: -15px;
-	&:before {
-		z-index: 0 !important;
-		content: ""
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		background-color: black !important;
-		opacity: 0.5;
-	}
 `
 
-export const StyledTextContainer = styled.div`
-	padding: 15px;
+export const StyledSmallBackground = styled(StyledBackground)`
+	min-height: 35vh;
+	height: auto;
 `
 
-export const StyledTitle = styled.h2`
+export const StyledTint = styled.span`
+&:before {
+	position: absolute;
+	content: "";
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, ${props => props.darken});
+}
+`
+
+export const StyledTextColumn = styled(Column)`
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+`
+
+export const StyledSubtitle = styled.h2`
 	text-align: center;
-	font-weight: 600;
-	font-style: italic;
-	margin: 0;
-	color: ${props => props.light? props.theme.colors.white : null};
+	font-weight: 700;
+	font-family: ${props => props.theme.fonts.secondary};
+	margin: 0 0 1rem;
+	color: ${props => props.theme.colors.white};
 	@media(min-width: ${props => props.theme.breakpoints.lg}) {
 		text-align: left;
 	}
 `
 
-export const StyledText = styled.h1`
+export const StyledTitle = styled.h1`
 	text-align: center;
+	line-height: 1;
+	font-family: ${props => props.theme.fonts.secondary};
 	font-weight: 700;
 	margin: 0;
-	color: ${props => props.light? props.theme.colors.white : null};
+	color: ${props => props.theme.colors.white};
 	@media(min-width: ${props => props.theme.breakpoints.lg}) {
 		font-size: 3.25rem;
 		text-align: left;
