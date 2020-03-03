@@ -43,12 +43,12 @@ export const StyledTestimonial = styled.div`
 `
 
 export const StyledText = styled.p`
-	font-size: 1.125rem;
+	font-size: 1rem;
 	text-align: left;
 	margin-top: 0;
 	font-weight: 400;
 	@media(min-width: ${props => props.theme.breakpoints.md}) {
-		font-size: 1.5rem;
+		font-size: 1.25rem;
 	}
 `
 

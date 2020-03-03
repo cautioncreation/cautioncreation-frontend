@@ -18,7 +18,6 @@ export const StyledColumn = styled(Column)`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: space-between;
 	padding-top: 40px;
 	padding-bottom: 40px;
 `
@@ -30,12 +29,12 @@ export const StyledSVG = styled.img`
 export const StyledTitle = styled.h2`
 	color: ${props => props.theme.colors.white};
 	margin-bottom: 0;
-	font-weight: 500;
+	font-weight: 600;
 	text-align: center;
 `
 export const StyledText = styled.p`
 	color: ${props => props.theme.colors.white};
-	font-size: 1.25rem;
+	font-size: 1.125rem;
 	margin-bottom: 0;
 	text-align: center;
 `

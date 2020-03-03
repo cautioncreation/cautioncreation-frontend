@@ -12,7 +12,7 @@ import {
 export const OurPrinciples = () => (
 	<SectionStatic>
 		<Row>
-			<Column>
+			<Column xs="12">
 				<StyledTitle>
 					Our Principles
 				</StyledTitle>

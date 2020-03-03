@@ -28,7 +28,7 @@ export const HomeHero = ({ src }) => (
 			<Column xs='0' md='1' lg='2'/>
 			<StyledHeroColumn xs='12' md='10' lg='8'>
 				<StyledContainer>
-					<Typing loop={true} startDelay={100} speed={75}>
+					<Typing loop={true} speed={75}>
 						<StyledTitle>
 							Minimalism when it matters.
 							<Typing.Delay ms={2000} />

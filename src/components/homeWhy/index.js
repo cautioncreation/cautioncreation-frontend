@@ -21,14 +21,14 @@ export const HomeWhy = withTheme(({ theme }) => (
 				<StyledSVG src={Browser} alt="Website Icon"/>
 				<StyledTitle>Simple in Every Way</StyledTitle>
 				<StyledText>
-					You and your users will love how easy it is to use and make changes to your website.
+					You and your users will be amazed with how easy it is to use and make changes to your website.
 				</StyledText>
 			</StyledColumn>
 			<StyledColumn xs="12" lg="4">
 				<StyledSVG src={Lightning} alt="Lignting Icon"/>
 				<StyledTitle>Lightning Fast</StyledTitle>
 				<StyledText>
-					Our websites are specifically optimized to be fast, so you can keep your bounce rate low!
+					Our websites are specifically optimized to be fast, so you can keep your bounce rate low and your traffic high!
 				</StyledText>
 			</StyledColumn>
 			<StyledColumn xs="12" lg="4">

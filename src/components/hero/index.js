@@ -11,7 +11,7 @@ import {
 
 export const Hero = ({ children, src, alt }) => (
 	<StyledContainer>
-		<StyledBackground Tag="div" fluid={src} alt={alt} critical>
+		<StyledBackground Tag="div" fluid={src} alt={alt}>
 			{children}
 		</StyledBackground>
 	</StyledContainer>
@@ -19,7 +19,7 @@ export const Hero = ({ children, src, alt }) => (
 
 export const HeroSmall = ({ children, src, alt, title, text, light }) => (
 	<StyledContainer>
-		<StyledBackground Tag="div" fluid={src} alt={alt} height="50vh" critical>
+		<StyledBackground Tag="div" fluid={src} alt={alt} height="50vh">
 			<Container>
 				<Row>
 					<Column xs="0" lg="2" spacer />
