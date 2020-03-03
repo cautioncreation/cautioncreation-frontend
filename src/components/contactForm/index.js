@@ -5,6 +5,7 @@ import { Button } from '../button'
 import { SectionStatic, Row, Column } from '../grid'
 
 import {
+	StyledPageTitle,
 	StyledInfoContainer,
 	StyledTitle,
 	StyledInfo,
@@ -12,6 +13,7 @@ import {
 
 export const ContactForm = ({ data }) => (
 	<SectionStatic>
+		<StyledPageTitle>Contact Us</StyledPageTitle>
 		<Row>
 			<Column xs="12" lg="8">
 				<Form>
@@ -35,7 +37,7 @@ export const ContactForm = ({ data }) => (
 							<Checkbox label="By checking this box, you are agreeing to the Privacy Policy and Cookie Policy." id="agreementCheckbox" name="agreement_checkbox" required/>
 						</Column>
 						<Column xs="12">
-							<Button type="submit" yellow pill>
+							<Button type="submit">
 								Submit
 							</Button>
 						</Column>
