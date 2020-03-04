@@ -34,7 +34,7 @@ const theme = {
 		mediumGrey: "#707070",
   },
 	fonts: {
-		primary: ['"Dosis", sans-serif'],
+		primary: ['"Exo", sans-serif'],
 	  secondary: ['"Exo", sans-serif'],
 	},
 	gradients: {
@@ -73,11 +73,10 @@ const GlobalStyle = createGlobalStyle`
 	a {
 		color: ${props => props.theme.colors.blue};
 		text-decoration: none;
-		font-weight: 700;
 	}
 
 	*, ::after, ::before {
-		font-family: ${props => props.theme.fonts.secondary};
+		font-family: ${props => props.theme.fonts.primary};
 		color: ${props => props.theme.colors.mediumGrey};
 		font-weight: 300;
 		box-sizing: border-box;
@@ -90,7 +89,7 @@ const GlobalStyle = createGlobalStyle`
 
 	h1, h2, h3, h4, h5, h6 {
 		font-weight: 500;
-		font-family: ${props => props.theme.fonts.primary};
+		font-family: ${props => props.theme.fonts.secondary};
 		color: ${props => props.theme.colors.black};
 		line-height: 1.15;
 	}

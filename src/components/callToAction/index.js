@@ -12,7 +12,7 @@ import {
 } from './style'
 
 export const CallToAction = withTheme(({ theme }) => (
-	<SectionStatic background={theme.colors.mediumBlue}>
+	<SectionStatic background={theme.colors.darkBlue}>
 		<StyledRow>
 			<StyledColumn xs="12" lg="6">
 				<StyledTitle>

@@ -33,7 +33,7 @@ export const Testimonials = withTheme(({ theme }) => {
   `)
 
 	return (
-		<SectionStatic background={theme.colors.mediumBlue}>
+		<SectionStatic background={theme.colors.darkBlue}>
 				<Row>
 					<StyledColumn xs="12" lg="4">
 						<StyledTitle>

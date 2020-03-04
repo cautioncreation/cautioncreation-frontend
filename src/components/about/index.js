@@ -11,7 +11,7 @@ export const About = () => (
 	<SectionStatic>
 		<Row>
 			<Column xs="12" lg="6">
-				<StyledTitle>We're a <span>small</span> company, and that's something we're <span>proud</span> of.</StyledTitle>
+				<StyledTitle>We're a small company, and we're <span>proud</span> of it.</StyledTitle>
 				<StyledText>
 					Many web development agencies pride themselves in the fact that they're large and established. At Caution Creation, we like to think outside the box and go against the grain. We're small, we're new, and those are advantages. But what does that mean for you? It means we are able to adapt our approach to the needs of our customers, and develop websites that truly represent your brand identity.
 				</StyledText>

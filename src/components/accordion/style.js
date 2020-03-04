@@ -8,7 +8,7 @@ export const StyledHeaderContainer = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	background: ${props => props.theme.colors.mediumBlue};
+	background: ${props => props.theme.colors.darkBlue};
 	border-radius: 5px;
 	${props => props.active ? css`
 		border-top-left-radius: 5px;
