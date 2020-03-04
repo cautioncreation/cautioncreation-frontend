@@ -7,8 +7,9 @@ import { HomeHero } from '../components/homeHero'
 import { HomeIntro } from '../components/homeIntro'
 import { Testimonials } from '../components/testimonials'
 import { ServicesDescription } from '../components/servicesDescription'
-import { HomeWhy } from '../components/homeWhy'
 import { FrequentlyAskedQuestions } from '../components/frequentlyAskedQuestions'
+import { CallToAction } from '../components/callToAction'
+import { Technologies } from '../components/technologies'
 
 const IndexPage = ({ data }) => (
 	<Layout transparentNav>
@@ -20,8 +21,9 @@ const IndexPage = ({ data }) => (
 		<HomeIntro />
 		<Testimonials />
 		<ServicesDescription />
-		<HomeWhy />
+		<Technologies />
 		<FrequentlyAskedQuestions />
+		<CallToAction />
 	</Layout>
 )
 

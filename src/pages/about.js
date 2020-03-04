@@ -5,9 +5,10 @@ import { Helmet } from 'react-helmet'
 import Layout from '../layouts'
 import { HeroSmall } from '../components/hero'
 import { OurPrinciples } from '../components/ourPrinciples'
-import { MeetManagement } from '../components/meetManagement'
+import { Management } from '../components/management'
 import { Testimonials } from '../components/testimonials'
-import { OurTechnologies } from '../components/ourTechnologies'
+import { Technologies } from '../components/technologies'
+import { About } from '../components/about'
 
 const aboutPage = ({ data }) => (
 	<Layout>
@@ -18,14 +19,15 @@ const aboutPage = ({ data }) => (
 		<HeroSmall
 			src={data.heroImage.childImageSharp.fluid}
 			title="About Us"
-			text="We made a list of our priorities and our clients are at the top of it."
+			text="We made a list of our priorities and our clients are at the top."
 			darken="0.5"
 			position="bottom"
 		/>
+		<About />
+		<Technologies />
 		<OurPrinciples />
 		<Testimonials />
-		<MeetManagement />
-		<OurTechnologies />
+		<Management />
 	</Layout>
 )
 

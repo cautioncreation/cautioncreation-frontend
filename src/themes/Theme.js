@@ -71,11 +71,9 @@ const GlobalStyle = createGlobalStyle`
 	}
 
 	a {
-		color: ${props => props.theme.colors.darkGrey};
+		color: ${props => props.theme.colors.blue};
 		text-decoration: none;
-		&:hover {
-
-		}
+		font-weight: 700;
 	}
 
 	*, ::after, ::before {
