@@ -5,6 +5,8 @@ import { Helmet } from 'react-helmet'
 import Layout from '../layouts'
 import { ServicesHero } from '../components/servicesHero'
 import { ServicesDescription } from '../components/servicesDescription'
+import { CallToAction } from '../components/callToAction'
+import { FrequentlyAskedQuestions } from '../components/frequentlyAskedQuestions'
 
 const servicesPage = ({ data }) => (
 	<Layout>
@@ -14,6 +16,8 @@ const servicesPage = ({ data }) => (
 		</Helmet>
 		<ServicesHero />
 		<ServicesDescription />
+		<CallToAction />
+		<FrequentlyAskedQuestions />
 	</Layout>
 )
 

@@ -42,7 +42,7 @@ export const Testimonials = withTheme(({ theme }) => {
 						</StyledTitle>
 					</StyledColumn>
 					<StyledColumn xs="12" lg="8">
-						<Slider interval="12">
+						<Slider interval="12" prefix="testimonials">
 							{data.allStrapiTestimonial.edges.map(({ node }, i) => (
 								<StyledTestimonial key={node.id}>
 									<StyledText>"{node.testimonial}"</StyledText>

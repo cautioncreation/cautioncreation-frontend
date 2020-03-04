@@ -24,6 +24,7 @@ export const StyledBackground = styled(BackgroundImage)`
 export const StyledSmallBackground = styled(StyledBackground)`
 	min-height: 35vh;
 	height: auto;
+	background-position: ${props => props.position} !important;
 `
 
 export const StyledTint = styled.span`

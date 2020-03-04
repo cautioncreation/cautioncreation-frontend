@@ -32,7 +32,6 @@ export const StyledTestimonial = styled.div`
 	border: 2px solid ${props => props.theme.colors.mediumGrey};
 	border-radius: 0.5rem;
 	padding: 1rem;
-	width: 100%;
 	display: flex;
 	flex-direction: column;
 	position: relative;

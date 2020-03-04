@@ -20,9 +20,9 @@ export const Hero = ({ children, src, alt }) => (
 	</StyledContainer>
 )
 
-export const HeroSmall = ({ children, src, alt, title, text, darken }) => (
+export const HeroSmall = ({ children, src, alt, title, text, darken, position }) => (
 	<StyledContainer>
-		<StyledSmallBackground Tag="div" fluid={src} alt={alt}>
+		<StyledSmallBackground Tag="div" fluid={src} alt={alt} position={position}>
 			{darken ? <StyledTint darken={darken} /> : null}
 			<Container>
 				<Row>

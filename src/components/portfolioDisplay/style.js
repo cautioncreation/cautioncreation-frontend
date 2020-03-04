@@ -1,6 +1,21 @@
 import styled from 'styled-components'
 import Image from 'gatsby-image'
 
+export const StyledTitle = styled.h1`
+	text-align: center;
+	font-weight: 700;
+	margin: 0 0 0.5rem;
+	font-family: ${props => props.theme.fonts.secondary};
+	@media(min-width: ${props => props.theme.breakpoints.lg}) {
+		font-size: 3rem;
+	}
+`
+
+export const StyledSubtitle = styled.h2`
+	text-align: center;
+	margin: 0 0 2rem;
+`
+
 export const StyledWrapperLink = styled.a`
 	display: block;
 `

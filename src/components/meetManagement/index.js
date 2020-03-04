@@ -15,7 +15,7 @@ export const MeetManagement = () => {
     query meetManagementQuery {
 			portrait:file(relativePath: { eq: "byron-portrait.jpg" }) {
 	      childImageSharp {
-	        fluid(quality: 100) {
+	        fluid(quality: 93) {
 	          ...GatsbyImageSharpFluid
 	        }
 	      }

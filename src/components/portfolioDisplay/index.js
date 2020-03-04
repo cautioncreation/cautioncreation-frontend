@@ -4,6 +4,8 @@ import { SectionStatic, Row, Column } from '../grid'
 import { Button } from '../button'
 
 import {
+		StyledTitle,
+		StyledSubtitle,
 		StyledWrapperLink,
 		StyledBackground,
 		StyledTextContainer,
@@ -14,6 +16,16 @@ import {
 
 export const PortfolioDisplay = ({ data }) => (
 	<SectionStatic>
+		<Row>
+			<Column xs="0" lg="2" spacer />
+			<Column xs="12" lg="8">
+				<StyledTitle>Some of Our Best Works</StyledTitle>
+				<StyledSubtitle>
+					Here is a collection of our biggest accomplishments, most stylish designs, an 
+				</StyledSubtitle>
+			</Column>
+			<Column xs="0" lg="2" spacer />
+		</Row>
 		<Row>
 			{data.map(({ node }, i) => (
 				<Column xs="12" lg="6">

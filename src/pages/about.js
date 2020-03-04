@@ -7,6 +7,7 @@ import { HeroSmall } from '../components/hero'
 import { OurPrinciples } from '../components/ourPrinciples'
 import { MeetManagement } from '../components/meetManagement'
 import { Testimonials } from '../components/testimonials'
+import { OurTechnologies } from '../components/ourTechnologies'
 
 const aboutPage = ({ data }) => (
 	<Layout>
@@ -18,11 +19,13 @@ const aboutPage = ({ data }) => (
 			src={data.heroImage.childImageSharp.fluid}
 			title="About Us"
 			text="We made a list of our priorities and our clients are at the top of it."
-			darken="0.4"
+			darken="0.5"
+			position="bottom"
 		/>
 		<OurPrinciples />
 		<Testimonials />
 		<MeetManagement />
+		<OurTechnologies />
 	</Layout>
 )
 
@@ -32,7 +35,7 @@ export const query = graphql`
   query aboutQuery {
 		heroImage:file(relativePath: { eq: "skyscrapers.jpeg" }) {
       childImageSharp {
-        fluid(quality: 100) {
+        fluid(quality: 95) {
           ...GatsbyImageSharpFluid
         }
       }

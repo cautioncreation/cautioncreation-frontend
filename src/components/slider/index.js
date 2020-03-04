@@ -30,9 +30,9 @@ export class Slider extends Component {
 	}
 
 	nextSlide() {
-		let icons = document.getElementsByClassName('slider-icon')
-		let items = document.getElementById('sliderContainer').children
-		let iconContainers = document.getElementsByClassName('slider-icon-container')
+		let icons = document.getElementsByClassName(this.props.prefix + "-slider")
+		let items = document.getElementById(this.props.prefix + "Container").children
+		let iconContainers = document.getElementsByClassName(this.props.prefix + "-icon")
 		let length = this.props.children.length
 
 		let increment = 100 / length;
@@ -72,18 +72,23 @@ export class Slider extends Component {
 			})
 		}
 	}
-
 	componentDidMount() {
-		let container = document.getElementById('sliderContainer')
+		let items = document.getElementById(this.props.prefix + "Container").children
+		let container = document.getElementById(this.props.prefix + "Container")
 		let length = this.props.children.length
 
-		if(length % 2 === 0) {
-			container.style.marginLeft = (((length - 2) / 2) * -100 + "%")
+		container.style.width = length / (this.props.show || 1) * 100 + "%"
+
+		for(let i = 0; i < items.length; i++) {
+			items[i].style.width = (100 / length) + "%"
+		}
+
+		if((length - (this.props.show || 1)) % 2 === 0) {
+			container.style.marginLeft = (((length - (this.props.show || 1)) / 2) * -100 / (this.props.show || 1) + "%")
 		}
 		else {
-			container.style.marginLeft = (((length - 1) / 2) * -100 + "%")
+			container.style.marginLeft = (((length - (this.props.show || 1) + 1) / 2) * -100 / (this.props.show || 1) + "%")
 		}
-		container.style.width = (length * 100 + "%")
 		this.nextSlide()
 	}
 
@@ -98,22 +103,25 @@ export class Slider extends Component {
 		}
 	}
 
+	componentWillUnmount() {
+		clearTimeout(this.timer)
+	}
 	render() {
 		return (
 			<StyledWrapper>
-				<StyledContainer id="sliderContainer">
+				<StyledContainer hideIcons={this.props.hideIcons} id={(this.props.prefix + "Container")}>
 					{this.props.children}
 				</StyledContainer>
-				<StyledIconContainer>
+				<StyledIconContainer id={(this.props.prefix + "IconContainer")} hideIcons={this.props.hideIcons}>
 					{this.props.children.map((item, i) => (
 						<StyledIcon
 							key={i}
 							onClick={() => this.handleClick(i)}
-							className={i === 0 ? "slider-icon-container active" : "slider-icon-container"}
+							className={i === 0 ? this.props.prefix + "-icon active" : this.props.prefix + "-icon"}
 							>
 							<StyledIconSlider
 								time={this.props.interval + "s"}
-								className={i === 0 ? "slider-icon active" : "slider-icon"}
+								className={i === 0 ? this.props.prefix + "-slider active" : this.props.prefix + "-slider"}
 							/>
 						</StyledIcon>
 					))}

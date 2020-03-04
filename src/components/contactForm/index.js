@@ -15,7 +15,7 @@ export const ContactForm = ({ data }) => (
 	<SectionStatic>
 		<StyledPageTitle>Contact Us</StyledPageTitle>
 		<Row>
-			<Column xs="12" lg="8">
+			<Column xs="12" md="8">
 				<Form>
 					<Row>
 						<Column xs="12" md="6">
@@ -44,7 +44,7 @@ export const ContactForm = ({ data }) => (
 					</Row>
 				</Form>
 			</Column>
-			<Column xs="12" lg="4">
+			<Column xs="12" md="4">
 				<StyledInfoContainer>
 					<StyledTitle>Phone</StyledTitle>
 					<StyledInfo href="tel: 780-618-6340">

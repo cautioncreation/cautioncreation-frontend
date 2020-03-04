@@ -9,11 +9,11 @@ export const StyledWrapper = styled.div`
 export const StyledContainer = styled.div`
 	position: relative;
 	display: flex;
-	padding: 30px 0;
+	padding: ${props => props.hideIcons ? '15px 0' : '30px 0'};
 `
 
 export const StyledIconContainer = styled.div`
-	display: flex;
+	display: ${props => props.hideIcons ? 'none' : 'flex'};
 	justify-content: center;
 	align-items: center;
 	position: absolute;
