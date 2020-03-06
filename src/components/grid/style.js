@@ -47,8 +47,7 @@ export const StyledColumn = styled.div`
 export const StyledSection = styled.section`
 	width: 100%;
 	padding: 15px;
-	margin-top: 60px;
-	margin-bottom: 100px;
+	margin: 60px 0;
 	background: ${props => props.background};
 `
 

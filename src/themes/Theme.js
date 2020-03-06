@@ -64,6 +64,17 @@ const GlobalStyle = createGlobalStyle`
 	body, html {
 		width: 100%;
 		min-height: 100vh;
+		&::-webkit-scrollbar {
+	  	width: 15px;
+			cursor: pointer;
+		}
+		&::-webkit-scrollbar-track {
+		  background: ${props => props.theme.colors.lightGrey};
+		}
+		&::-webkit-scrollbar-thumb {
+			border-radius: 7.5px;
+		  background-color: ${props => props.theme.colors.mediumGrey};
+		}
 	}
 
 	body {
