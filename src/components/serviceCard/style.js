@@ -60,9 +60,6 @@ export const StyledLinkContainer = styled.div`
 	display: flex;
 	align-items: flex-end;
 	padding: 0 15px;
-	position: absolute;
-	bottom: 15px;
-	right: 30px;
 `
 export const StyledLink = styled.a`
 	display: inline-block;
