@@ -24,7 +24,6 @@ collections:
       - { name: name, label: Name }
       - { name: position, label: Position }
       - { name: company, label: Company }
-      - { name: featured, label: Featured, widget: boolean }
       - {
           name: image,
           label: Image,
@@ -50,6 +49,7 @@ collections:
     fields:
       - { name: company, label: Company }
       - { name: link, label: Link }
+      - { name: featured, label: Featured, widget: boolean }
       - {
           name: services,
           label: Services,
