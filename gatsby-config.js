@@ -5,7 +5,6 @@ module.exports = {
     description: `Caution Creation is proud to provide the most streamlined web development services in the edmonton Area.`,
   },
   plugins: [
-		`gatsby-plugin-netlify-cms`,
 		`gatsby-plugin-netlify`,
 		`gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
