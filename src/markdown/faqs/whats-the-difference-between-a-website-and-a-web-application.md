@@ -1,9 +1,6 @@
 ---
 question: What's the difference between a website and a web application?
 answer: >-
-  <!--StartFragment-->
-
-
   Technically, websites are web applications, and web applications are websites.
   We would like to make a distinction so that we can refer individually to two
   vastly different but related pieces of software. Websites generally perform a
@@ -18,9 +15,4 @@ answer: >-
   affordable, but in many cases applications provide features that must be
   custom coded and are not readily available or easy to create with standard
   content management systems.
-
-
-
-
-  <!--EndFragment-->
 ---
