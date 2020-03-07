@@ -1,13 +1,13 @@
 backend:
   name: github
   repo: cautioncreation/cautioncreation-frontend
-media_folder: static/assets
-public_folder: /assets
+media_folder: src/assets/cms
+public_folder: src/assets/cms
 collections:
   - name: articles
     label: Articles
     label_singular: Article
-    folder: articles
+    folder: src/markdown/articles
     create: true
     fields:
       - { name: path, label: Path }
@@ -17,7 +17,7 @@ collections:
   - name: testimonials
     label: Testimonials
     label_singular: Testimonial
-    folder: testimonials
+    folder: src/markdown/testimonials
     create: true
     delete: true
     fields:
@@ -29,13 +29,13 @@ collections:
           name: image,
           label: Image,
           widget: image,
-          default: "src/images/svg/user-default.svg"
+          default: "./src/images/svg/user-default.svg"
         }
       - { name: testimonial, label: Testimonial, widget: markdown }
   - name: faqs
     label: FAQs
     label_singular: FAQ
-    folder: faqs
+    folder: src/markdown/faqs
     create: true
     delete: true
     fields:
@@ -44,7 +44,7 @@ collections:
   - name: portfolios
     label: Portfolios
     label_singular: Portfolio
-    folder: portfolios
+    folder: src/markdown/portfolios
     create: true
     delete: true
     fields:

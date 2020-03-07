@@ -8,7 +8,6 @@ module.exports = {
 		`gatsby-plugin-netlify-cms`,
 		`gatsby-plugin-netlify`,
 		`gatsby-plugin-styled-components`,
-		`gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -24,6 +23,13 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+		{
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `markdown`,
+        path: `${__dirname}/src/markdown`,
       },
     },
     {
