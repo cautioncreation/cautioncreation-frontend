@@ -4,12 +4,65 @@ backend:
 media_folder: static/assets
 public_folder: /assets
 collections:
-  - name: blog
-    label: Blog
-    folder: blog
+  - name: articles
+    label: Articles
+    label_singular: Article
+    folder: articles
     create: true
     fields:
       - { name: path, label: Path }
       - { name: date, label: Date, widget: datetime }
       - { name: title, label: Title }
       - { name: body, label: Body, widget: markdown }
+  - name: testimonials
+    label: Testimonials
+    label_singular: Testimonial
+    folder: testimonials
+    create: true
+    delete: true
+    fields:
+      - { name: name, label: Name }
+      - { name: position, label: Position }
+      - { name: company, label: Company }
+      - { name: featured, label: Featured, widget: boolean }
+      - {
+          name: image,
+          label: Image,
+          widget: image,
+          default: "src/images/svg/user-default.svg"
+        }
+      - { name: testimonial, label: Testimonial, widget: markdown }
+  - name: faqs
+    label: FAQs
+    label_singular: FAQ
+    folder: faqs
+    create: true
+    delete: true
+    fields:
+      - { name: question, label: Question }
+      - { name: answer, label: Answer, widget: markdown }
+  - name: portfolios
+    label: Portfolios
+    label_singular: Portfolio
+    folder: portfolios
+    create: true
+    delete: true
+    fields:
+      - { name: company, label: Company }
+      - { name: link, label: Link }
+      - {
+          name: services,
+          label: Services,
+          widget: select,
+          options: [
+            "Themed Web Development",
+            "Custom Web Development",
+            "Application Development",
+            "Branding & Design",
+          ]
+        }
+      - {
+          name: image,
+          label: Image,
+          widget: image,
+        }
