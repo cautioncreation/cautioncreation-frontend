@@ -1,8 +1,8 @@
 backend:
   name: github
   repo: cautioncreation/cautioncreation-frontend
-media_folder: src/assets/cms
-public_folder: src/assets/cms
+media_folder: src/images/cms
+public_folder: src/images/cms
 collections:
   - name: articles
     label: Articles
