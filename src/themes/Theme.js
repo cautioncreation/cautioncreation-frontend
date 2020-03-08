@@ -9,7 +9,7 @@ const Theme = ({ children, transparentNav }) => {
 		<ThemeProvider theme={theme}>
 			<GlobalStyle transparentNav={transparentNav}/>
 			<Helmet>
-				<link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet" />
+				<link href="https://fonts.googleapis.com/css?family=Exo:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i&display=swap" rel="preconnect" crossorigin></link>
 			</Helmet>
 			{children}
 		</ThemeProvider>

@@ -33,7 +33,7 @@ export const query = graphql`
   query indexQuery {
     heroImage:file(relativePath: { eq: "chair-and-wall.jpeg" }) {
       childImageSharp {
-        fluid(quality: 90, toFormat: WEBP) {
+        fluid(quality: 95, toFormat: WEBP) {
           ...GatsbyImageSharpFluid
         }
       }
