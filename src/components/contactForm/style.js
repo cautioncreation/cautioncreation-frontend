@@ -25,11 +25,3 @@ export const StyledInfo = styled.a`
 	font-size: 1.25rem;
 	font-weight: 500;
 `
-
-export const StyledAttachmentContainer = styled.div`
-
-`
-
-export const StyledSVG = styled.img`
-	height: 100%;
-`

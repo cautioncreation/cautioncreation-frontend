@@ -19,7 +19,7 @@ export const StyledVector = styled.svg`
 	transform-origin: center;
 `
 
-export const StyledRect = styled.rect`
+const StyledRect = styled.rect`
 	transform-origin: center;
 	transition-duration: 0.4s;
 	fill: ${props => props.theme.colors.white};

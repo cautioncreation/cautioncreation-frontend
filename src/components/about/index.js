@@ -2,7 +2,6 @@ import React from 'react'
 
 import { SectionStatic, Row, Column } from '../grid'
 import {
-	StyledWrapper,
 	StyledTitle,
 	StyledText,
 } from './style'

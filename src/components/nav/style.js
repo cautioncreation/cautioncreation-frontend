@@ -16,12 +16,6 @@ export const StyledNav = styled.nav`
 		};
 	}
 	transition: background 1s;
-	/*
-	background: ${props => props.theme.colors.black};
-	@media(min-width: ${props => props.theme.breakpoints.lg}) {
-		background: ${props => props.scrollPosition === 0 ? 'none' : props.theme.colors.black};
-	}
-	*/
 `
 export const StyledBrand = styled.a`
 	display: flex;
@@ -40,15 +34,5 @@ export const StyledLogo = styled.img`
 	@keyframes logoScale {
 		from {transform: scale(1)}
 		to {transform: scale(1.25)}
-	}
-`
-export const StyledBrandName = styled.h1`
-	display: none;
-	margin: 0;
-	font-weight: 400;
-	line-height: 1;
-	color: ${props => props.theme.colors.white};
-	@media (min-width: ${props => props.theme.breakpoints.sm}) {
-		display: inline-block;
 	}
 `

@@ -1,19 +1,7 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 
 export const StyledForm = styled.form`
 	width: 100%;
-`
-
-export const StyledLabel = styled.label`
-	font-size: 1.5rem;
-	color: ${props => props.theme.colors.black};
-	${props => props.required? css`
-		&:after {
-			content: "*";
-			display: inline;
-			color: red;
-		}
-	` : 'none'}
 `
 
 export const StyledInput = styled.input`

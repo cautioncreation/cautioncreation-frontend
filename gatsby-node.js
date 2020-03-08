@@ -1,10 +1,6 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
+const slugify = require("slugify")
 
-// You can delete this file if you're not using it
+// Netlify redirects
 exports.createPages = ({ actions }) => {
   const { createRedirect } = actions;
   createRedirect({
@@ -26,9 +22,60 @@ exports.createPages = ({ actions }) => {
     force: true
   });
 	createRedirect({
-    fromPath: "https://admin.cautioncreation.com",
+    fromPath: "https://cautioncreation.com/admin",
     toPath: "https://cautioncreation-backend.herokuapp.com/admin",
     isPermanent: true,
     force: true
   });
 };
+
+// Create blog page slugs
+exports.onCreateNode = ({ node, getNode, actions }) => {
+  const { createNodeField } = actions
+  if (node.internal.type === `StrapiArticle`) {
+    const slug = slugify(node.title, {lower: true})
+    createNodeField({
+      node,
+      name: `slug`,
+      value: slug,
+    })
+  }
+}
+
+
+exports.createPages = async ({ graphql, actions }) => {
+  const { createPage } = actions
+  const result = await graphql(
+    `
+      {
+        articles: allStrapiArticle {
+          edges {
+            node {
+              strapiId
+							fields {
+								slug
+							}
+            }
+          }
+				}
+      }
+    `
+  )
+
+  if (result.errors) {
+    throw result.errors
+  }
+
+  // Create blog articles pages.
+  const articles = result.data.articles.edges
+
+  articles.forEach((article, index) => {
+    createPage({
+      path: `/articles/${article.node.fields.slug}`,
+      component: require.resolve("./src/templates/article.js"),
+      context: {
+        id: article.node.strapiId,
+      },
+    })
+  })
+}

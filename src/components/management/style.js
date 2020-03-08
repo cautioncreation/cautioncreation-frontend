@@ -1,10 +1,6 @@
 import styled from 'styled-components'
 import Image from 'gatsby-image'
 
-export const Default = styled.div`
-
-`
-
 export const StyledImageWrapper = styled.div`
 	overflow: hidden;
 	max-height: 100%;

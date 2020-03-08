@@ -4,7 +4,6 @@ import { SectionStatic } from '../grid'
 
 import {
 	StyledTitle,
-	StyledSubTitle,
 	StyledText,
 } from './style'
 
