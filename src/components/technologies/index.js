@@ -56,34 +56,34 @@ export const Technologies = withTheme(({ theme }) => {
 				<StyledColumn xs="12" lg="10">
 					<Slider interval="2" prefix="technologies" show="5" hideIcons>
 						<StyledVectorContainer>
-							<StyledVector fluid={data.sass.publicURL} alt="Sass logo" />
+							<StyledVector src={data.sass.publicURL} alt="Sass logo" />
 						</StyledVectorContainer>
 						<StyledVectorContainer>
-							<StyledVector fluid={data.nodejs.publicURL} alt="Node.js logo" />
+							<StyledVector src={data.nodejs.publicURL} alt="Node.js logo" />
 						</StyledVectorContainer>
 						<StyledVectorContainer>
-							<StyledVector fluid={data.mysql.publicURL} alt="mySQL logo" />
+							<StyledVector src={data.mysql.publicURL} alt="mySQL logo" />
 						</StyledVectorContainer>
 						<StyledVectorContainer>
-							<StyledVector fluid={data.react.publicURL} alt="React.js logo" />
+							<StyledVector src={data.react.publicURL} alt="React.js logo" />
 						</StyledVectorContainer>
 						<StyledVectorContainer>
-							<StyledVector fluid={data.php.publicURL} alt="PHP logo" />
+							<StyledVector src={data.php.publicURL} alt="PHP logo" />
 						</StyledVectorContainer>
 						<StyledVectorContainer>
-							<StyledVector fluid={data.gatsby.publicURL} alt="Gatsby.js logo" />
+							<StyledVector src={data.gatsby.publicURL} alt="Gatsby.js logo" />
 						</StyledVectorContainer>
 						<StyledVectorContainer>
-							<StyledVector fluid={data.netlify.publicURL} alt="Netlify logo" />
+							<StyledVector src={data.netlify.publicURL} alt="Netlify logo" />
 						</StyledVectorContainer>
 						<StyledVectorContainer>
-							<StyledVector fluid={data.strapi.publicURL} alt="Strapi logo" />
+							<StyledVector src={data.strapi.publicURL} alt="Strapi logo" />
 						</StyledVectorContainer>
 						<StyledVectorContainer>
-							<StyledVector fluid={data.heroku.publicURL} alt="Heroku logo" />
+							<StyledVector src={data.heroku.publicURL} alt="Heroku logo" />
 						</StyledVectorContainer>
 						<StyledVectorContainer>
-							<StyledVector fluid={data.bootstrap.publicURL} alt="Bootstrap logo" />
+							<StyledVector src={data.bootstrap.publicURL} alt="Bootstrap logo" />
 						</StyledVectorContainer>
 					</Slider>
 				</StyledColumn>
