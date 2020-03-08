@@ -46,16 +46,16 @@ export const HomeHero = ({ src }) => (
 			</StyledHeroColumn>
 			<Column xs='0' md='1' lg='2'/>
 			<StyledSocialContainer>
-				<StyledSocialLink href="https://facebook.com/cautioncreation" target="_blank" aria-label="facebook">
+				<StyledSocialLink href="https://facebook.com/cautioncreation" target="_blank" rel="noreferrer" aria-label="facebook">
 					<StyledSocialIcon src={Facebook} alt="Facebook icon"/>
 				</StyledSocialLink>
-				<StyledSocialLink href="https://instagram.com/cautioncreation" target="_blank" aria-label="Instagram">
+				<StyledSocialLink href="https://instagram.com/cautioncreation" target="_blank" rel="noreferrer" aria-label="Instagram">
 					<StyledSocialIcon src={Instagram}  alt="Instagram icon"/>
 				</StyledSocialLink>
-				<StyledSocialLink href="https://linkedin.com/in/cautioncreation" target="_blank" aria-label="LinkedIn">
+				<StyledSocialLink href="https://linkedin.com/in/cautioncreation" target="_blank" rel="noreferrer" aria-label="LinkedIn">
 					<StyledSocialIcon src={LinkedIn}  alt="LinkedIn icon"/>
 				</StyledSocialLink>
-				<StyledSocialLink href="https://twitter.com/cautioncreation" target="_blank" aria-label="Twitter">
+				<StyledSocialLink href="https://twitter.com/cautioncreation" target="_blank" rel="noreferrer" aria-label="Twitter">
 					<StyledSocialIcon src={Twitter}  alt="Twitter icon"/>
 				</StyledSocialLink>
 			</StyledSocialContainer>

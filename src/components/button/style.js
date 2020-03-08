@@ -17,10 +17,9 @@ export const StyledButton = styled.button`
 	padding: 0.5rem 1rem;
 	border-radius: 0.25rem;
 	transition: background 1s;
-	color: ${props => props.theme.colors.white};
-	background: ${props => props.theme.colors.blue};
+	color: ${props => props.theme.colors.blue};
+	background: ${props => props.theme.colors.darkBlue};
 	&:hover {
-		color: ${props => props.theme.colors.blue};
 		background: none;
 	}
 
@@ -36,6 +35,7 @@ export const StyledButton = styled.button`
 
 	${props => props.outline ? css`
 		background: none;
+		color: ${props => props.theme.colors.white};
 		&:hover {
 			${props => props.yellow ? css`
 				color: ${props => props.theme.colors.black};

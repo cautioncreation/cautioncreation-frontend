@@ -30,34 +30,34 @@ export const Technologies = withTheme(({ theme }) => (
 			<StyledColumn xs="12" lg="10">
 				<Slider interval="2" prefix="technologies" show="5" hideIcons>
 					<StyledVectorContainer>
-						<StyledVector src={sass} />
+						<StyledVector src={sass} alt="Sass logo" />
 					</StyledVectorContainer>
 					<StyledVectorContainer>
-						<StyledVector src={nodejs} />
+						<StyledVector src={nodejs} alt="Node.js logo" />
 					</StyledVectorContainer>
 					<StyledVectorContainer>
-						<StyledVector src={mysql} />
+						<StyledVector src={mysql} alt="mySQL logo" />
 					</StyledVectorContainer>
 					<StyledVectorContainer>
-						<StyledVector src={react} />
+						<StyledVector src={react} alt="React.js logo" />
 					</StyledVectorContainer>
 					<StyledVectorContainer>
-						<StyledVector src={php} />
+						<StyledVector src={php} alt="PHP logo" />
 					</StyledVectorContainer>
 					<StyledVectorContainer>
-						<StyledVector src={gatsby} />
+						<StyledVector src={gatsby} alt="Gatsby.js logo" />
 					</StyledVectorContainer>
 					<StyledVectorContainer>
-						<StyledVector src={netlify} />
+						<StyledVector src={netlify} alt="Netlify logo" />
 					</StyledVectorContainer>
 					<StyledVectorContainer>
-						<StyledVector src={strapi} />
+						<StyledVector src={strapi} alt="Strapi logo" />
 					</StyledVectorContainer>
 					<StyledVectorContainer>
-						<StyledVector src={heroku} />
+						<StyledVector src={heroku} alt="Heroku logo" />
 					</StyledVectorContainer>
 					<StyledVectorContainer>
-						<StyledVector src={bootstrap} />
+						<StyledVector src={bootstrap} alt="Bootstrap logo" />
 					</StyledVectorContainer>
 				</Slider>
 			</StyledColumn>
