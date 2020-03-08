@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-
+import Image from "gatsby-image"
 import { StyledColumn as Column } from '../grid/style'
 
 export const StyledColumn = styled(Column)`
