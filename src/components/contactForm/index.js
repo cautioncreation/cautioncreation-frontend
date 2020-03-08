@@ -59,7 +59,7 @@ export const ContactForm = ({ data }) => (
 				</StyledInfoContainer>
 				<StyledInfoContainer>
 					<StyledTitle>Address</StyledTitle>
-					<StyledInfo href="tel: 780-618-6340">
+					<StyledInfo href="https://www.google.com/maps/place/13035+200+St+NW,+Edmonton,+AB+T5S+0E1/@53.5916904,-113.6666143,17z/data=!3m1!4b1!4m5!3m4!1s0x53a0271e4125eb8b:0x248ede7059613225!8m2!3d53.5916904!4d-113.6644256">
 						13035 200 St NW,
 						<br />
 						Edmonton AB, T5S 0E1

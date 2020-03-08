@@ -17,7 +17,7 @@ export const Form = ({ children }) => (
 	</StyledForm>
 )
 
-export const Input = ({ children, id, label, type, name, required, placeholder }) => (
+export const Input = ({ id, label, type, name, required, placeholder }) => (
 	<StyledInput
 		type={type}
 		id={id}
@@ -27,7 +27,7 @@ export const Input = ({ children, id, label, type, name, required, placeholder }
 	/>
 )
 
-export const Textarea = ({ children, id, label, name, required, rows, placeholder }) => (
+export const Textarea = ({ id, label, name, required, rows, placeholder }) => (
 	<StyledTextarea
 		id={id}
 		name={name}
