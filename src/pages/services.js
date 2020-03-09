@@ -3,7 +3,6 @@ import { graphql } from "gatsby"
 import { Helmet } from 'react-helmet'
 
 import Layout from '../layouts'
-import { ServicesHero } from '../components/servicesHero'
 import { ServicesDescription } from '../components/servicesDescription'
 import { CallToAction } from '../components/callToAction'
 import { FrequentlyAskedQuestions } from '../components/frequentlyAskedQuestions'
@@ -11,10 +10,9 @@ import { FrequentlyAskedQuestions } from '../components/frequentlyAskedQuestions
 const servicesPage = ({ data }) => (
 	<Layout>
 		<Helmet>
-			<title>Caution Creation | Home</title>
+			<title>Services | Caution Creation</title>
 			<meta name="description" content="Caution Creation is a web development agency which specializes in responsive web applications for small businesses and startups."></meta>
 		</Helmet>
-		<ServicesHero />
 		<ServicesDescription />
 		<CallToAction />
 		<FrequentlyAskedQuestions />

@@ -9,7 +9,14 @@ import {
 	StyledTint,
 	StyledTextColumn,
 	StyledSubtitle,
-	StyledTitle
+	StyledTitle,
+	StyledCartoonContainer,
+	StyledCartoonContainerStatic,
+	StyledCartoonTextColumn,
+	StyledCartoonTextWrapper,
+	StyledCartoonSubTitle,
+	StyledCartoonTitle,
+	StyledCartoonVector,
 } from './style'
 
 export const Hero = ({ children, src, alt }) => (
@@ -36,4 +43,24 @@ export const HeroSmall = ({ children, src, alt, title, text, darken, position })
 			</Container>
 		</StyledSmallBackground>
 	</StyledContainer>
+)
+
+export const CartoonHero = ({ background, subtitle, title, color, src, alt }) => (
+	<StyledCartoonContainer background={background}>
+		<StyledCartoonContainerStatic>
+			<Row>
+				<StyledCartoonTextColumn xs="12" lg="8">
+					<StyledCartoonTextWrapper>
+						<StyledCartoonSubTitle>{subtitle}</StyledCartoonSubTitle>
+						<StyledCartoonTitle color={color}>{title}</StyledCartoonTitle>
+					</StyledCartoonTextWrapper>
+				</StyledCartoonTextColumn>
+				<Column xs="2" lg="0"/>
+				<Column xs="8" lg="4">
+					<StyledCartoonVector src={src} alt={alt}/>
+				</Column>
+				<Column xs="2" lg="0"/>
+			</Row>
+		</StyledCartoonContainerStatic>
+	</StyledCartoonContainer>
 )

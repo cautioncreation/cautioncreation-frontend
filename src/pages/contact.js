@@ -8,15 +8,15 @@ import { ContactForm } from '../components/contactForm'
 const contactPage = ({ data }) => (
 	<Layout>
 		<Helmet>
-			<title>Caution Creation | Home</title>
+			<title>Contact | Caution Creation</title>
 			<meta name="description" content="Caution Creation is a web development agency which specializes in responsive web applications for small businesses and startups."></meta>
 		</Helmet>
 		<HeroSmall
 			src={data.heroImage.childImageSharp.fluid}
 			title="Contact Us"
-			text="No matter the reason for your inquiry, let's set up a time for coffee and sort it out."
+			text="Whatever the reason for your inquiry, let's set up a time for coffee and sort it out."
 			darken="0.4"
-			position="bottom"
+			position="middle"
 		/>
 		<ContactForm />
 	</Layout>

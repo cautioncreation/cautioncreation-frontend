@@ -12,9 +12,9 @@ export const NavDropdown = ({ title, href, children }) => {
 	const [active, setActive] = useState(false)
 
 	return (
-		<StyledDropdownContainer onHover={() => setActive(!active)}>
+		<StyledDropdownContainer>
 			<StyledTitle>{title}</StyledTitle>
-			<StyledDropdown active={active}>
+			<StyledDropdown>
 				{children}
 			</StyledDropdown>
 		</StyledDropdownContainer>

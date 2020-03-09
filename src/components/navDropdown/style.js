@@ -4,9 +4,7 @@ export const StyledDropdownContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	&:hover {
-		position: relative;
-	}
+	position: relative;
 `
 
 export const StyledTitle = styled.a`
@@ -18,7 +16,6 @@ export const StyledTitle = styled.a`
 	color: white;
 	vertical-align: middle;
 	text-decoration: none;
-	transition: width 1s;
 	@media(min-width: ${props => props.theme.breakpoints.lg}) {
 		padding: 8px;
 	}
@@ -29,17 +26,20 @@ export const StyledDropdown = styled.ul`
 	background: ${props => props.theme.colors.white};
 	margin: 0;
 	padding: 1rem 0;
-	display: ${props => props.active ? 'flex' : 'none'};
+	display: none;
 	flex-direction: column;
-	width: auto;
+	${StyledDropdownContainer}:hover & {
+    display: flex;
+  }
+	${StyledTitle}:focus & {
+    display: flex;
+  }
 	@media(min-width: ${props => props.theme.breakpoints.lg}) {
 		position: absolute;
 		left: 8px;
 		top: 100%;
 		right: auto;
 	}
-
-
 `
 
 export const StyledListItem = styled.li`
@@ -49,6 +49,6 @@ export const StyledListItem = styled.li`
 	text-align: center;
 `
 
-export const StyledLink = styled.div`
-
+export const StyledLink = styled.a`
+	display: block;
 `
