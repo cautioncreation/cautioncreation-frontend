@@ -4,7 +4,10 @@ import { Helmet } from 'react-helmet'
 
 import Layout from '../layouts'
 import { CartoonHero } from '../components/hero'
+import { OurApproach } from '../components/ourApproach'
+import { Technologies } from '../components/technologies'
 import { DevelopmentServices } from '../components/developmentServices'
+import { CallToAction } from '../components/callToAction'
 
 const developmentPage = ({ theme, data }) => (
 	<Layout>
@@ -14,11 +17,13 @@ const developmentPage = ({ theme, data }) => (
 		</Helmet>
 		<CartoonHero
 			subtitle="Development Services"
-			title="Businesses big or small, we develop them all!"
+			title="Websites big or small, we will develop them all!"
 			src={data.heroImage.publicURL}
 		/>
+		<OurApproach />
+		<Technologies />
 		<DevelopmentServices />
-
+		<CallToAction />
 	</Layout>
 )
 

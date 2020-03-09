@@ -1,7 +1,7 @@
 import React from 'react'
 import { withTheme } from 'styled-components'
 
-import { SectionStatic } from '../grid'
+import { ContainerStatic } from '../grid'
 import { Button } from '../button'
 
 import {
@@ -12,7 +12,7 @@ import {
 } from './style'
 
 export const CallToAction = withTheme(({ theme }) => (
-	<SectionStatic background={theme.colors.darkBlue}>
+	<ContainerStatic background={theme.colors.darkBlue}>
 		<StyledRow>
 			<StyledColumn xs="12" lg="6">
 				<StyledTitle>
@@ -28,5 +28,5 @@ export const CallToAction = withTheme(({ theme }) => (
 				</Button>
 			</StyledColumn>
 		</StyledRow>
-	</SectionStatic>
+	</ContainerStatic>
 ))

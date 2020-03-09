@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet'
 import Layout from '../layouts'
 import { CartoonHero } from '../components/hero'
 import { MaintenancePackages } from '../components/maintenancePackages'
+import { CallToAction } from '../components/callToAction'
 
 const maintenancePage = ({ data }) => (
 	<Layout>
@@ -17,6 +18,7 @@ const maintenancePage = ({ data }) => (
 			src={data.heroImage.publicURL}
 		/>
 		<MaintenancePackages />
+		<CallToAction />
 	</Layout>
 )
 

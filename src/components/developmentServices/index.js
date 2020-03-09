@@ -1,11 +1,15 @@
 import React from 'react'
 
 import { SectionStatic, Row } from '../grid'
-
 import { ServiceCard } from '../serviceCard'
+
+import {
+	StyledTitle,
+} from './style'
 
 export const DevelopmentServices = () => (
 	<SectionStatic>
+		<StyledTitle>Development Services</StyledTitle>
 		<Row>
 			<ServiceCard
 				service="Themed Web Development"

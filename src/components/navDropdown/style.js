@@ -19,7 +19,7 @@ export const StyledTitle = styled.a`
 		${StyledDropdownContainer}:hover & {
 			position: relative;
 			&:after {
-				content: '';
+				content: "";
 				display: block;
 				border-top: 2px solid ${props => props.theme.colors.yellow};
 				width: 100%;

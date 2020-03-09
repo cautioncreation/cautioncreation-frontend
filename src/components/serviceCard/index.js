@@ -17,7 +17,7 @@ import {
 } from './style'
 
 export const ServiceCard = ({ service, price, paragraph, subtitle, features }) => (
-	<Column xs="12" lg="4">
+	<Column xs="12" md="6" lg="4">
 		<Card>
 			<StyledTitle dangerouslySetInnerHTML={{__html: service}}/>
 			<StyledSubtext>Starting At</StyledSubtext>
