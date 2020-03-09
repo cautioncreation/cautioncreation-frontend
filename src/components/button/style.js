@@ -24,6 +24,10 @@ export const StyledButton = styled.button`
 		color: ${props => props.theme.colors.mediumBlue};
 	}
 
+	${props => props.fullWidth ? css`
+		width: 100%;
+	` : null}
+
 	${props => props.lightBlue ? css`
 		border: 0.125rem solid ${props => props.theme.colors.blue};
 		background: ${props => props.theme.colors.blue};

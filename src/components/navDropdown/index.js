@@ -4,7 +4,6 @@ import {
 	StyledDropdownContainer,
 	StyledTitle,
 	StyledDropdown,
-	StyledListItem,
 	StyledLink,
 } from './style'
 
@@ -22,7 +21,5 @@ export const NavDropdown = ({ title, href, children }) => {
 }
 
 export const NavDropdownLink = ({ children, href }) => (
-	<StyledListItem>
-		<StyledLink href={href}>{children}</StyledLink>
-	</StyledListItem>
+	<StyledLink href={href}>{children}</StyledLink>
 )

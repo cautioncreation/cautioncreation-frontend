@@ -28,7 +28,7 @@ export const NavMenu = (props) => {
 				<StyledLink href="/portfolio">Portfolio</StyledLink>
 				<StyledLink href="/contact">Contact</StyledLink>
 				<StyledButtonContainer>
-					<Button outline pill lightBlue href="/contact">Get Started</Button>
+					<Button outline pill lightBlue fullWidth href="/contact">Get Started</Button>
 				</StyledButtonContainer>
 			</StyledMenu>
 		</StyledContainer>

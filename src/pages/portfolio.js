@@ -18,8 +18,8 @@ const portfolioPage = ({ data }) => (
 		<HeroSmall
 			src={data.heroImage.childImageSharp.fluid}
 			title="Our Portfolio"
-			text="No matter the size or complexity, we will develop a product your users will love."
-			darken="0.25"
+			text="No matter the size or complexity, we'll develop a product your users will love."
+			darken="0.4"
 			position="top"
 		/>
 		<PortfolioDisplay

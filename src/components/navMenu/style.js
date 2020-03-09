@@ -8,9 +8,8 @@ export const StyledContainer = styled.div`
 
 export const StyledMenu = styled.div`
 	display: flex;
-	align-items: center;
+	align-items: flex-start;
 	flex-direction: column;
-	justify-content: center;
 	position: fixed;
 	z-index: 1;
 	top: 64px;
@@ -19,11 +18,13 @@ export const StyledMenu = styled.div`
 	width: 0;
 	transition: 0.4s;
 	opacity: 0;
+	padding-top: 32px;
 	@media(min-width: ${props => props.theme.breakpoints.lg}) {
 		flex-direction: row;
 		position: static;
 		width: auto;
 		opacity: 1;
+		padding-top: 0;
 	}
 
 	&.active {
@@ -45,7 +46,6 @@ export const StyledLink = styled.a`
 	}
 	&:hover {
 		position: relative;
-		top: 1px;
 		&:after {
 		  content: '';
 		  display: block;
@@ -62,8 +62,13 @@ export const StyledLink = styled.a`
 `
 
 export const StyledButtonContainer = styled.div`
-	padding: 16px;
+	padding: 16px 16px 32px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
 	@media(min-width: ${props => props.theme.breakpoints.lg}) {
 		padding: 4px 0px 4px 16px;
+		position: static;
 	}
 `
