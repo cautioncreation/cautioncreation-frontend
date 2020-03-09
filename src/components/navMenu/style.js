@@ -8,7 +8,6 @@ export const StyledContainer = styled.div`
 
 export const StyledMenu = styled.div`
 	display: flex;
-	align-items: flex-start;
 	flex-direction: column;
 	position: fixed;
 	z-index: 1;
@@ -18,11 +17,10 @@ export const StyledMenu = styled.div`
 	width: 0;
 	transition: 0.4s;
 	opacity: 0;
-	padding-top: 32px;
+	padding-top: 64px;
 	@media(min-width: ${props => props.theme.breakpoints.lg}) {
 		flex-direction: row;
 		position: static;
-		width: auto;
 		opacity: 1;
 		padding-top: 0;
 	}
@@ -31,6 +29,9 @@ export const StyledMenu = styled.div`
 		width: 100%;
 		opacity: 1;
 		background: ${props => props.theme.colors.black};
+		@media(min-width: ${props => props.theme.breakpoints.md}) {
+			width: 320px;
+		}
 	}
 `
 

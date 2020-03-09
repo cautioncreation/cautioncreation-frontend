@@ -10,21 +10,21 @@ export const StyledDropdownContainer = styled.div`
 export const StyledTitle = styled.a`
 	padding: 16px 16px 4px;
 	font-size: 1.25rem;
-	color: white;
+	color: ${props => props.theme.colors.lightGrey};
 	vertical-align: middle;
 	text-decoration: none;
 	transition: width 1s;
 	@media(min-width: ${props => props.theme.breakpoints.lg}) {
 		padding: 8px;
-	}
-	${StyledDropdownContainer}:hover & {
-		position: relative;
-		&:after {
-			content: '';
-			display: block;
-			border-top: 2px solid ${props => props.theme.colors.yellow};
-			width: 100%;
-			animation: line 0.7s;
+		${StyledDropdownContainer}:hover & {
+			position: relative;
+			&:after {
+				content: '';
+				display: block;
+				border-top: 2px solid ${props => props.theme.colors.yellow};
+				width: 100%;
+				animation: line 0.7s;
+			}
 		}
 	}
 

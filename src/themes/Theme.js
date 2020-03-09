@@ -63,7 +63,7 @@ const GlobalStyle = createGlobalStyle`
 
 	body, html {
 		width: 100%;
-		min-height: 100vh;
+		height: 100vh;
 		&::-webkit-scrollbar {
 	  	width: 15px;
 			cursor: pointer;
@@ -77,7 +77,10 @@ const GlobalStyle = createGlobalStyle`
 		}
 	}
 
-	body {
+	#gatsby-focus-wrapper {
+		min-height: 100vh;
+		display: flex;
+		flex-wrap: wrap;
 		padding-top: ${props => props.transparentNav === true ? '0px' : '64px'};
 	}
 

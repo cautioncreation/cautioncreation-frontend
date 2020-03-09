@@ -3,7 +3,8 @@ import styled from 'styled-components'
 import { StyledForm as Form, StyledInput as Input } from '../form/style'
 
 export const StyledFooter = styled.footer`
-
+	width: 100%;
+	align-self: flex-end;
 `
 
 export const StyledFooterLink = styled.a`
