@@ -12,8 +12,8 @@ export const NavDropdown = ({ title, href, children }) => {
 
 	return (
 		<StyledDropdownContainer>
-			<StyledTitle>{title}</StyledTitle>
-			<StyledDropdown>
+			<StyledTitle onClick={() => setActive(!active)} active={active}>{title}</StyledTitle>
+			<StyledDropdown active={active}>
 				{children}
 			</StyledDropdown>
 		</StyledDropdownContainer>

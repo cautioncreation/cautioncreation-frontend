@@ -8,14 +8,22 @@ export const StyledDropdownContainer = styled.div`
 `
 
 export const StyledTitle = styled.a`
-	padding: 16px 16px 4px;
+	padding: 16px;
 	font-size: 1.25rem;
-	color: ${props => props.theme.colors.lightGrey};
-	vertical-align: middle;
+	color: ${props => props.theme.colors.white};
 	text-decoration: none;
-	transition: width 1s;
+	transition: width 0.5s;
+	&:after {
+		content: "${props => props.active ? "▴" : "▾"}";
+		margin-left: 5px;
+		color: ${props => props.theme.colors.white};
+	}
 	@media(min-width: ${props => props.theme.breakpoints.lg}) {
 		padding: 8px;
+		&:after {
+			content: "";
+			margin-left: 0;
+		}
 		${StyledDropdownContainer}:hover & {
 			position: relative;
 			&:after {
@@ -40,8 +48,12 @@ export const StyledDropdown = styled.div`
 	flex-direction: column;
 	align-items: flex-start;
 	padding-left: 16px;
+	max-height: ${props => props.active ? '600px' : '0'};
+	overflow: hidden;
+	transition: max-height 1s;
 	@media(min-width: ${props => props.theme.breakpoints.lg}) {
 		display: none;
+		max-height: none;
 		padding: 16px;
 		border-radius: 5px;
 		background: ${props => props.theme.colors.white};
