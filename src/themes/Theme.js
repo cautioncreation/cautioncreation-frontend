@@ -25,7 +25,7 @@ const theme = {
 		black: '#363636',
 		blue: "#42bff5",
 		darkBlue: "#113240",
-		mediumBlue: "#1D5C80",
+		mediumBlue: "#0088BB",
 		lightBlue: "#009GD0",
 		yellow: "#E4EB17",
 		green: "#51B74A",
@@ -82,8 +82,9 @@ const GlobalStyle = createGlobalStyle`
 	}
 
 	a {
-		color: ${props => props.theme.colors.blue};
+		color: ${props => props.theme.colors.mediumBlue};
 		text-decoration: none;
+		font-weight: 600;
 	}
 
 	*, ::after, ::before {

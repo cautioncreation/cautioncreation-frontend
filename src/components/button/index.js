@@ -6,7 +6,7 @@ import {
 } from './style'
 
 export const Button = (props) => {
-  const { href, target, children, disabled, isLoading, ...rest } = props
+  const { href, target, rel, children, disabled, isLoading, ...rest } = props
 
   const button = (
     <StyledButton disabled={disabled || isLoading} {...rest}>
@@ -19,7 +19,7 @@ export const Button = (props) => {
       <StyledLink
         href={href}
         target={target || null}
-        rel={!target ? 'noopener noreferrer' : undefined}
+        rel={rel}
       >
         {button}
       </StyledLink>

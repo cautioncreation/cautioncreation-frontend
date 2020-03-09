@@ -17,7 +17,6 @@ export const StyledMenu = styled.div`
 	right: 0;
 	bottom: 0;
 	width: 0;
-	overflow: hidden;
 	transition: 0.4s;
 	opacity: 0;
 	@media(min-width: ${props => props.theme.breakpoints.lg}) {

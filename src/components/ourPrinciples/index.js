@@ -26,7 +26,7 @@ export const OurPrinciples = () => (
 			<Column xs="12" lg="4">
 
 				<StyledSubtitle>
-					<StyledVector src={puzzle} />
+					<StyledVector src={puzzle} alt="puzzle icon"/>
 					Usability
 				</StyledSubtitle>
 				<StyledParagraph>
@@ -35,7 +35,7 @@ export const OurPrinciples = () => (
 			</Column>
 			<Column xs="12" lg="4">
 				<StyledSubtitle>
-					<StyledVector src={hierarchy} />
+					<StyledVector src={hierarchy} alt="hierarchy icon"/>
 					Optimization
 				</StyledSubtitle>
 				<StyledParagraph>
@@ -44,7 +44,7 @@ export const OurPrinciples = () => (
 			</Column>
 			<Column xs="12" lg="4">
 				<StyledSubtitle>
-					<StyledVector src={boss} />
+					<StyledVector src={boss} alt="man icon"/>
 					Simplicity
 				</StyledSubtitle>
 				<StyledParagraph>

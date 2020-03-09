@@ -11,6 +11,8 @@ export const StyledFooterLink = styled.a`
 	text-align: center;
 	margin: 8px 0 8px;
 	line-height: 1.4;
+	color: ${props => props.theme.colors.blue};
+	font-weight: 500;
 `
 
 export const StyledLogoLink = styled.a`
@@ -35,12 +37,20 @@ export const StyledLogo = styled.img`
 	}
 `
 
-export const StyledFormTitle = styled.h2`
-	color: ${props => props.theme.colors.white};
-	text-align: center;
+export const StyledForm = styled.form`
+
 `
 
-export const StyledForm = styled.form`
+export const StyledFormTitle = styled.label`
+	color: ${props => props.theme.colors.white};
+	text-align: center;
+	display: block;
+	margin: 1rem 0;
+	font-size: 1.5rem;
+	font-weight: 500;
+`
+
+export const StyledInputWrapper = styled.div`
 	display: flex;
 	margin-bottom: 1rem;
 `
@@ -49,6 +59,7 @@ export const StyledInput = styled.input`
 	flex-grow: 2;
 	height: 36px;
 	border: none;
+	padding-left: 10px;
 `
 
 export const StyledSubmit = styled.button`
@@ -58,6 +69,7 @@ export const StyledSubmit = styled.button`
 	background: ${props => props.theme.colors.yellow};
 	font-weight: 500;
 	color: ${props => props.theme.colors.black};
+	cursor: pointer;
 `
 
 export const StyledSocialContainer = styled.div`

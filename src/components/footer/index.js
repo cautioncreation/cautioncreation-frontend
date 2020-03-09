@@ -12,6 +12,7 @@ import {
 	StyledLogo,
 	StyledFormTitle,
 	StyledForm,
+	StyledInputWrapper,
 	StyledInput,
 	StyledSubmit,
 	StyledSocialContainer,
@@ -77,10 +78,12 @@ export const Footer = withTheme(({ theme }) => {
 				<Row>
 					<Column xs="0" lg="2" spacer />
 					<Column xs="12" lg="4">
-						<StyledFormTitle>Join our Weekly Newsletter</StyledFormTitle>
 						<StyledForm>
-							<StyledInput />
-							<StyledSubmit>Join</StyledSubmit>
+							<StyledFormTitle htmlFor="footerEmail">Join our Weekly Newsletter</StyledFormTitle>
+							<StyledInputWrapper>
+								<StyledInput placeholder="Your Email" id="footerEmail" name="email" />
+								<StyledSubmit>Join</StyledSubmit>
+							</StyledInputWrapper>
 						</StyledForm>
 					</Column>
 					<Column xs="12" lg="4">

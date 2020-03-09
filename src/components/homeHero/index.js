@@ -38,7 +38,7 @@ export const HomeHero = ({ src }) => (
 					<StyledText>
 						Caution Creation is a web development agency which specializes in responsive web applications for small businesses and startups.
 					</StyledText>
-					<Button href='/hello' outline pill large>Request A Quote</Button>
+					<Button href='/hello' outline pill large lightBlue>Request A Quote</Button>
 				</StyledContainer>
 			</StyledHeroColumn>
 			<Column xs='0' md='1' lg='2'/>

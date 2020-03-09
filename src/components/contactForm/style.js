@@ -23,5 +23,4 @@ export const StyledTitle = styled.h1`
 
 export const StyledInfo = styled.a`
 	font-size: 1.25rem;
-	font-weight: 500;
 `

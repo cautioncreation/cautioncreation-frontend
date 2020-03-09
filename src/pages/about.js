@@ -34,7 +34,7 @@ const aboutPage = ({ data }) => (
 export default aboutPage
 
 export const query = graphql`
-  query aboutQuery {
+  query aboutPageQuery {
 		heroImage:file(relativePath: { eq: "skyscrapers.jpeg" }) {
       childImageSharp {
         fluid(quality: 95) {
@@ -43,4 +43,4 @@ export const query = graphql`
       }
     }
   }
-`;
+`

@@ -4,7 +4,7 @@ export const StyledSocialLink = styled.a`
 	transition: all 1s;
 
 	&:hover {
-		transform: scale(1.1) rotate(360deg);
+		transform: rotate(360deg);
 	}
 `
 

@@ -13,15 +13,21 @@ export const StyledButton = styled.button`
 	font-family: ${props => props.theme.fonts.secondary};
 	line-height: 1;
 	cursor: pointer;
-	border: 0.125rem solid ${props => props.theme.colors.blue};
+	border: 0.125rem solid ${props => props.theme.colors.mediumBlue};
 	padding: 0.5rem 1rem;
 	border-radius: 0.25rem;
 	transition: background 1s;
-	color: ${props => props.theme.colors.blue};
-	background: ${props => props.theme.colors.darkBlue};
+	color: ${props => props.theme.colors.white};
+	background: ${props => props.theme.colors.mediumBlue};
 	&:hover {
 		background: none;
+		color: ${props => props.theme.colors.mediumBlue};
 	}
+
+	${props => props.lightBlue ? css`
+		border: 0.125rem solid ${props => props.theme.colors.blue};
+		background: ${props => props.theme.colors.blue};
+	` : null}
 
 	${props => props.yellow ? css`
 		color: ${props => props.theme.colors.black};

@@ -24,7 +24,7 @@ const servicesPage = ({ data }) => (
 export default servicesPage
 
 export const query = graphql`
-  query servicesQuery {
+  query servicesPageQuery {
 		heroImage:file(relativePath: { eq: "chair-and-wall.jpeg" }) {
       childImageSharp {
         fluid(quality: 95) {

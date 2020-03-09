@@ -4,19 +4,27 @@ export const StyledForm = styled.form`
 	width: 100%;
 `
 
+export const StyledLabel = styled.label`
+	font-size: 20px;
+	top: ${props => props.isFocused ? '0px' : '34px'};
+	cursor: text;
+	position: relative;
+	transition: top 0.5s;
+`
+
 export const StyledInput = styled.input`
+	height: 40px;
 	width: 100%;
-	font-size: 1.25rem;
-	height: 2.5rem;
-	margin-bottom: 2rem;
+	font-size: 20px;
+	margin-bottom: 1.5rem;
 	border: none;
 	border-bottom: 1px solid ${props => props.theme.colors.mediumGrey};
 `
 
 export const StyledTextarea = styled.textarea`
 	width: 100%;
-	font-size: 1.25rem;
-	height: 2.5rem;
+	height: 40px;
+	font-size: 20px;
 	margin-bottom: 2rem;
 	border: none;
 	border-bottom: 1px solid ${props => props.theme.colors.mediumGrey};

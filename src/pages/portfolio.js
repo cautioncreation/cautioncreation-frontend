@@ -28,7 +28,7 @@ const portfolioPage = ({ data }) => (
 export default portfolioPage
 
 export const query = graphql`
-  query portfolioQuery {
+  query portfolioPageQuery {
 		allStrapiPortfolio {
 	    edges {
 	      node {
@@ -41,7 +41,8 @@ export const query = graphql`
 			      }
 	        }
 	        company
-	        description
+	        industry
+					services
 					link
 	      }
 	    }

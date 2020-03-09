@@ -30,15 +30,15 @@ export const PortfolioDisplay = ({ data }) => (
 					</StyledWrapperLink>
 					<StyledTextContainer>
 						<StyledService>
-							Development
+							{node.services}
 						</StyledService>
 						<StyledCompany>
 							{node.company}
 						</StyledCompany>
 						<StyledDescription>
-							{node.description}
+							{node.industry}
 						</StyledDescription>
-						<Button href={node.link} target="_blank">Go To Site</Button>
+						<Button href={node.link} target="_blank" rel="noreferrer">Go To Site</Button>
 					</StyledTextContainer>
 				</Column>
 			))}

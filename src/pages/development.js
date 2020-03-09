@@ -27,7 +27,7 @@ const developmentPage = ({ data }) => (
 export default developmentPage
 
 export const query = graphql`
-  query developmentQuery {
+  query developmentPageQuery {
 		heroImage:file(relativePath: { eq: "hands-typing.jpeg" }) {
       childImageSharp {
         fluid(quality: 95) {

@@ -30,7 +30,7 @@ const IndexPage = ({ data }) => (
 export default IndexPage
 
 export const query = graphql`
-  query indexQuery {
+  query indexPageQuery {
     heroImage:file(relativePath: { eq: "chair-and-wall.jpeg" }) {
       childImageSharp {
         fluid(quality: 95, toFormat: WEBP) {
