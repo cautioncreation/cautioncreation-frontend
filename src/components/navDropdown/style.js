@@ -1,11 +1,12 @@
 import styled, { css } from 'styled-components'
 
-export const StyledDropdownContainer = styled.div`
+export const StyledDropdownWrapper = styled.div`
 	display: flex;
 	position: relative;
 	flex-direction: column;
 	align-items: flex-start;
 `
+
 
 export const StyledTitle = styled.a`
 	padding: 16px;
@@ -24,8 +25,9 @@ export const StyledTitle = styled.a`
 			content: "";
 			margin-left: 0;
 		}
-		${StyledDropdownContainer}:hover & {
+		${StyledDropdownWrapper}:hover & {
 			position: relative;
+			padding-bottom: 6px;
 			&:after {
 				content: "";
 				display: block;
@@ -42,34 +44,39 @@ export const StyledTitle = styled.a`
 	}
 `
 
+export const StyledDropdownContainer = styled.div`
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.5s;
+	@media(max-width: ${props => props.theme.breakpoints.lgDown}) {
+		max-height: ${props => props.active ? '400px' : null};
+	}
+	@media(min-width: ${props => props.theme.breakpoints.lg}) {
+		position: absolute;
+		left: 8px;
+		top: 100%;
+		${StyledDropdownWrapper}:hover & {
+			max-height: 400px;
+		}
+	}
+`
+
 export const StyledDropdown = styled.div`
 	display: flex;
 	position: relative;
 	flex-direction: column;
 	align-items: flex-start;
-	padding-left: 16px;
-	max-height: ${props => props.active ? '600px' : '0'};
-	overflow: hidden;
-	transition: max-height 1s;
+	padding-left: 24px;
 	@media(min-width: ${props => props.theme.breakpoints.lg}) {
-		display: none;
-		max-height: none;
 		padding: 16px;
 		border-radius: 5px;
 		background: ${props => props.theme.colors.white};
-		border: 1px solid ${props => props.theme.colors.lightGrey};
-		${StyledDropdownContainer}:hover & {
-			display: flex;
-			position: absolute;
-			left: 8px;
-			top: 100%;
-		}
 	}
 `
 
 export const StyledLink = styled.a`
 	padding: 16px 0;
-	margin: 0 16px;
+	margin: 0px 16px;
 	font-size: 1.125rem;
 	white-space: nowrap;
 	color: white;

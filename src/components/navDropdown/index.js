@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 
 import {
+	StyledDropdownWrapper,
 	StyledDropdownContainer,
 	StyledTitle,
 	StyledDropdown,
@@ -11,12 +12,14 @@ export const NavDropdown = ({ title, href, children }) => {
 	const [active, setActive] = useState(false)
 
 	return (
-		<StyledDropdownContainer>
+		<StyledDropdownWrapper>
 			<StyledTitle onClick={() => setActive(!active)} active={active}>{title}</StyledTitle>
-			<StyledDropdown active={active}>
-				{children}
-			</StyledDropdown>
-		</StyledDropdownContainer>
+			<StyledDropdownContainer active={active}>
+				<StyledDropdown>
+					{children}
+				</StyledDropdown>
+			</StyledDropdownContainer>
+		</StyledDropdownWrapper>
 	)
 }
 
