@@ -9,12 +9,12 @@ import {
 	StyledQuestionColumn,
 	StyledTitle,
 	StyledLine,
-	StyledText,
+	StyledParagraph,
 } from './style'
 
-export const FrequentlyAskedQuestions = () => {
+export const MaintenanceParagraph = () => {
 	const data = useStaticQuery(graphql`
-    query frequentlyAskedQuestionsQuery {
+    query maintenanceParagraphQuery {
 			allStrapiQuestion {
 		    edges {
 		      node {
@@ -32,22 +32,14 @@ export const FrequentlyAskedQuestions = () => {
 			<Row>
 				<Column xs="12" lg="4">
 					<StyledTitle>
-						Frequently Asked Questions
+						Your Website Needs Proper Maintenance
 						<StyledLine />
 					</StyledTitle>
 				</Column>
 				<StyledQuestionColumn xs="12" lg="8">
-					<Row>
-						{data.allStrapiQuestion.edges.map(({ node }, i) => (
-							<Column key={i} xs="12">
-								<Accordion title={node.title}>
-									<StyledText>
-										{node.answer}
-									</StyledText>
-								</Accordion>
-							</Column>
-						))}
-					</Row>
+					<StyledParagraph>
+						Many business owners, especially of small businesses, make the assumption that proper website maintenance is unneeded. That couldn't be further from the truth. Not only will a proper maintenance package protect you from malicious third-parties, it will make doing your day-to-day web tasks more efficient, and in some cases may automate them completely. That means you have more free time to manage your company and grow revenue!
+					</StyledParagraph>
 				</StyledQuestionColumn>
 			</Row>
 		</SectionStatic>

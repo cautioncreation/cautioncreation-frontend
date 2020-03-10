@@ -40,9 +40,12 @@ export const StyledTextContainer = styled.div`
 export const StyledTitle = styled.h3`
 	margin: 0;
 	font-weight: 500;
-	font-size: 1.25rem;
+	font-size: 1.125rem;
 	padding: 10px;
 	color: ${props => props.theme.colors.white};
+	@media(min-width: ${props => props.theme.breakpoints.lg}) {
+		font-size: 1.25rem;
+	}
 `
 
 export const StyledVector = styled.svg`

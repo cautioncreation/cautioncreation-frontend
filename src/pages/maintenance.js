@@ -3,6 +3,8 @@ import { Helmet } from 'react-helmet'
 
 import Layout from '../layouts'
 import { CartoonHero } from '../components/hero'
+import { MaintenanceParagraph } from '../components/maintenanceParagraph'
+import { Testimonials } from '../components/testimonials'
 import { MaintenancePackages } from '../components/maintenancePackages'
 import { CallToAction } from '../components/callToAction'
 
@@ -17,6 +19,8 @@ const maintenancePage = ({ data }) => (
 			title="After development is done, it doesn't mean we are!"
 			src={data.heroImage.publicURL}
 		/>
+		<MaintenanceParagraph />
+		<Testimonials />
 		<MaintenancePackages />
 		<CallToAction />
 	</Layout>

@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import ReactMarkdown from "react-markdown"
 
 import { StyledColumn as Column } from '../grid/style'
 
@@ -29,9 +28,10 @@ export const StyledLine = styled.hr`
 	border-bottom: 5px solid ${props => props.theme.colors.yellow};
 `
 
-export const StyledText = styled(ReactMarkdown)`
-	font-size: 1rem;
+export const StyledParagraph = styled.p`
+	font-size: 1.125rem;
+	margin: 0;
 	@media(min-width: ${props => props.theme.breakpoints.lg}) {
-		font-size: 1.125rem;
+		font-size: 1.25rem;
 	}
 `

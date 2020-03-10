@@ -70,6 +70,7 @@ export const StyledDropdown = styled.div`
 	@media(min-width: ${props => props.theme.breakpoints.lg}) {
 		padding: 16px;
 		border-radius: 5px;
+		border: 1px solid ${props => props.theme.colors.mediumGrey};
 		background: ${props => props.theme.colors.white};
 	}
 `

@@ -9,7 +9,7 @@ import {
 
 export const MaintenancePackages = () => (
 	<SectionStatic>
-		<StyledTitle>Maintenance Packages</StyledTitle>
+		<StyledTitle>WordPress Packages</StyledTitle>
 		<Row>
 			<ServiceCard
 				service="Proprietor Package"
@@ -23,7 +23,6 @@ export const MaintenancePackages = () => (
 					"Weekly System updates",
 					"Website performance checks",
 					"Detailed report every monday"
-
 				]}
 			/>
 			<ServiceCard
@@ -38,19 +37,21 @@ export const MaintenancePackages = () => (
 					"Google analytics integration",
 					"Extensive broken link monitoring",
 					"Weekly Performance Optimizations",
-					"2 hours of development each month"
+					"3 hours of development each month"
 
 				]}
 			/>
 			<ServiceCard
 				service="Corporation Package"
-				price="$400.00 / month"
+				price="$300.00 / month"
 				paragraph="A full-stack application with advanced features for businesses with expansive requirements."
 				subtitle="Package features:"
 				features={[
 					"The Incorporated Package Plus:",
 					"Hourly backups",
 					"Weekly SEO improvements",
+					"Copywriting & guest posts",
+					"Hosting and domain included",
 					"Heavily discounted hourly rate",
 					"5 hours of development each month"
 
