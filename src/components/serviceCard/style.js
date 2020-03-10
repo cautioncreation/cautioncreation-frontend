@@ -20,12 +20,14 @@ export const StyledParagraph = styled.p`
 export const StyledSubtitle = styled.h2`
 	text-align: center;
 	margin: 0 0 1rem;
+	display: ${props => props.hideFeatures ? 'none' : 'block'};
 `
 export const StyledScrollWrapper = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	margin: 0 0 2rem;
+	display: ${props => props.hideFeatures ? 'none' : 'block'};
 `
 export const StyledScrollContainer = styled.div`
 	padding-right: 10px;

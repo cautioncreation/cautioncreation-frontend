@@ -16,15 +16,15 @@ import {
 	StyledLink,
 } from './style'
 
-export const ServiceCard = ({ service, price, paragraph, subtitle, features }) => (
+export const ServiceCard = ({ service, price, paragraph, subtitle, features, hideFeatures }) => (
 	<Column xs="12" md="6" lg="4">
 		<Card>
 			<StyledTitle dangerouslySetInnerHTML={{__html: service}}/>
 			<StyledSubtext>Starting At</StyledSubtext>
 			<StyledPrice dangerouslySetInnerHTML={{__html: price}}/>
 			<StyledParagraph dangerouslySetInnerHTML={{__html: paragraph}}/>
-			<StyledSubtitle dangerouslySetInnerHTML={{__html: subtitle}}/>
-			<StyledScrollWrapper>
+			<StyledSubtitle hideFeatures={hideFeatures} dangerouslySetInnerHTML={{__html: subtitle}}/>
+			<StyledScrollWrapper hideFeatures={hideFeatures}>
 				<StyledScrollContainer>
 					{features.map((text) => (
 						<StyledScrollText dangerouslySetInnerHTML={{__html: text}}/>
