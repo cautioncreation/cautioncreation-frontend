@@ -6,10 +6,7 @@ import { BlogNav } from '../components/blogNav'
 import { Footer } from '../components/footer'
 
 export const BlogLayout = ({ children, hero, transparentNav }) => {
-	const [isDarkMode, setDarkMode] = useState(window.localStorage.getItem('isDarkMode'))
-	console.log(isDarkMode)
-
-	var storage = window.localStorage;
+	const [isDarkMode, setDarkMode] = useState(typeof window !== 'undefined' && window.localStorage.getItem('isDarkMode'))
 
 	useEffect(() => {
 		window.addEventListener('storage', () => {

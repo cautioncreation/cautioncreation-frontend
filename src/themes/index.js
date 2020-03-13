@@ -129,7 +129,7 @@ const GlobalStyle = createGlobalStyle`
 	#gatsby-focus-wrapper {
 		display: flex;
 		flex-wrap: wrap;
-			min-height: 100vh;
+		min-height: 100vh;
 		padding-top: ${props => props.transparentNav === true ? '0px' : '64px'};
 	}
 
