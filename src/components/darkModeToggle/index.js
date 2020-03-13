@@ -7,7 +7,7 @@ import {
 } from './style'
 
 export const DarkModeToggle = () => {
-	const [isDarkMode, setDarkMode] = useState(typeof window !== 'undefined' && window.localStorage.getItem('isDarkMode'))
+	const [isDarkMode, setDarkMode] = useState()
 
 	const handleClick = () => {
 		if(window.localStorage.getItem('isDarkMode') === 'true') {
