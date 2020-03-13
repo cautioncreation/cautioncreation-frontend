@@ -30,7 +30,7 @@ export const Nav = ({ transparentNav, isDarkMode, setDarkMode }) => {
 			<StyledBrand href="/">
 				<StyledLogo src={Logo} alt="Logo"/>
 			</StyledBrand>
-			<NavMenu isDarkMode={isDarkMode} setDarkMode={setDarkMode}/>
+			<NavMenu />
 		</StyledNav>
 	)
 }

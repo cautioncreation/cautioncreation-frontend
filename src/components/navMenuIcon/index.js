@@ -8,7 +8,7 @@ import {
 	StyledRect3,
 } from './style'
 
-export const MenuIcon = (props) => {
+export const NavMenuIcon = (props) => {
 	const [className, setClassName] = useState(false)
 
 	function handleClick() {

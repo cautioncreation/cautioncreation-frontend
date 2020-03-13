@@ -29,7 +29,7 @@ export const Input = ({ id, label, type, name, required, placeholder }) => {
 			id={id}
 			name={name}
 			required={required}
-			onFocus={() => {{setIsFocused(true)}}}
+			onFocus={() => {setIsFocused(true)}}
 			onBlur={() => {
 				if(document.getElementById(id).value === "") {
 					setIsFocused(false)

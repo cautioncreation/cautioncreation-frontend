@@ -2,12 +2,12 @@ import React from "react"
 import { graphql } from "gatsby"
 import { Helmet } from 'react-helmet'
 
-import Layout from '../layouts'
+import { MainLayout } from '../layouts/main'
 import { CartoonHero } from '../components/hero'
 import { CallToAction } from '../components/callToAction'
 
 const BrandingAndDesignPage = ({ theme, data }) => (
-	<Layout>
+	<MainLayout>
 		<Helmet>
 			<title>Development Services | Caution Creation</title>
 			<meta name="description" content="Caution Creation is a web development agency which specializes in responsive web applications for small businesses and startups."></meta>
@@ -18,7 +18,7 @@ const BrandingAndDesignPage = ({ theme, data }) => (
 			src={data.heroImage.publicURL}
 		/>
 		<CallToAction />
-	</Layout>
+	</MainLayout>
 )
 
 export default BrandingAndDesignPage

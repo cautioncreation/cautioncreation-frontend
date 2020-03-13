@@ -13,34 +13,11 @@ export const StyledTitle = styled.a`
 	font-size: 1.25rem;
 	color: ${props => props.theme.colors.white};
 	text-decoration: none;
-	transition: width 0.5s;
+	cursor: pointer;
 	&:after {
 		content: "${props => props.active ? "▴" : "▾"}";
 		margin-left: 5px;
 		color: ${props => props.theme.colors.white};
-	}
-	@media(min-width: ${props => props.theme.breakpoints.lg}) {
-		padding: 8px;
-		&:after {
-			content: "";
-			margin-left: 0;
-		}
-		${StyledDropdownWrapper}:hover & {
-			position: relative;
-			padding-bottom: 6px;
-			&:after {
-				content: "";
-				display: block;
-				border-top: 2px solid ${props => props.theme.colors.yellow};
-				width: 100%;
-				animation: line 0.7s;
-			}
-		}
-	}
-
-	@keyframes line {
-		from {width: 0}
-		to {width: 100%}
 	}
 `
 
@@ -48,17 +25,7 @@ export const StyledDropdownContainer = styled.div`
 	max-height: 0;
 	overflow: hidden;
 	transition: max-height 0.5s;
-	@media(max-width: ${props => props.theme.breakpoints.lgDown}) {
-		max-height: ${props => props.active ? '400px' : null};
-	}
-	@media(min-width: ${props => props.theme.breakpoints.lg}) {
-		position: absolute;
-		left: 8px;
-		top: 100%;
-		${StyledDropdownWrapper}:hover & {
-			max-height: 400px;
-		}
-	}
+	max-height: ${props => props.active ? '400px' : null};
 `
 
 export const StyledDropdown = styled.div`
@@ -67,12 +34,6 @@ export const StyledDropdown = styled.div`
 	flex-direction: column;
 	align-items: flex-start;
 	padding-left: 24px;
-	@media(min-width: ${props => props.theme.breakpoints.lg}) {
-		padding: 16px;
-		border-radius: 5px;
-		border: 1px solid ${props => props.theme.colors.mediumGrey};
-		background: ${props => props.theme.colors.white};
-	}
 `
 
 export const StyledLink = styled.a`
@@ -84,10 +45,6 @@ export const StyledLink = styled.a`
 	vertical-align: middle;
 	text-decoration: none;
 	transition: width 1s;
-	@media(min-width: ${props => props.theme.breakpoints.lg}) {
-		padding: 8px 0;
-		color: ${props => props.theme.colors.darkGrey};
-	}
 	&:hover {
 		position: relative;
 		&:after {

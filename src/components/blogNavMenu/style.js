@@ -18,14 +18,6 @@ export const StyledMenu = styled.div`
 	width: 0;
 	transition: 0.4s;
 	opacity: 0;
-	@media(min-width: ${props => props.theme.breakpoints.lg}) {
-		flex-direction: row;
-		justify-content: center;
-		align-items: center;
-		position: static;
-		opacity: 1;
-		width: auto;
-	}
 
 	${props => props.active ? css`
 		padding: 32px 16px 0;
@@ -45,9 +37,7 @@ export const StyledLink = styled.a`
 	vertical-align: middle;
 	text-decoration: none;
 	transition: width 1s;
-	@media(min-width: ${props => props.theme.breakpoints.lg}) {
-		padding: 8px;
-	}
+	
 	&:hover {
 		position: relative;
 		&:after {
@@ -71,8 +61,4 @@ export const StyledButtonContainer = styled.div`
 	bottom: 0;
 	left: 0;
 	right: 0;
-	@media(min-width: ${props => props.theme.breakpoints.lg}) {
-		padding: 4px 0px 4px 16px;
-		position: static;
-	}
 `

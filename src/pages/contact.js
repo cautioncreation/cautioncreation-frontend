@@ -1,12 +1,12 @@
 import React from "react"
 import { Helmet } from 'react-helmet'
 
-import Layout from '../layouts'
+import { MainLayout } from '../layouts/main'
 import { HeroSmall } from '../components/hero'
 import { ContactForm } from '../components/contactForm'
 
 const contactPage = ({ data }) => (
-	<Layout>
+	<MainLayout>
 		<Helmet>
 			<title>Contact | Caution Creation</title>
 			<meta name="description" content="Caution Creation is a web development agency which specializes in responsive web applications for small businesses and startups."></meta>
@@ -19,7 +19,7 @@ const contactPage = ({ data }) => (
 			position="middle"
 		/>
 		<ContactForm />
-	</Layout>
+	</MainLayout>
 )
 
 export default contactPage
@@ -28,7 +28,7 @@ export const query = graphql`
   query contactPageQuery {
 		heroImage:file(relativePath: { eq: "conference-call.jpeg" }) {
       childImageSharp {
-        fluid(quality: 95, toFormat: WEBP) {
+        fluid(quality: 95) {
           ...GatsbyImageSharpFluid
         }
       }

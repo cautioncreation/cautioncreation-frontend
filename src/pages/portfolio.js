@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import { Helmet } from "react-helmet"
 
-import Layout from '../layouts'
+import { MainLayout } from '../layouts/main'
 import { HeroSmall } from '../components/hero'
 import { CallToAction } from '../components/callToAction'
 import { PortfolioDisplay } from '../components/portfolioDisplay'
@@ -10,7 +10,7 @@ import { FrequentlyAskedQuestions } from '../components/frequentlyAskedQuestions
 import { Testimonials } from '../components/testimonials'
 
 const portfolioPage = ({ data }) => (
-	<Layout>
+	<MainLayout>
 		<Helmet>
 			<title>Portfolio | Caution Creation</title>
 			<meta name="description" content="Caution Creation is a web development agency that specializes in responsive web applications for small businesses and startups."></meta>
@@ -28,7 +28,7 @@ const portfolioPage = ({ data }) => (
 		<Testimonials />
 		<FrequentlyAskedQuestions />
 		<CallToAction />
-	</Layout>
+	</MainLayout>
 )
 
 export default portfolioPage

@@ -2,7 +2,7 @@ import React from 'react'
 import { withTheme } from 'styled-components'
 import { graphql, useStaticQuery } from 'gatsby'
 
-import { ContainerStatic, Container, Row, Column } from '../grid'
+import { ContainerStatic, Row, Column } from '../grid'
 import { FooterItem } from '../footerItem'
 import { SocialIcons } from '../socialIcons'
 import {
@@ -17,11 +17,7 @@ import {
 	StyledSubmit,
 	StyledSocialContainer,
 	StyledSocialTitle,
-	StyledSocialLink,
-	StyledSocialIcon
 } from './style'
-
-import Logo from '../../images/svg/logo.svg'
 
 export const Footer = withTheme(({ theme }) => {
 	const data = useStaticQuery(graphql`

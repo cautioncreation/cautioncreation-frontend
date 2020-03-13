@@ -1,7 +1,7 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 
-import { SectionStatic, Container, Row, Column } from '../grid'
+import { SectionStatic, Row, Column } from '../grid'
 
 import { Accordion } from '../accordion'
 

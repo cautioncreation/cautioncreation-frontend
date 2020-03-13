@@ -8,7 +8,7 @@ import {
 	StyledLink,
 } from './style'
 
-export const NavDropdown = ({ title, href, children }) => {
+export const BlogNavDropdown = ({ title, href, children }) => {
 	const [active, setActive] = useState(true)
 
 	return (
@@ -23,6 +23,6 @@ export const NavDropdown = ({ title, href, children }) => {
 	)
 }
 
-export const NavDropdownLink = ({ children, href }) => (
+export const BlogNavDropdownLink = ({ children, href }) => (
 	<StyledLink href={href}>{children}</StyledLink>
 )

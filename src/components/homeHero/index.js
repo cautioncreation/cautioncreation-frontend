@@ -13,8 +13,6 @@ import {
 	StyledText,
 	StyledContainer,
 	StyledSocialContainer,
-	StyledSocialLink,
-	StyledSocialIcon,
 	StyledArrowContainer,
 	StyledArrowText,
 	StyledArrowIcon,

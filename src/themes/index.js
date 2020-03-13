@@ -6,7 +6,7 @@ import { ThemeProvider, createGlobalStyle } from 'styled-components'
 const Theme = ({ children, transparentNav, isDarkMode }) => {
 
 	return (
-		<ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
+		<ThemeProvider theme={isDarkMode === 'true' ? darkTheme : lightTheme}>
 			<GlobalStyle transparentNav={transparentNav}/>
 			<Helmet>
 				<link href="https://fonts.googleapis.com/css?family=Exo:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i&display=swap" rel="preconnect" crossorigin></link>

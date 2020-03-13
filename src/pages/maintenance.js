@@ -1,7 +1,7 @@
 import React from "react"
 import { Helmet } from 'react-helmet'
 
-import Layout from '../layouts'
+import { MainLayout } from '../layouts/main'
 import { CartoonHero } from '../components/hero'
 import { MaintenanceParagraph } from '../components/maintenanceParagraph'
 import { Testimonials } from '../components/testimonials'
@@ -9,7 +9,7 @@ import { MaintenancePackages } from '../components/maintenancePackages'
 import { CallToAction } from '../components/callToAction'
 
 const maintenancePage = ({ data }) => (
-	<Layout>
+	<MainLayout>
 		<Helmet>
 			<title>Maintenance Services | Caution Creation</title>
 			<meta name="description" content="Caution Creation is a web development agency which specializes in responsive web applications for small businesses and startups."></meta>
@@ -23,7 +23,7 @@ const maintenancePage = ({ data }) => (
 		<Testimonials />
 		<MaintenancePackages />
 		<CallToAction />
-	</Layout>
+	</MainLayout>
 )
 
 export default maintenancePage

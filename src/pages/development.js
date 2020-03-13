@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import { Helmet } from 'react-helmet'
 
-import Layout from '../layouts'
+import { MainLayout } from '../layouts/main'
 import { CartoonHero } from '../components/hero'
 import { OurApproach } from '../components/ourApproach'
 import { Technologies } from '../components/technologies'
@@ -10,7 +10,7 @@ import { DevelopmentServices } from '../components/developmentServices'
 import { CallToAction } from '../components/callToAction'
 
 const developmentPage = ({ theme, data }) => (
-	<Layout>
+	<MainLayout>
 		<Helmet>
 			<title>Development Services | Caution Creation</title>
 			<meta name="description" content="Caution Creation is a web development agency which specializes in responsive web applications for small businesses and startups."></meta>
@@ -24,7 +24,7 @@ const developmentPage = ({ theme, data }) => (
 		<Technologies />
 		<DevelopmentServices />
 		<CallToAction />
-	</Layout>
+	</MainLayout>
 )
 
 export default developmentPage

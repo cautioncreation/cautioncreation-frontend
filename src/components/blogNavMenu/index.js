@@ -1,8 +1,9 @@
 import React, { useState } from "react"
 
 import { Button } from '../button'
-import { NavMenuIcon } from '../navMenuIcon'
-import { NavDropdown, NavDropdownLink } from '../navDropdown'
+import { BlogMenuIcon } from '../blogMenuIcon'
+import { DarkModeToggle } from '../darkModeToggle'
+import { BlogNavDropdown, BlogNavDropdownLink } from '../blogNavDropdown'
 import {
 	StyledContainer,
 	StyledMenu,
@@ -10,19 +11,20 @@ import {
 	StyledButtonContainer
 } from './style'
 
-export const NavMenu = () => {
+export const BlogNavMenu = () => {
 	const [isMenuOpen, setMenuOpen] = useState(false);
 
 	return (
 		<StyledContainer>
-			<NavMenuIcon onClick={() => setMenuOpen(!isMenuOpen)}/>
+			<DarkModeToggle />
+			<BlogMenuIcon onClick={() => setMenuOpen(!isMenuOpen)}/>
 			<StyledMenu active={isMenuOpen}>
 				<StyledLink href="/about">About</StyledLink>
-				<NavDropdown title="Services">
-					<NavDropdownLink href="/development">Development</NavDropdownLink>
-					<NavDropdownLink href="/maintenance">Maintenance</NavDropdownLink>
-					<NavDropdownLink href="/branding-and-design">Branding and Design</NavDropdownLink>
-				</NavDropdown>
+				<BlogNavDropdown title="Services">
+					<BlogNavDropdownLink href="/development">Development</BlogNavDropdownLink>
+					<BlogNavDropdownLink href="/maintenance">Maintenance</BlogNavDropdownLink>
+					<BlogNavDropdownLink href="/branding-and-design">Branding and Design</BlogNavDropdownLink>
+				</BlogNavDropdown>
 				<StyledLink href="/portfolio">Portfolio</StyledLink>
 				<StyledLink href="/contact">Contact</StyledLink>
 				<StyledButtonContainer>
