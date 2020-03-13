@@ -9,6 +9,8 @@ export const BlogLayout = ({ children, hero, transparentNav }) => {
 	const [isDarkMode, setDarkMode] = useState(typeof window !== 'undefined' && window.localStorage.getItem('isDarkMode'))
 
 	useEffect(() => {
+		setDarkMode(window.localStorage.getItem('isDarkMode'))
+
 		window.addEventListener('storage', () => {
 			if(window.localStorage.getItem('isDarkMode') === 'true') {
 				setDarkMode('true')

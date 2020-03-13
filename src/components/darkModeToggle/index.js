@@ -29,6 +29,8 @@ export const DarkModeToggle = () => {
 	}
 
 	useEffect(() => {
+		setDarkMode(window.localStorage.getItem('isDarkMode'))
+
 		if(window.localStorage.getItem('isDarkMode') === null) {
 			window.localStorage.setItem('isDarkMode', 'false')
 			setDarkMode('false')
