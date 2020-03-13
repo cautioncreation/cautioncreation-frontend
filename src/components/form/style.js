@@ -13,21 +13,23 @@ export const StyledLabel = styled.label`
 `
 
 export const StyledInput = styled.input`
+	background: none;
 	height: 40px;
 	width: 100%;
 	font-size: 20px;
 	margin-bottom: 1.5rem;
 	border: none;
-	border-bottom: 1px solid ${props => props.theme.colors.mediumGrey};
+	border-bottom: 1px solid ${props => props.theme.colors.accent};
 `
 
 export const StyledTextarea = styled.textarea`
+	background: none;
 	width: 100%;
 	height: 40px;
 	font-size: 20px;
 	margin-bottom: 2rem;
 	border: none;
-	border-bottom: 1px solid ${props => props.theme.colors.mediumGrey};
+	border-bottom: 1px solid ${props => props.theme.colors.accent};
 `
 
 export const StyledCheckboxContainer = styled.div`
@@ -40,7 +42,6 @@ export const StyledCheckbox = styled.input`
 
 export const StyledCheckboxLabel = styled.label`
 	margin: auto;
-	color: ${props => props.theme.colors.black};
 `
 
 export const StyledFile = styled.input`

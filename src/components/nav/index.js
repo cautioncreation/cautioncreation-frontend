@@ -10,7 +10,7 @@ import {
 
 } from './style'
 
-export const Nav = ({ transparentNav }) => {
+export const Nav = ({ transparentNav, isDarkMode, setDarkMode }) => {
 	const [scrollPosition, setScrollPosition] = useState(0)
 
 	function handleScrollPosition() {
@@ -30,7 +30,7 @@ export const Nav = ({ transparentNav }) => {
 			<StyledBrand href="/">
 				<StyledLogo src={Logo} alt="Logo"/>
 			</StyledBrand>
-			<NavMenu />
+			<NavMenu isDarkMode={isDarkMode} setDarkMode={setDarkMode}/>
 		</StyledNav>
 	)
 }

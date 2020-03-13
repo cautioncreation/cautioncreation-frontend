@@ -8,6 +8,7 @@ export const StyledColumn = styled(Column)`
 `
 
 export const StyledTitle = styled.h1`
+	color: ${props => props.theme.colors.black};
 	font-family: ${props => props.theme.fonts.secondary};
 	font-weight: 700;
 	margin: 0;

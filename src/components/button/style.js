@@ -29,8 +29,8 @@ export const StyledButton = styled.button`
 	` : null}
 
 	${props => props.lightBlue ? css`
-		border: 0.125rem solid ${props => props.theme.colors.blue};
-		background: ${props => props.theme.colors.blue};
+		border: 0.125rem solid ${props => props.theme.colors.lightBlue};
+		background: ${props => props.theme.colors.lightBlue};
 	` : null}
 
 	${props => props.yellow ? css`
@@ -52,7 +52,7 @@ export const StyledButton = styled.button`
 				background: ${props => props.theme.colors.yellow};
 			` : css`
 				color: ${props => props.theme.colors.white};
-				background: ${props => props.theme.colors.blue};
+				background: ${props => props.theme.colors.lightBlue};
 			`}
 		}
 	` : null}

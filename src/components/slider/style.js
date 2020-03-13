@@ -44,7 +44,7 @@ export const StyledIcon = styled.div`
 export const StyledIconSlider = styled.div`
 	width: 0%;
 	height: 100%;
-	background: ${props => props.theme.colors.blue};
+	background: ${props => props.theme.colors.lightBlue};
 	&.active {
 		animation-name: iconAnimate;
 		animation-timing-function: linear;

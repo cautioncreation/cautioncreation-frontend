@@ -8,7 +8,7 @@ export const StyledVector = styled.img`
 export const StyledTitle = styled.h1`
 	font-weight: 500;
 	margin-top: 0;
-	color: ${props => props.theme.colors.mediumBlue};
+	color: ${props => props.theme.colors.accent};
 	@media(min-width: ${props => props.theme.breakpoints.lg}) {
 		font-size: 3rem;
 	}
@@ -16,12 +16,12 @@ export const StyledTitle = styled.h1`
 
 export const StyledLine = styled.hr`
 	border: none;
-	border-bottom: 2px solid ${props => props.theme.colors.mediumBlue};
+	border-bottom: 2px solid ${props => props.theme.colors.accent};
 `
 
 export const StyledSubtitle = styled.h1`
 	font-family: ${props => props.theme.fonts.secondary};
-	color: ${props => props.theme.colors.mediumBlue};
+	color: ${props => props.theme.colors.accent};
 `
 
 export const StyledParagraph = styled.p`

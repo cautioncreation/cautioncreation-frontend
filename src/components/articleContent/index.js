@@ -1,16 +1,16 @@
 import React from 'react'
 
-import { SectionStatic, Row, Column } from '../grid'
+import { Container, SectionStatic, Row, Column } from '../grid'
 import {
 	StyledArticle
 } from './style'
 
-export const Article = ({ data }) => (
+export const ArticleContent = ({ data }) => (
 	<SectionStatic>
 		<Row>
 			<Column xs="0" md="1" lg="2.5" spacer />
 			<Column xs="12" md="10" lg="7">
-				<StyledArticle source={data} />
+				<StyledArticle source={data.content} />
 			</Column>
 			<Column xs="0" md="1" lg="2.5" spacer />
 		</Row>

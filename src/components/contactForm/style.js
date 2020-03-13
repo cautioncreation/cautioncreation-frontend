@@ -5,7 +5,7 @@ export const StyledPageTitle = styled.h1`
 	font-size: 3rem;
 	font-weight: 600;
 	font-family: ${props => props.theme.fonts.secondary};
-	border-left: 4px solid ${props => props.theme.colors.blue};
+	border-left: 4px solid ${props => props.theme.colors.lightBlue};
 	padding-left: 10px;
 `
 

@@ -28,8 +28,7 @@ export const StyledLine = styled.hr`
 `
 
 export const StyledTestimonial = styled.div`
-	background: ${props => props.theme.colors.white};
-	border: 2px solid ${props => props.theme.colors.mediumGrey};
+	background: ${props => props.theme.colors.background};
 	border-radius: 0.5rem;
 	padding: 1rem;
 	display: flex;
@@ -63,7 +62,7 @@ export const StyledCompany = styled.p`
 	font-size: 1.125rem;
 	text-align: center;
 	span {
-		color: ${props => props.theme.colors.black};
+		color: ${props => props.theme.colors.header};
 		font-weight: 500;
 	}
 `

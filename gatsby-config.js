@@ -12,6 +12,13 @@ module.exports = {
     `gatsby-plugin-sharp`,
 		`gatsby-plugin-sitemap`,
 		{
+      resolve: `gatsby-plugin-remote-images`,
+      options: {
+        nodeType: 'strapiArticle',
+        imagePath: 'path.to.image',
+      },
+		},
+		{
       resolve: 'gatsby-plugin-html-attributes',
       options: {
         lang: 'en'

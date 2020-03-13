@@ -52,7 +52,7 @@ export const StyledScrollText = styled.p`
 		content: "\u2713";
 		font-weight: 700;
 		padding: 0 0.2745rem;
-		color: ${props => props.theme.colors.green};
+		color: 	#00FF00;
 		margin-right: 5px;
 		border-radius: 50%;
 		background: ${props => props.theme.colors.mediumGrey};
@@ -71,12 +71,12 @@ export const StyledLink = styled.a`
 	padding: 0 10px;
 	border-radius: 1rem;
 	font-weight: 700;
-	color: ${props => props.theme.colors.blue};
+	color: ${props => props.theme.colors.accent};
 	&:after {
 		vertical-align: middle;
 		content: "\u27a4";
 		margin-left: 10px;
-		color: ${props => props.theme.colors.blue};
+		color: ${props => props.theme.colors.accent};
 		font-size: 1.25rem;
 	}
 

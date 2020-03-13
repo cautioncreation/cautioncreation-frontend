@@ -4,11 +4,15 @@ import Image from 'gatsby-image'
 import { Helmet } from 'react-helmet'
 
 import Layout from "../layouts"
-import { Article } from '../components/article'
+import { ArticleHeader } from '../components/articleHeader'
+import { ArticleContent } from '../components/articleContent'
 
 export const query = graphql`
   query ArticleTemplateQuery($id: String!) {
     strapiArticle(strapiId: { eq: $id }) {
+			author {
+				username
+			}
       strapiId
       title
       content
@@ -24,21 +28,14 @@ export const query = graphql`
 `
 
 const ArticleTemplate = ({ data }) => {
-  const article = data.strapiArticle
   return (
 		<Layout>
 			<Helmet>
 				<title>About | Caution Creation</title>
 				<meta name="description" content="Caution Creation is a web development agency that specializes in streamlined web applications for small businesses & startups. We offer development, branding & design, as well as maintenance services."></meta>
 			</Helmet>
-
-      <Image
-        fluid={article.image.childImageSharp.fluid}
-				alt="hello"
-      />
-      <h1>{article.title}</h1>
-
-			<Article data={article.content} />
+			<ArticleHeader data={data.strapiArticle} />
+			<ArticleContent data={data.strapiArticle} />
 		</Layout>
   )
 }

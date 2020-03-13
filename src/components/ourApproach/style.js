@@ -4,7 +4,7 @@ export const StyledTitle = styled.h1`
 	margin: 0 0 1.5rem;
 	text-align: right;
 	span {
-		color: ${props => props.theme.colors.mediumBlue};
+		color: ${props => props.theme.colors.accent};
 		font-weight: 700;
 	}
 	@media(min-width: ${props => props.theme.breakpoints.lg}) {

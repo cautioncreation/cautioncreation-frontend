@@ -12,7 +12,7 @@ export const StyledFooterLink = styled.a`
 	text-align: center;
 	margin: 8px 0 8px;
 	line-height: 1.4;
-	color: ${props => props.theme.colors.blue};
+	color: ${props => props.theme.colors.lightBlue};
 	font-weight: 500;
 `
 

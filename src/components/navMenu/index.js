@@ -6,19 +6,22 @@ import { NavDropdown, NavDropdownLink } from '../navDropdown'
 import {
 	StyledContainer,
 	StyledMenu,
+	StyledToggleContainer,
+	StyledToggle,
 	StyledLink,
 	StyledButtonContainer
 } from './style'
 
-export const NavMenu = (props) => {
+export const NavMenu = ({ isDarkMode, setDarkMode }) => {
 	const [isMenuOpen, setMenuOpen] = useState(false);
-
-	let activeClass = (isMenuOpen ? "active" : null)
 
 	return (
 		<StyledContainer>
+			<StyledToggleContainer>
+				<StyledToggle active={isDarkMode} onClick={() => setDarkMode(!isDarkMode)}/>
+			</StyledToggleContainer>
 			<MenuIcon onClick={() => setMenuOpen(!isMenuOpen)}/>
-			<StyledMenu className={activeClass} >
+			<StyledMenu active={isMenuOpen}>
 				<StyledLink href="/about">About</StyledLink>
 				<NavDropdown title="Services">
 					<NavDropdownLink href="/development">Development</NavDropdownLink>
