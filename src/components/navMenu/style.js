@@ -8,9 +8,8 @@ export const StyledContainer = styled.div`
 
 export const StyledMenu = styled.div`
 	display: flex;
-	align-items: center;
+	align-items: flex-start;
 	flex-direction: column;
-	justify-content: center;
 	position: fixed;
 	z-index: 1;
 	top: 64px;
@@ -21,12 +20,14 @@ export const StyledMenu = styled.div`
 	opacity: 0;
 	@media(min-width: ${props => props.theme.breakpoints.lg}) {
 		flex-direction: row;
+		justify-content: center;
+		align-items: center;
 		position: static;
 		opacity: 1;
 		width: auto;
 	}
 
-	&.active {
+	${props => props.active ? css`
 		padding: 32px 16px 0;
 		width: 100%;
 		opacity: 1;
@@ -34,7 +35,7 @@ export const StyledMenu = styled.div`
 		@media(min-width: ${props => props.theme.breakpoints.md}) {
 			width: 320px;
 		}
-	}
+	` : null}
 `
 
 export const StyledToggleContainer = styled.div`

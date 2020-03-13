@@ -98,8 +98,8 @@ export class Slider extends Component {
 			this.nextSlide()
 		}
 		else {
+			clearTimeout(this.timer)
 			this.timer = setTimeout(() => {this.nextSlide()}, this.props.interval * 1000);
-			return () => clearTimeout(this.timer);
 		}
 	}
 
