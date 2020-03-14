@@ -47,8 +47,12 @@ export const StyledColumn = styled.div`
 export const StyledSection = styled.section`
 	width: 100%;
 	padding: 15px;
-	margin: 60px 0;
+	margin: 40px 0;
 	background: ${props => props.background};
+
+	@media(min-width: ${props => props.theme.breakpoints.sm}) {
+		margin: 60px 0;
+	}
 `
 
 export const StyledContainer = styled.div`

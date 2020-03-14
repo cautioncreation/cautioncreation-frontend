@@ -20,6 +20,7 @@ const Theme = ({ children, transparentNav, isDarkMode }) => {
 export default Theme
 
 const lightTheme = {
+	theme: "light",
   colors: {
 		white: '#ffffff',
 		black: '#363636',
@@ -64,6 +65,7 @@ const lightTheme = {
 }
 
 const darkTheme = {
+	theme: "dark",
   colors: {
 		white: '#ffffff',
 		black: '#363636',
