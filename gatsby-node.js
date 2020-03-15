@@ -52,6 +52,9 @@ exports.createPages = async ({ graphql, actions }) => {
           edges {
             node {
               strapiId
+							author {
+								username
+							}
 							fields {
 								slug
 							}
@@ -71,10 +74,11 @@ exports.createPages = async ({ graphql, actions }) => {
 
   articles.forEach((article, index) => {
     createPage({
-      path: `/articles/${article.node.fields.slug}`,
+      path: `/blog/${article.node.fields.slug}`,
       component: require.resolve("./src/templates/article.js"),
       context: {
         id: article.node.strapiId,
+				username: article.node.author.username,
       },
     })
   })

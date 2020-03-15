@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import ReactMarkdown from "react-markdown"
 
 export const StyledArticle = styled(ReactMarkdown)`
-	max-width: calc(66ch * 0.85);
+	max-width: calc(60ch);
 	margin-left: auto;
 	margin-right: auto;
 	img {

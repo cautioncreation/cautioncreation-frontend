@@ -7,12 +7,8 @@ import { ArticleHeader } from '../components/articleHeader'
 import { ArticleContent } from '../components/articleContent'
 
 export const query = graphql`
-  query ArticleTemplateQuery($id: String!) {
+  query ArticleTemplateQuery($id: String! $username: String!) {
     strapiArticle(strapiId: { eq: $id }) {
-			author {
-				username
-			}
-      strapiId
       title
       content
       image {
@@ -22,7 +18,18 @@ export const query = graphql`
 	        }
 	      }
       }
+			alt
     }
+		strapiUser(username: { eq: $username}) {
+			name
+			avatar {
+				childImageSharp {
+					fluid {
+	          ...GatsbyImageSharpFluid
+					}
+				}
+			}
+		}
   }
 `
 
@@ -30,10 +37,9 @@ const ArticleTemplate = ({ data }) => {
   return (
 		<BlogLayout>
 			<Helmet>
-				<title>About | Caution Creation</title>
-				<meta name="description" content="Caution Creation is a web development agency that specializes in streamlined web applications for small businesses & startups. We offer development, branding & design, as well as maintenance services."></meta>
+				<title>{data.strapiArticle.title}</title>
 			</Helmet>
-			<ArticleHeader data={data.strapiArticle} />
+			<ArticleHeader data={data.strapiArticle} author={data.strapiUser} />
 			<ArticleContent data={data.strapiArticle} />
 		</BlogLayout>
   )

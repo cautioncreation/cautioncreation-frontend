@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'gatsby-image'
+import Moment from 'react-moment'
 
 import { ContainerStatic, Container, Row, Column } from '../grid'
 
@@ -14,21 +15,23 @@ import {
 	StyledDate,
 } from './style'
 
-export const ArticleHeader = ({ data }) => (
+export const ArticleHeader = ({ data, author }) => (
 	<ContainerStatic>
 		<Row>
 			<Column xs="12">
 				<StyledTitle>{data.title}</StyledTitle>
 				<StyledMetaContainer>
-					<StyledPortrait />
+					<StyledPortrait fluid={author.avatar.childImageSharp.fluid} alt="Author Avatar"/>
 					<StyledMetaTextContainer>
-						<StyledAuthor>Author: {data.author.username}</StyledAuthor>
-						<StyledDate>Published On: July 5th, 2020</StyledDate>
+						<StyledAuthor>Author: <span>{author.name}</span></StyledAuthor>
+						<StyledDate>
+							Published On: <Moment date={data.createdAt} interval={0} format="MMMM Do, YYYY" />
+						</StyledDate>
 					</StyledMetaTextContainer>
 				</StyledMetaContainer>
 			</Column>
 			<Column xs="12">
-				<Image fluid={data.image.childImageSharp.fluid} />
+				<Image sizes={{ ...data.image.childImageSharp.fluid, aspectRatio: 21/9 }} alt={data.alt} />
 			</Column>
 			<Column xs="12">
 				<BlogSocialIcons />

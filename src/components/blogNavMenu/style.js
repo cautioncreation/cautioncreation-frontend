@@ -6,10 +6,7 @@ export const StyledContainer = styled.div`
 	justify-content: center;
 `
 
-export const StyledMenu = styled.div`
-	display: flex;
-	align-items: flex-start;
-	flex-direction: column;
+export const StyledMenuWrapper = styled.div`
 	position: fixed;
 	z-index: 1;
 	top: 64px;
@@ -18,6 +15,7 @@ export const StyledMenu = styled.div`
 	width: 0;
 	transition: 0.4s;
 	opacity: 0;
+	overflow: hidden;
 
 	${props => props.active ? css`
 		padding: 32px 16px 0;
@@ -30,20 +28,31 @@ export const StyledMenu = styled.div`
 	` : null}
 `
 
+export const StyledMenu = styled.div`
+	display: flex;
+	align-items: flex-start;
+	flex-direction: column;
+	max-height: 100%;
+	overflow: auto;
+	margin-bottom: 64px;
+`
+
 export const StyledLink = styled.a`
-	padding: 16px;
+	padding: 16px 0;
+	margin: 0px 16px;
 	font-size: 1.25rem;
+	white-space: nowrap;
 	color: white;
 	vertical-align: middle;
 	text-decoration: none;
 	transition: width 1s;
-	
 	&:hover {
 		position: relative;
 		&:after {
-		  content: '';
-		  display: block;
-		  border-top: 2px solid ${props => props.theme.colors.yellow};
+			content: '';
+			position: absolute;
+			display: block;
+			border-top: 2px solid ${props => props.theme.colors.yellow};
 			width: 100%;
 			animation: line 0.7s;
 		}
@@ -56,9 +65,11 @@ export const StyledLink = styled.a`
 `
 
 export const StyledButtonContainer = styled.div`
-	padding: 16px 16px 32px;
+	padding: 16px;
 	position: absolute;
 	bottom: 0;
 	left: 0;
 	right: 0;
+	border-top: 1px solid ${props => props.theme.colors.white};
+	background: ${props => props.theme.colors.black};
 `

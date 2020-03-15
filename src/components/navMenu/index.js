@@ -5,6 +5,7 @@ import { NavMenuIcon } from '../navMenuIcon'
 import { NavDropdown, NavDropdownLink } from '../navDropdown'
 import {
 	StyledContainer,
+	StyledMenuWrapper,
 	StyledMenu,
 	StyledLink,
 	StyledButtonContainer
@@ -16,19 +17,23 @@ export const NavMenu = () => {
 	return (
 		<StyledContainer>
 			<NavMenuIcon onClick={() => setMenuOpen(!isMenuOpen)}/>
-			<StyledMenu active={isMenuOpen}>
-				<StyledLink href="/about">About</StyledLink>
-				<NavDropdown title="Services">
-					<NavDropdownLink href="/development">Development</NavDropdownLink>
-					<NavDropdownLink href="/maintenance">Maintenance</NavDropdownLink>
-					<NavDropdownLink href="/branding-and-design">Branding and Design</NavDropdownLink>
-				</NavDropdown>
-				<StyledLink href="/portfolio">Portfolio</StyledLink>
-				<StyledLink href="/contact">Contact</StyledLink>
-				<StyledButtonContainer>
-					<Button outline pill lightBlue fullWidth href="/contact">Get Started</Button>
-				</StyledButtonContainer>
-			</StyledMenu>
+			<StyledMenuWrapper active={isMenuOpen}>
+				<StyledMenu>
+					<StyledLink href="/blog">Blog</StyledLink>
+					<StyledLink href="/about">About</StyledLink>
+					<NavDropdown title="Services">
+						<NavDropdownLink href="/development">Development</NavDropdownLink>
+						<NavDropdownLink href="/maintenance">Maintenance</NavDropdownLink>
+						<NavDropdownLink href="/branding-and-design">Branding and Design</NavDropdownLink>
+					</NavDropdown>
+					<StyledLink href="/portfolio">Portfolio</StyledLink>
+					<StyledLink href="/contact">Contact</StyledLink>
+					<StyledButtonContainer>
+						<Button outline pill lightBlue fullWidth href="/contact">Get Started</Button>
+					</StyledButtonContainer>
+
+				</StyledMenu>
+			</StyledMenuWrapper>
 		</StyledContainer>
 	)
 }

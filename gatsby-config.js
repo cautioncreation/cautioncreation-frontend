@@ -13,9 +13,9 @@ module.exports = {
 		`gatsby-plugin-sitemap`,
 		{
       resolve: `gatsby-plugin-remote-images`,
-      options: {
+			options: {
         nodeType: 'strapiArticle',
-        imagePath: 'path.to.image',
+        imagePath: 'edges.node.author.avatar.url',
       },
 		},
 		{
