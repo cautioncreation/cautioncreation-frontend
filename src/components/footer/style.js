@@ -59,6 +59,9 @@ export const StyledInput = styled.input`
 	height: 36px;
 	border: none;
 	padding-left: 10px;
+	::placeholder {
+		color: ${props => props.theme.colors.black};
+	}
 `
 
 export const StyledSubmit = styled.button`

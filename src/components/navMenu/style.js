@@ -43,6 +43,7 @@ export const StyledMenu = styled.div`
 	overflow: auto;
 
 	@media(min-width: ${props => props.theme.breakpoints.lg}) {
+		margin-bottom: 0;
 		flex-direction: row;
 		justify-content: center;
 		align-items: center;
@@ -65,6 +66,8 @@ export const StyledLink = styled.a`
 		position: relative;
 		&:after {
 			content: '';
+			padding: 8px 0;
+			margin: 0 8px;
 			position: absolute;
 			display: block;
 			border-top: 2px solid ${props => props.theme.colors.yellow};

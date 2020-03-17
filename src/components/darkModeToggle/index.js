@@ -61,7 +61,7 @@ export const DarkModeToggle = () => {
 		<StyledToggleContainer>
 			<StyledToggle active={isDarkMode} onClick={() => handleClick()} aria-label="Toggle Dark Mode">
 				<StyledToggleIcon active={isDarkMode}>
-					<StyledToggleImage src={(isDarkMode === "true" ? MoonIcon : SunIcon)} />
+					<StyledToggleImage src={(isDarkMode === "true" ? MoonIcon : SunIcon)} alt={(isDarkMode === "true" ? "Moon Icon" : "Sun Icon")}/>
 				</StyledToggleIcon>
 			</StyledToggle>
 		</StyledToggleContainer>
