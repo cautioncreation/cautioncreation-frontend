@@ -66,14 +66,17 @@ export const StyledLink = styled.a`
 		position: relative;
 		&:after {
 			content: '';
-			padding: 8px 0;
-			margin: 0 8px;
 			position: absolute;
 			display: block;
 			border-top: 2px solid ${props => props.theme.colors.yellow};
 			width: 100%;
 			animation: line 0.7s;
 		}
+	}
+
+	@media(min-width: ${props => props.theme.breakpoints.lg}) {
+		padding: 8px 0;
+		margin: 0 8px;
 	}
 
 	@keyframes line {
