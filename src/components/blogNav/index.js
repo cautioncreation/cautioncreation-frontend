@@ -1,4 +1,4 @@
-import React, { useState, useLayoutEffect } from "react"
+import React from "react"
 
 import { BlogNavMenu } from '../blogNavMenu'
 import Logo from "../../images/svg/logo.svg"

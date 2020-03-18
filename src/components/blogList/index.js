@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import Moment from 'react-moment'
 
-import { SectionStatic, Row, Column } from '../grid'
+import { SectionStatic, Column } from '../grid'
 
 import {
 	StyledRow,

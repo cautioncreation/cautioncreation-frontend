@@ -13,7 +13,6 @@ export const ArticleContent = ({ data }) => (
 					<StyledArticle
 						source={data.content}
 						renderers={{ code: CodeRenderer }}
-						escapeHtml={false}
 					/>
 			</Column>
 		</Row>

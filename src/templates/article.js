@@ -38,6 +38,7 @@ const ArticleTemplate = ({ data }) => {
 		<BlogLayout>
 			<Helmet>
 				<title>{data.strapiArticle.title}</title>
+				<meta name="description" content={data.strapiArticle.meta}></meta>
 			</Helmet>
 			<ArticleHeader data={data.strapiArticle} author={data.strapiUser} />
 			<ArticleContent data={data.strapiArticle} />

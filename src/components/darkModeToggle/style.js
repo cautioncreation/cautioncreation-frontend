@@ -9,6 +9,7 @@ export const StyledToggleContainer = styled.div`
 `
 
 export const StyledToggle = styled.button`
+	cursor: pointer;
 	height: 24px;
 	width: 64px;
 	padding: 0;

@@ -6,14 +6,13 @@ export const StyledTitle = styled.h1`
 	text-align: center;
 	@media(min-width: ${props => props.theme.breakpoints.lg}) {
 		text-align: left;
-		font-size: 3.5rem;
+		font-size: 3rem;
 	}
 `
 
 export const StyledMetaContainer = styled.div`
 	display: flex;
 	align-items: center;
-	margin-bottom: 2rem;
 `
 
 export const StyledMetaTextContainer = styled.div`

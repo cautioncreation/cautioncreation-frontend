@@ -14,20 +14,19 @@ export const DarkModeToggle = () => {
 	const [isDarkMode, setDarkMode] = useState()
 
 	const handleClick = () => {
+		var event = document.createEvent("Event");
+		event.initEvent("storage", true, true);
+
 		if(window.localStorage.getItem('isDarkMode') === 'true') {
 			window.localStorage.setItem('isDarkMode', 'false')
 			setDarkMode('false')
 
-			var event = document.createEvent("Event");
-			event.initEvent("storage", true, true);
       window.dispatchEvent(event);
 		}
 		else {
 			window.localStorage.setItem('isDarkMode', 'true')
 			setDarkMode('true')
 
-			var event = document.createEvent("Event");
-			event.initEvent("storage", true, true);
       window.dispatchEvent(event);
 		}
 	}
@@ -58,7 +57,7 @@ export const DarkModeToggle = () => {
 	}, [])
 
 	return (
-		<StyledToggleContainer>
+		<StyledToggleContainer title={"Enable " + (isDarkMode === "true" ? "light" : "dark") + " mode"}>
 			<StyledToggle active={isDarkMode} onClick={() => handleClick()} aria-label="Toggle Dark Mode">
 				<StyledToggleIcon active={isDarkMode}>
 					<StyledToggleImage src={(isDarkMode === "true" ? MoonIcon : SunIcon)} alt={(isDarkMode === "true" ? "Moon Icon" : "Sun Icon")}/>

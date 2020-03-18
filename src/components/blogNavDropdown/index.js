@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { withTheme } from 'styled-components'
 
 import {
 	StyledDropdownWrapper,
