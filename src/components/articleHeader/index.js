@@ -25,7 +25,7 @@ export const ArticleHeader = ({ data, author }) => (
 					<StyledMetaTextContainer>
 						<StyledAuthor>Author: <span>{author.name}</span></StyledAuthor>
 						<StyledDate>
-							Published On: <Moment date={data.createdAt} interval={0} format="MMMM Do, YYYY" />
+							Published: <Moment date={data.createdAt} interval={0} format="MMMM Do, YYYY" />
 						</StyledDate>
 					</StyledMetaTextContainer>
 				</StyledMetaContainer>

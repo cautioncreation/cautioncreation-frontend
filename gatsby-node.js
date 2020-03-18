@@ -33,7 +33,7 @@ exports.createPages = ({ actions }) => {
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
   if (node.internal.type === `StrapiArticle`) {
-    const slug = slugify(node.title, {lower: true})
+    const slug = slugify(node.title, {lower: true, strict: true})
     createNodeField({
       node,
       name: `slug`,
