@@ -1,5 +1,5 @@
 ---
-name: Rhonda Arsenault 0
+name: Rhonda Arsenault
 position: Co-owner
 company: Lil' Ranch Trucking Ltd.
 testimonial: >-
