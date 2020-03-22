@@ -1,5 +1,5 @@
 ---
-name: Mickey Sidhu 0
+name: Mickey Sidhu
 position: Realtor
 company: Sidko Sales Inc.
 testimonial: >-
