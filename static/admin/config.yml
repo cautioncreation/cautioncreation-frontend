@@ -10,6 +10,7 @@ collections:
   - name: article
     label: Articles
     label_singular: Article
+    identifier_field: title
     folder: static/cms/articles
     publish_mode: editorial_workflow
     create: true
@@ -58,6 +59,7 @@ collections:
   - name: author
     label: Authors
     label_singular: Author
+    identifier_field: name
     folder: static/cms/authors
     create: true
     fields:
@@ -70,6 +72,7 @@ collections:
   - name: portfolio
     label: Portfolios
     label_singular: Portfolio
+    identifier_field: company
     folder: static/cms/portfolios
     create: true
     fields:
@@ -115,6 +118,7 @@ collections:
   - name: testimonial
     label: Testimonials
     label_singular: Testimonial
+    identifier_field: name
     folder: static/cms/testimonials
     create: true
     fields:
@@ -140,8 +144,9 @@ collections:
         }
 
   - name: faq
-    label: "Frequently Asked Questions"
-    label_singular: "Frequently Asked Question"
+    label: "FAQs"
+    label_singular: "FAQ"
+    identifier_field: question
     folder: static/cms/faqs
     create: true
     fields:
