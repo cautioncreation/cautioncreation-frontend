@@ -1,6 +1,6 @@
 import React from "react"
 
-import { BlogNavMenu } from '../blogNavMenu'
+import { BlogNavMenu } from './blogNavMenu'
 import Logo from "../../images/svg/logo.svg"
 
 import {

@@ -3,11 +3,11 @@ import { graphql } from "gatsby"
 import { Helmet } from "react-helmet"
 
 import { MainLayout } from '../layouts/main'
-import { HeroSmall } from '../components/hero'
-import { CallToAction } from '../components/callToAction'
-import { PortfolioDisplay } from '../components/portfolioDisplay'
-import { FrequentlyAskedQuestions } from '../components/frequentlyAskedQuestions'
-import { Testimonials } from '../components/testimonials'
+import { HeroSmall } from '../sections/hero'
+import { Testimonials } from '../sections/testimonials'
+import { CallToAction } from '../sections/callToAction'
+import { PortfolioDisplay } from '../sections/portfolioDisplay'
+import { FrequentlyAskedQuestions } from '../sections/frequentlyAskedQuestions'
 
 const portfolioPage = ({ data }) => (
 	<MainLayout>

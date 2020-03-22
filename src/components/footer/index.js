@@ -5,16 +5,12 @@ import { graphql, useStaticQuery } from 'gatsby'
 import { ContainerStatic, Row, Column } from '../grid'
 import { FooterItem } from '../footerItem'
 import { SocialIcons } from '../socialIcons'
+import { MailchimpForm } from '../mailchimpForm'
 import {
 	StyledFooter,
 	StyledFooterLink,
 	StyledLogoLink,
 	StyledLogo,
-	StyledFormTitle,
-	StyledForm,
-	StyledInputWrapper,
-	StyledInput,
-	StyledSubmit,
 	StyledSocialContainer,
 	StyledSocialTitle,
 } from './style'
@@ -74,13 +70,7 @@ export const Footer = withTheme(({ theme }) => {
 				<Row>
 					<Column xs="0" lg="2" spacer />
 					<Column xs="12" lg="4">
-						<StyledForm>
-							<StyledFormTitle htmlFor="footerEmail">Join our Weekly Newsletter</StyledFormTitle>
-							<StyledInputWrapper>
-								<StyledInput placeholder="Your Email" id="footerEmail" name="email" />
-								<StyledSubmit>Join</StyledSubmit>
-							</StyledInputWrapper>
-						</StyledForm>
+						<MailchimpForm />
 					</Column>
 					<Column xs="12" lg="4">
 						<StyledSocialTitle>Follow us on social</StyledSocialTitle>

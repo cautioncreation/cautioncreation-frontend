@@ -3,8 +3,8 @@ import { graphql } from "gatsby"
 import { Helmet } from 'react-helmet'
 
 import { MainLayout } from '../layouts/main'
-import { CartoonHero } from '../components/hero'
-import { CallToAction } from '../components/callToAction'
+import { CartoonHero } from '../sections/hero'
+import { CallToAction } from '../sections/callToAction'
 
 const BrandingAndDesignPage = ({ theme, data }) => (
 	<MainLayout>

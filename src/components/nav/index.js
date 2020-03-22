@@ -1,13 +1,12 @@
 import React, { useState, useLayoutEffect } from "react"
 
-import { NavMenu } from '../navMenu'
+import { NavMenu } from './navMenu'
 import Logo from "../../images/svg/logo.svg"
 
 import {
 	StyledNav,
-	StyledBrand,
+	StyledBrand, 
 	StyledLogo,
-
 } from './style'
 
 export const Nav = ({ transparentNav, isDarkMode, setDarkMode }) => {

@@ -3,8 +3,8 @@ import { graphql } from "gatsby"
 import { Helmet } from 'react-helmet'
 
 import { BlogLayout } from '../layouts/blog'
-import { CartoonHero } from '../components/hero'
-import { BlogList } from '../components/blogList'
+import { CartoonHero } from '../sections/hero'
+import { BlogList } from '../sections/blogList'
 
 
 const BlogPage = ({ data }) => {

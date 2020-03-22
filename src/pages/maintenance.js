@@ -2,11 +2,11 @@ import React from "react"
 import { Helmet } from 'react-helmet'
 
 import { MainLayout } from '../layouts/main'
-import { CartoonHero } from '../components/hero'
-import { MaintenanceParagraph } from '../components/maintenanceParagraph'
-import { Testimonials } from '../components/testimonials'
-import { MaintenancePackages } from '../components/maintenancePackages'
-import { CallToAction } from '../components/callToAction'
+import { CartoonHero } from '../sections/hero'
+import { MaintenanceParagraph } from '../sections/maintenanceParagraph'
+import { Testimonials } from '../sections/testimonials'
+import { MaintenancePackages } from '../sections/maintenancePackages'
+import { CallToAction } from '../sections/callToAction'
 
 const maintenancePage = ({ data }) => (
 	<MainLayout>

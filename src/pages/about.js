@@ -3,12 +3,12 @@ import { graphql } from "gatsby"
 import { Helmet } from 'react-helmet'
 
 import { MainLayout } from '../layouts/main'
-import { HeroSmall } from '../components/hero'
-import { OurPrinciples } from '../components/ourPrinciples'
-import { Management } from '../components/management'
-import { Testimonials } from '../components/testimonials'
-import { Technologies } from '../components/technologies'
-import { About } from '../components/about'
+import { HeroSmall } from '../sections/hero'
+import { OurPrinciples } from '../sections/ourPrinciples'
+import { Management } from '../sections/management'
+import { Testimonials } from '../sections/testimonials'
+import { Technologies } from '../sections/technologies'
+import { About } from '../sections/about'
 
 const aboutPage = ({ data }) => (
 	<MainLayout>

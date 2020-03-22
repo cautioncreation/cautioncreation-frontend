@@ -3,11 +3,11 @@ import { graphql } from "gatsby"
 import { Helmet } from 'react-helmet'
 
 import { MainLayout } from '../layouts/main'
-import { CartoonHero } from '../components/hero'
-import { OurApproach } from '../components/ourApproach'
-import { Technologies } from '../components/technologies'
-import { DevelopmentServices } from '../components/developmentServices'
-import { CallToAction } from '../components/callToAction'
+import { CartoonHero } from '../sections/hero'
+import { OurApproach } from '../sections/ourApproach'
+import { Technologies } from '../sections/technologies'
+import { DevelopmentServices } from '../sections/developmentServices'
+import { CallToAction } from '../sections/callToAction'
 
 const developmentPage = ({ theme, data }) => (
 	<MainLayout>

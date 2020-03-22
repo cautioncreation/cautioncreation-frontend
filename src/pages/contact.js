@@ -3,8 +3,8 @@ import { Helmet } from 'react-helmet'
 import { graphql } from 'gatsby'
 
 import { MainLayout } from '../layouts/main'
-import { HeroSmall } from '../components/hero'
-import { ContactForm } from '../components/contactForm'
+import { HeroSmall } from '../sections/hero'
+import { ContactForm } from '../sections/contactForm'
 
 const contactPage = ({ data }) => (
 	<MainLayout>
