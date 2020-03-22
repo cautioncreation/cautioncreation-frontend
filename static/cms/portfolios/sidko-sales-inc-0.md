@@ -1,6 +1,6 @@
 ---
 image: /static/cms/assets/mickeysidhu-1520x720.jpg
-company: Sidko Sales Inc. 0
+company: Sidko Sales Inc.
 link: 'https://mickeysidhu.com'
 featured: true
 services:
