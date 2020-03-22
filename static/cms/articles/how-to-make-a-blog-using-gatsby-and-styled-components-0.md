@@ -1,7 +1,7 @@
 ---
 image: /static/cms/assets/chair-and-wall.jpeg
 alt: Two chairs in an office
-title: How to Make a Blog Using Gatsby and Styled Components 0
+title: How to Make a Blog Using Gatsby and Styled Components
 author: Byron Hill
 date: 'March 22nd, 2020'
 meta: >-
