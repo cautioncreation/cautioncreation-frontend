@@ -1,3 +1,157 @@
 backend:
   name: github
   repo: cautioncreation/cautioncreation-frontend
+
+media_folder: static/cms/assets
+site_url: https://cautioncreation.com
+display_url: https://cautioncreation.com/blog
+
+collections:
+  - name: article
+    label: Articles
+    label_singular: Article
+    folder: static/cms/articles
+    publish_mode: editorial_workflow
+    create: true
+    fields:
+      - {
+          name: image,
+          label: "Featured Image",
+          widget: image,
+        }
+      - {
+          name: alt,
+          label: "Featured Image Alt Text",
+          widget: string,
+        }
+      - {
+          name: title,
+          label: "Article Title",
+          widget: string,
+        }
+      - {
+          name: author,
+          label: "Article Author",
+          widget: relation,
+          collection: author,
+          searchFields: ["name"],
+          valueField: "name",
+          displayFields: ["name"],
+        }
+      - {
+          name: date,
+          label: "Publish Date",
+          widget: date,
+          format: "MMMM Do, YYYY",
+        }
+      - {
+          name: meta,
+          label: "Article Description",
+          widget: text,
+        }
+      - {
+          name: content,
+          label: "Article Content",
+          widget: markdown,
+        }
+
+  - name: author
+    label: Authors
+    label_singular: Author
+    folder: static/cms/authors
+    create: true
+    fields:
+      - {
+          name: name,
+          label: "Author Name",
+          widget: string,
+        }
+
+  - name: portfolio
+    label: Portfolios
+    label_singular: Portfolio
+    folder: static/cms/portfolios
+    create: true
+    fields:
+      - {
+          name: image,
+          label: "Portfolio Image",
+          widget: image,
+        }
+      - {
+          name: company,
+          label: "Company Name",
+          widget: string,
+        }
+      - {
+          name: link,
+          label: "Website Link",
+          widget: string,
+        }
+      - {
+          name: featured,
+          label: "is Featured",
+          widget: boolean,
+          default: true,
+        }
+      - {
+          name: services,
+          label: "Services Provided",
+          widget: select,
+          multiple: true,
+          options: [
+            "Themed Web Development",
+            "Custom Web Development",
+            "Application Development",
+            "Branding and Design",
+          ],
+        }
+      - {
+          name: industry,
+          label: "Company Industry",
+          widget: string,
+        }
+
+  - name: testimonial
+    label: Testimonials
+    label_singular: Testimonial
+    folder: static/cms/testimonials
+    create: true
+    fields:
+      - {
+          name: name,
+          label: "Client Name",
+          widget: string,
+        }
+      - {
+          name: position,
+          label: "Position at Company",
+          widget: string,
+        }
+      - {
+          name: company,
+          label: "Company Name",
+          widget: string,
+        }
+      - {
+          name: testimonial,
+          label: "Client Testimonial",
+          widget: text,
+        }
+
+  - name: faq
+    label: "Frequently Asked Questions"
+    label_singular: "Frequently Asked Question"
+    folder: static/cms/faqs
+    create: true
+    fields:
+      - {
+          name: question,
+          label: Question,
+          widget: string,
+        }
+      - {
+          name: answer,
+          label: Answer,
+          widget: markdown,
+        }
