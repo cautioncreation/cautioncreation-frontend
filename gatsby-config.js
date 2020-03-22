@@ -12,6 +12,8 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
 		`gatsby-plugin-sitemap`,
+		`gatsby-transformer-remark`,
+		`gatsby-remark-source-name`,
 		{
       resolve: 'gatsby-plugin-html-attributes',
       options: {
@@ -28,8 +30,43 @@ module.exports = {
 		{
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `markdown`,
-        path: `${__dirname}/static/cms`,
+        name: `articles`,
+        path: `${__dirname}/static/cms/articles`,
+      },
+    },
+		{
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `assets`,
+        path: `${__dirname}/static/cms/assets`,
+      },
+    },
+		{
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `authors`,
+        path: `${__dirname}/static/cms/authors`,
+      },
+    },
+		{
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `faqs`,
+        path: `${__dirname}/static/cms/faqs`,
+      },
+    },
+		{
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `portfolios`,
+        path: `${__dirname}/static/cms/portfolios`,
+      },
+    },
+		{
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `testimonials`,
+        path: `${__dirname}/static/cms/testimonials`,
       },
     },
     {

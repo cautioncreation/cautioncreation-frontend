@@ -51,7 +51,7 @@ collections:
           widget: text,
         }
       - {
-          name: content,
+          name: body,
           label: "Article Content",
           widget: markdown,
         }
@@ -156,7 +156,7 @@ collections:
           widget: string,
         }
       - {
-          name: answer,
+          name: body,
           label: Answer,
           widget: markdown,
         }

@@ -6,7 +6,7 @@ import { ContainerStatic, Row } from '../../components/grid'
 import { Slider } from '../../components/slider'
 
 import {
-	StyledColumn, 
+	StyledColumn,
 	StyledTitle,
 	StyledLine,
 	StyledTestimonial,
@@ -18,19 +18,31 @@ import {
 export const Testimonials = withTheme(({ theme }) => {
 	const data = useStaticQuery(graphql`
     query testimonialsQuery {
-			allStrapiTestimonial {
-		    edges {
-		      node {
-						id
-		        name
-		        testimonial
-		        position
-		        company
-	    		}
-	  		}
+			allMarkdownRemark {
+				edges {
+					node {
+						fields {
+							sourceName
+						}
+						frontmatter {
+							testimonial
+							name
+							position
+							company
+						}
+					}
+				}
 			}
     }
   `)
+
+	const testimonials = []
+
+	data.allMarkdownRemark.edges.map(({ node }) => {
+		if(node.fields.sourceName ==="testimonials") {
+			testimonials.push(node)
+		}
+	})
 
 	return (
 		<ContainerStatic background={theme.colors.darkBlue}>
@@ -43,12 +55,12 @@ export const Testimonials = withTheme(({ theme }) => {
 					</StyledColumn>
 					<StyledColumn xs="12" lg="8">
 						<Slider interval="12" prefix="testimonials">
-							{data.allStrapiTestimonial.edges.map(({ node }, i) => (
-								<StyledTestimonial key={node.id}>
-									<StyledText>"{node.testimonial}"</StyledText>
-									<StyledName>{node.name}</StyledName>
+							{testimonials.map(({ frontmatter }, i) => (
+								<StyledTestimonial key={frontmatter.id}>
+									<StyledText>"{frontmatter.testimonial}"</StyledText>
+									<StyledName>{frontmatter.name}</StyledName>
 									<StyledCompany>
-										<span>{node.position}</span> at <span>{node.company}</span>
+										<span>{frontmatter.position}</span> at <span>{frontmatter.company}</span>
 									</StyledCompany>
 								</StyledTestimonial>
 							))}
