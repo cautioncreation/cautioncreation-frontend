@@ -9,15 +9,6 @@ import {
 } from './style'
 
 export const MailchimpForm = () => (
-		/*
-		<StyledForm>
-			<StyledFormTitle htmlFor="footerEmail">Join our Weekly Newsletter</StyledFormTitle>
-			<StyledInputWrapper>
-				<StyledInput placeholder="Your Email" id="footerEmail" name="email" />
-				<StyledSubmit>Join</StyledSubmit>
-			</StyledInputWrapper>
-		</StyledForm>
-		*/
 	<div id="mc_embed_signup">
 		<StyledForm
 			action="https://cautioncreation.us19.list-manage.com/subscribe/post?u=5beb28088a2412ca5a7539c07&amp;id=42bc8764dd"
@@ -37,9 +28,8 @@ export const MailchimpForm = () => (
 	    	<div style={{position: 'absolute', left: '-5000px'}} aria-hidden="true">
 					<input type="text" name="b_5beb28088a2412ca5a7539c07_42bc8764dd" tabindex="-1" value="" />
 				</div>
-				<StyledSubmit type="submit" value="Join" name="subscribe" id="mc-embedded-subscribe" class="button" />
+				<StyledSubmit type="submit" value="Join" name="subscribe" id="mc-embedded-subscribe" />
 			</StyledInputWrapper>
 		</StyledForm>
 	</div>
-
 )
