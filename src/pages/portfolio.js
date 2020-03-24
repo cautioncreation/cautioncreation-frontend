@@ -50,7 +50,13 @@ export const query = graphql`
 		        industry
 						services
 						link
-						image
+						image {
+							childImageSharp {
+								fluid(quality: 95) {
+									...GatsbyImageSharpFluid
+								}
+							}
+						}
 					}
 	      }
 	    }
