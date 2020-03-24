@@ -86,7 +86,7 @@ module.exports = {
 	    options: {
 	      apiURL: `https://cautioncreation-backend.herokuapp.com`,
 	      queryLimit: 100, // Default to 100
-	      contentTypes: [`article`, `user`, 'portfolio', 'testimonial', 'question'],
+	      contentTypes: [`article`, `user`],
 	    },
 		},
   ],

@@ -18,7 +18,7 @@ import {
 export const Testimonials = withTheme(({ theme }) => {
 	const data = useStaticQuery(graphql`
     query testimonialsQuery {
-			allMarkdownRemark {
+			allMarkdownRemark(filter: {fields: {sourceName: {eq: "testimonials"}}}) {
 				edges {
 					node {
 						fields {
@@ -36,14 +36,6 @@ export const Testimonials = withTheme(({ theme }) => {
     }
   `)
 
-	const testimonials = []
-
-	data.allMarkdownRemark.edges.map(({ node }) => {
-		if(node.fields.sourceName ==="testimonials") {
-			testimonials.push(node)
-		}
-	})
-
 	return (
 		<ContainerStatic background={theme.colors.darkBlue}>
 				<Row>
@@ -55,12 +47,12 @@ export const Testimonials = withTheme(({ theme }) => {
 					</StyledColumn>
 					<StyledColumn xs="12" lg="8">
 						<Slider interval="12" prefix="testimonials">
-							{testimonials.map(({ frontmatter }, i) => (
-								<StyledTestimonial key={frontmatter.id}>
-									<StyledText>"{frontmatter.testimonial}"</StyledText>
-									<StyledName>{frontmatter.name}</StyledName>
+							{data.allMarkdownRemark.edges.map(({ node }, i) => (
+								<StyledTestimonial key={node.frontmatter.id}>
+									<StyledText>"{node.frontmatter.testimonial}"</StyledText>
+									<StyledName>{node.frontmatter.name}</StyledName>
 									<StyledCompany>
-										<span>{frontmatter.position}</span> at <span>{frontmatter.company}</span>
+										<span>{node.frontmatter.position}</span> at <span>{node.frontmatter.company}</span>
 									</StyledCompany>
 								</StyledTestimonial>
 							))}

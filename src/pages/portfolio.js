@@ -42,21 +42,16 @@ export const query = graphql`
         }
       }
     }
-		allStrapiPortfolio {
+		allMarkdownRemark(filter: {fields: {sourceName: {eq: "portfolios"}}}) {
 	    edges {
 	      node {
-	        id
-	        image {
-						childImageSharp {
-			        fluid(quality: 95) {
-			          ...GatsbyImageSharpFluid
-			        }
-			      }
-	        }
-	        company
-	        industry
-					services
-					link
+					frontmatter {
+						company
+		        industry
+						services
+						link
+						image
+					}
 	      }
 	    }
 	  }

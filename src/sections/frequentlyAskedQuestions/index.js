@@ -15,22 +15,17 @@ export const FrequentlyAskedQuestions = () => {
 	const data = useStaticQuery(graphql`
     query frequentlyAskedQuestionsQuery {
 			allMarkdownRemark(filter: {fields: {sourceName: {eq: "faqs"}}}) {
-				edges {
-					node {
-						fields {
-							sourceName
-						}
-						frontmatter {
-							question
-							answer
-						}
-					}
-				}
-			}
+    		edges {
+      		node {
+        		html
+        		frontmatter {
+          		question
+        		}
+      		}
+    		}
+  		}
     }
   `)
-
-	const frequentlyAskedQuestions = data.allMarkdownRemark.edges
 
 	return (
 		<SectionStatic>
@@ -43,17 +38,14 @@ export const FrequentlyAskedQuestions = () => {
 				</Column>
 				<StyledQuestionColumn xs="12" lg="8">
 					<Row>
-						{/*
-						{frequentlyAskedQuestions.map(({ frontmatter }, i) => (
+						{data.allMarkdownRemark.edges.map(({ node }, i) => (
 							<Column key={i} xs="12">
-								<Accordion title={frontmatter.question}>
-									<StyledText>
-										{frontmatter.answer}
+								<Accordion title={node.frontmatter.question}>
+									<StyledText dangerouslySetInnerHTML={{__html: node.html}}>
 									</StyledText>
 								</Accordion>
 							</Column>
 						))}
-						*/}
 					</Row>
 				</StyledQuestionColumn>
 			</Row>
