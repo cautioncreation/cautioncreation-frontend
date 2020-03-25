@@ -23,7 +23,7 @@ const portfolioPage = ({ data }) => (
 			position="top"
 		/>
 		<PortfolioDisplay
-			data={data.allStrapiPortfolio.edges}
+			data={data.allMarkdownRemark.edges}
 		/>
 		<Testimonials />
 		<FrequentlyAskedQuestions />

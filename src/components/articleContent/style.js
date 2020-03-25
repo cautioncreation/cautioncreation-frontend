@@ -1,8 +1,6 @@
 import styled from 'styled-components'
 
-import ReactMarkdown from "react-markdown"
-
-export const StyledArticle = styled(ReactMarkdown)`
+export const StyledArticle = styled.div`
 	max-width: calc(70ch);
 	margin-left: auto;
 	margin-right: auto;

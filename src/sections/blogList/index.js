@@ -1,6 +1,5 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
-import Moment from 'react-moment'
 
 import { SectionStatic, Column } from '../../components/grid'
 
@@ -16,22 +15,22 @@ import {
 export const BlogList = () => {
 	const data = useStaticQuery(graphql`
 			query blogListQuery {
-				allStrapiArticle {
+				allMarkdownRemark(filter: {fields: {sourceName: {eq: "articles"}}}) {
 					edges {
 						node {
-							title
-							meta
-							author {
-								name
-							}
 							fields {
 								slug
 							}
-							date
-							image {
-								childImageSharp {
-									fluid {
-										...GatsbyImageSharpFluid
+							frontmatter {
+								title
+								meta
+								author
+								date
+								image {
+									childImageSharp {
+										fluid {
+											...GatsbyImageSharpFluid
+										}
 									}
 								}
 							}
@@ -40,7 +39,8 @@ export const BlogList = () => {
 				}
 			}
 	`)
-	const articles = data.allStrapiArticle.edges.reverse()
+	console.log(data)
+	const articles = data.allMarkdownRemark.edges.reverse()
 	return (
 		<SectionStatic>
 
@@ -49,20 +49,20 @@ export const BlogList = () => {
 					<Column xs="0" lg="1.5" spacer />
 					<Column xs="12" lg="4">
 						<a href={"/blog/" + node.fields.slug}>
-							<StyledImage sizes={{...node.image.childImageSharp.fluid, aspectRatio: 21/9}} />
+							<StyledImage sizes={{...node.frontmatter.image.childImageSharp.fluid, aspectRatio: 21/9}} />
 						</a>
 					</Column>
 					<Column xs="12" lg="5">
 						<StyledTextWrapper>
 							<a href={"/blog/" + node.fields.slug}>
-								<StyledTitle>{node.title}</StyledTitle>
+								<StyledTitle>{node.frontmatter.title}</StyledTitle>
 							</a>
 							<StyledMetaWrapper>
 								<StyledMetaText>
-									Author: {node.author.name}
+									Author: {node.frontmatter.author}
 								</StyledMetaText>
 								<StyledMetaText>
-									Published: <Moment date={node.date} interval={0} format="MMMM Do, YYYY" />
+									Published: {node.frontmatter.date}
 								</StyledMetaText>
 							</StyledMetaWrapper>
 						</StyledTextWrapper>

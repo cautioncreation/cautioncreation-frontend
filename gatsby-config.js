@@ -81,13 +81,5 @@ module.exports = {
         icon: `src/images/svg/logo.svg`,
       },
     },
-		{
-	    resolve: `gatsby-source-strapi`,
-	    options: {
-	      apiURL: `https://cautioncreation-backend.herokuapp.com`,
-	      queryLimit: 100, // Default to 100
-	      contentTypes: [`article`, `user`],
-	    },
-		},
   ],
 }

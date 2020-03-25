@@ -1,6 +1,5 @@
 import React from 'react'
 import Image from 'gatsby-image'
-import Moment from 'react-moment'
 
 import { ContainerStatic, Row, Column } from '../grid'
 
@@ -15,7 +14,7 @@ import {
 	StyledDate,
 } from './style'
 
-export const ArticleHeader = ({ data, author }) => (
+export const ArticleHeader = ({ data }) => (
 	<ContainerStatic>
 		<Row>
 			<Column xs="0" lg="1.5" spacer />
@@ -27,11 +26,11 @@ export const ArticleHeader = ({ data, author }) => (
 					<Column xs="12">
 						<StyledTitle>{data.title}</StyledTitle>
 						<StyledMetaContainer>
-							<StyledPortrait fluid={author.avatar.childImageSharp.fluid} alt="Author Avatar"/>
+							<StyledPortrait />
 							<StyledMetaTextContainer>
-								<StyledAuthor>Author: <span>{author.name}</span></StyledAuthor>
+								<StyledAuthor>Author: <span>{data.author}</span></StyledAuthor>
 								<StyledDate>
-									Published: <Moment date={data.createdAt} interval={0} format="MMMM Do, YYYY" />
+									Published: {data.date}
 								</StyledDate>
 							</StyledMetaTextContainer>
 						</StyledMetaContainer>

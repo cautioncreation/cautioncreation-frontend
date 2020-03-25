@@ -35,8 +35,8 @@ export const DarkModeToggle = () => {
 		setDarkMode(window.localStorage.getItem('isDarkMode'))
 
 		if(window.localStorage.getItem('isDarkMode') === null) {
-			window.localStorage.setItem('isDarkMode', 'true')
-			setDarkMode('true')
+			window.localStorage.setItem('isDarkMode', 'false')
+			setDarkMode('false')
 		}
 		else {
 			if(window.localStorage.getItem('isDarkMode') === 'true') {

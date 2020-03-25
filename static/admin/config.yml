@@ -2,7 +2,8 @@ backend:
   name: github
   repo: cautioncreation/cautioncreation-frontend
 
-media_folder: static/cms/assets
+media_folder: 'static/cms/assets'
+public_folder: '../assets'
 site_url: https://cautioncreation.com
 display_url: https://cautioncreation.com/blog
 

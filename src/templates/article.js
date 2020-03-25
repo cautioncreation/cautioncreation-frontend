@@ -7,29 +7,22 @@ import { ArticleHeader } from '../components/articleHeader'
 import { ArticleContent } from '../components/articleContent'
 
 export const query = graphql`
-  query ArticleTemplateQuery($id: String! $username: String!) {
-    strapiArticle(strapiId: { eq: $id }) {
-      title
-      content
-      image {
-				childImageSharp {
-	        fluid(quality: 100) {
-	          ...GatsbyImageSharpFluid
-	        }
+  query ArticleTemplateQuery($id: String!) {
+    markdownRemark(id: {eq: $id}) {
+			frontmatter {
+				image {
+					childImageSharp {
+		        fluid(quality: 100) {
+		          ...GatsbyImageSharpFluid
+		        }
+		      }
 	      }
-      }
-			alt
-    }
-		strapiUser(username: { eq: $username}) {
-			name
-			avatar {
-				childImageSharp {
-					fluid {
-	          ...GatsbyImageSharpFluid
-					}
-				}
+				title
+				author
+				date
 			}
-		}
+	    html
+    }
   }
 `
 
@@ -37,11 +30,11 @@ const ArticleTemplate = ({ data }) => {
   return (
 		<BlogLayout>
 			<Helmet>
-				<title>{data.strapiArticle.title}</title>
-				<meta name="description" content={data.strapiArticle.meta}></meta>
+				<title>{data.markdownRemark.frontmatter.title}</title>
+				<meta name="description" content={data.markdownRemark.frontmatter.meta}></meta>
 			</Helmet>
-			<ArticleHeader data={data.strapiArticle} author={data.strapiUser} />
-			<ArticleContent data={data.strapiArticle} />
+			<ArticleHeader data={data.markdownRemark.frontmatter}/>
+			<ArticleContent data={data.markdownRemark.html} />
 		</BlogLayout>
   )
 }

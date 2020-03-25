@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import Image from 'gatsby-image'
 
 export const StyledTitle = styled.h1`
 	font-size: 2.5rem;
@@ -23,9 +22,10 @@ export const StyledMetaTextContainer = styled.div`
 	justify-content: space-around;
 `
 
-export const StyledPortrait = styled(Image)`
+export const StyledPortrait = styled.div`
 	width: 60px;
 	height: 60px;
+	background: ${props => props.theme.colors.lightGrey};
 	border-radius: 50%;
 	margin-right: 15px;
 	display: inline-block;

@@ -11,8 +11,7 @@ export const ArticleContent = ({ data }) => (
 		<Row>
 			<Column xs="12">
 					<StyledArticle
-						source={data.content}
-						renderers={{ code: CodeRenderer }}
+						dangerouslySetInnerHTML={{__html: data}}
 					/>
 			</Column>
 		</Row>

@@ -26,19 +26,19 @@ export const PortfolioDisplay = ({ data }) => (
 			{data.map(({ node }, i) => (
 				<Column xs="12" lg="6">
 					<StyledWrapperLink>
-						<StyledBackground fluid={node.image.childImageSharp.fluid} alt={node.company}/>
+						<StyledBackground fluid={node.frontmatter.image.childImageSharp.fluid} alt={node.frontmatter.company}/>
 					</StyledWrapperLink>
 					<StyledTextContainer>
 						<StyledService>
-							{node.services}
+							{node.frontmatter.services}
 						</StyledService>
 						<StyledCompany>
-							{node.company}
+							{node.frontmatter.company}
 						</StyledCompany>
 						<StyledDescription>
-							{node.industry}
+							{node.frontmatter.industry}
 						</StyledDescription>
-						<Button href={node.link} target="_blank" rel="noreferrer">Go To Site</Button>
+						<Button href={node.frontmatter.link} target="_blank" rel="noreferrer">Go To Site</Button>
 					</StyledTextContainer>
 				</Column>
 			))}
