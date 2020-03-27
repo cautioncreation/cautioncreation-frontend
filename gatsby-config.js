@@ -14,7 +14,6 @@ module.exports = {
 		`gatsby-plugin-sitemap`,
 		`gatsby-transformer-remark`,
 		`gatsby-remark-source-name`,
-		`gatsby-plugin-svg-sprite-loader`,
 		{
 			resolve: `gatsby-plugin-mailchimp`,
 			options: {

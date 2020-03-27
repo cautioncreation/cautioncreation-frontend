@@ -38,7 +38,7 @@ export const query = graphql`
 		heroImage:file(relativePath: { eq: "hands-typing.jpeg" }) {
       childImageSharp {
         fluid(quality: 95) {
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }

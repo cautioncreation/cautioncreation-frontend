@@ -30,7 +30,7 @@ export const query = graphql`
 		heroImage:file(relativePath: { eq: "conference-call.jpeg" }) {
       childImageSharp {
         fluid(quality: 95) {
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
