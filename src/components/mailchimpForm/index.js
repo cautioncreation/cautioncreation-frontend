@@ -28,10 +28,8 @@ export const MailchimpForm = () => {
 
 	return (
 		<div>
-			<S.Form
-				onSubmit={handleSubmit}
-			>
-				<S.FormTitle>Subscribe to our Newsletter</S.FormTitle>
+			<S.Form onSubmit={handleSubmit}>
+				<S.FormTitle for="mailchimpEmail">Subscribe to our Newsletter</S.FormTitle>
 				<S.InputWrapper>
 					<S.Input type="email" name="email" placeholder="Email Address" id="mailchimpEmail" onChange={handleEmailChange}/>
 		    	<div style={{position: 'absolute', left: '-5000px'}} aria-hidden="true">
