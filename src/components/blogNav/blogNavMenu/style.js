@@ -1,12 +1,12 @@
 import styled, { css } from "styled-components"
 
-export const StyledContainer = styled.div`
+export const Container = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: center;
 `
 
-export const StyledMenuWrapper = styled.div`
+export const MenuWrapper = styled.div`
 	position: fixed;
 	z-index: 1;
 	top: 64px;
@@ -28,7 +28,7 @@ export const StyledMenuWrapper = styled.div`
 	` : null}
 `
 
-export const StyledMenu = styled.div`
+export const Menu = styled.div`
 	display: flex;
 	align-items: flex-start;
 	flex-direction: column;
@@ -37,7 +37,7 @@ export const StyledMenu = styled.div`
 	margin-bottom: 64px;
 `
 
-export const StyledLink = styled.a`
+export const Link = styled.a`
 	padding: 16px 0;
 	margin: 0px 16px;
 	font-size: 1.25rem;
@@ -64,7 +64,7 @@ export const StyledLink = styled.a`
 	}
 `
 
-export const StyledButtonContainer = styled.div`
+export const ButtonContainer = styled.div`
 	padding: 16px;
 	position: absolute;
 	bottom: 0;

@@ -4,37 +4,31 @@ import { Button } from '../../button'
 import { BlogMenuIcon } from '../blogNavIcon'
 import { DarkModeToggle } from '../../darkModeToggle'
 import { BlogNavDropdown, BlogNavDropdownLink } from '../blogNavDropdown'
-import {
-	StyledContainer,
-	StyledMenuWrapper,
-	StyledMenu,
-	StyledLink,
-	StyledButtonContainer
-} from './style'
+import * as S from './style'
 
 export const BlogNavMenu = () => {
 	const [isMenuOpen, setMenuOpen] = useState(false);
 
 	return (
-		<StyledContainer>
+		<S.Container>
 			<DarkModeToggle />
 			<BlogMenuIcon onClick={() => setMenuOpen(!isMenuOpen)}/>
-			<StyledMenuWrapper active={isMenuOpen}>
-				<StyledMenu>
-					<StyledLink href="/blog">Blog</StyledLink>
-					<StyledLink href="/about">About</StyledLink>
+			<S.MenuWrapper active={isMenuOpen}>
+				<S.Menu>
+					<S.Link href="/blog">Blog</S.Link>
+					<S.Link href="/about">About</S.Link>
 					<BlogNavDropdown title="Services">
 						<BlogNavDropdownLink href="/development">Development</BlogNavDropdownLink>
 						<BlogNavDropdownLink href="/maintenance">Maintenance</BlogNavDropdownLink>
 						<BlogNavDropdownLink href="/branding-and-design">Branding and Design</BlogNavDropdownLink>
 					</BlogNavDropdown>
-					<StyledLink href="/portfolio">Portfolio</StyledLink>
-					<StyledLink href="/contact">Contact</StyledLink>
-					<StyledButtonContainer>
+					<S.Link href="/portfolio">Portfolio</S.Link>
+					<S.Link href="/contact">Contact</S.Link>
+					<S.ButtonContainer>
 						<Button outline pill lightBlue fullWidth href="/contact">Get Started</Button>
-					</StyledButtonContainer>
-				</StyledMenu>
-			</StyledMenuWrapper>
-		</StyledContainer>
+					</S.ButtonContainer>
+				</S.Menu>
+			</S.MenuWrapper>
+		</S.Container>
 	)
 }

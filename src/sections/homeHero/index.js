@@ -7,45 +7,36 @@ import { Hero } from '../../sections/hero'
 import { Column } from '../../components/grid'
 import { Button } from '../../components/button'
 import { SocialIcons } from '../../components/socialIcons'
-import {
-	StyledHeroColumn,
-	StyledTitle,
-	StyledText,
-	StyledContainer,
-	StyledSocialContainer,
-	StyledArrowContainer,
-	StyledArrowText,
-	StyledArrowIcon,
-} from './style'
+import * as S from './style'
 
 export const HomeHero = ({ src }) => (
 	<Hero src={src}>
 			<Column xs='0' md='1' lg='2'/>
-			<StyledHeroColumn xs='12' md='10' lg='8'>
-				<StyledContainer>
+			<S.HeroColumn xs='12' md='10' lg='8'>
+				<S.Container>
 					<Typing loop={true} speed={75}>
-						<StyledTitle>
+						<S.Title>
 							Minimalism when it matters.
 							<Typing.Delay ms={2000} />
 							<Typing.Backspace count={28} />
 							Complexity where it counts.
 							<Typing.Delay ms={2000} />
 							<Typing.Backspace count={28} />
-						</StyledTitle>
+						</S.Title>
 					</Typing>
-					<StyledText>
+					<S.Text>
 						Caution Creation is a web development firm that specializes in performant, responsive web applications for modern businesses.
-					</StyledText>
+					</S.Text>
 					<Button href='/hello' outline pill large lightBlue>Request A Quote</Button>
-				</StyledContainer>
-			</StyledHeroColumn>
+				</S.Container>
+			</S.HeroColumn>
 			<Column xs='0' md='1' lg='2'/>
-			<StyledSocialContainer>
+			<S.SocialContainer>
 				<SocialIcons />
-			</StyledSocialContainer>
-			<StyledArrowContainer>
-				<StyledArrowIcon src={DownArrow} alt="Scroll Down Arrow"/>
-				<StyledArrowText>Scroll</StyledArrowText>
-			</StyledArrowContainer>
+			</S.SocialContainer>
+			<S.ArrowContainer>
+				<S.ArrowIcon src={DownArrow} alt="Scroll Down Arrow"/>
+				<S.ArrowText>Scroll</S.ArrowText>
+			</S.ArrowContainer>
 	</Hero>
 )

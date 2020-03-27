@@ -3,37 +3,32 @@ import React, { useState } from "react"
 import { Button } from '../../button'
 import { NavMenuIcon } from '../navMenuIcon'
 import { NavDropdown, NavDropdownLink } from '../navDropdown'
-import {
-	StyledContainer,
-	StyledMenuWrapper,
-	StyledMenu,
-	StyledLink,
-	StyledButtonContainer
-} from './style'
+
+import * as S from './style'
 
 export const NavMenu = () => {
 	const [isMenuOpen, setMenuOpen] = useState(false);
 
 	return (
-		<StyledContainer>
+		<S.Container>
 			<NavMenuIcon onClick={() => setMenuOpen(!isMenuOpen)}/>
-			<StyledMenuWrapper active={isMenuOpen}>
-				<StyledMenu>
-					<StyledLink href="/blog">Blog</StyledLink>
-					<StyledLink href="/about">About</StyledLink>
+			<S.MenuWrapper active={isMenuOpen}>
+				<S.Menu>
+					<S.Link href="/blog">Blog</S.Link>
+					<S.Link href="/about">About</S.Link>
 					<NavDropdown title="Services">
 						<NavDropdownLink href="/development">Development</NavDropdownLink>
 						<NavDropdownLink href="/maintenance">Maintenance</NavDropdownLink>
 						<NavDropdownLink href="/branding-and-design">Branding and Design</NavDropdownLink>
 					</NavDropdown>
-					<StyledLink href="/portfolio">Portfolio</StyledLink>
-					<StyledLink href="/contact">Contact</StyledLink>
-					<StyledButtonContainer>
+					<S.Link href="/portfolio">Portfolio</S.Link>
+					<S.Link href="/contact">Contact</S.Link>
+					<S.ButtonContainer>
 						<Button outline pill lightBlue fullWidth href="/contact">Get Started</Button>
-					</StyledButtonContainer>
+					</S.ButtonContainer>
 
-				</StyledMenu>
-			</StyledMenuWrapper>
-		</StyledContainer>
+				</S.Menu>
+			</S.MenuWrapper>
+		</S.Container>
 	)
 }

@@ -1,11 +1,11 @@
 import styled from 'styled-components'
 
-export const StyledFooter = styled.footer`
+export const Footer = styled.footer`
 	width: 100%;
 	align-self: flex-end;
 `
 
-export const StyledFooterLink = styled.a`
+export const FooterLink = styled.a`
 	display: block;
 	text-align: center;
 	margin: 8px 0 8px;
@@ -14,7 +14,7 @@ export const StyledFooterLink = styled.a`
 	font-weight: 500;
 `
 
-export const StyledLogoLink = styled.a`
+export const LogoLink = styled.a`
 	display: block;
 	cursor: pointer;
 	&:hover {
@@ -27,7 +27,7 @@ export const StyledLogoLink = styled.a`
 	}
 `
 
-export const StyledLogo = styled.img`
+export const Logo = styled.img`
 	width: 100px;
 	margin: 0 auto;
 	display: none;
@@ -37,14 +37,14 @@ export const StyledLogo = styled.img`
 `
 
 
-export const StyledSocialContainer = styled.div`
+export const SocialContainer = styled.div`
 	display: flex;
 	align-items: flex-end;
 	justify-content: space-between;
 	max-height: 100%;
 `
 
-export const StyledSocialTitle = styled.h2`
+export const SocialTitle = styled.h2`
 	color: ${props => props.theme.colors.white};
 	text-align: center;
 	display: none;
@@ -53,10 +53,10 @@ export const StyledSocialTitle = styled.h2`
 	}
 `
 
-export const StyledSocialLink = styled.a`
+export const SocialLink = styled.a`
 	display: block;
 `
 
-export const StyledSocialIcon = styled.img`
+export const SocialIcon = styled.img`
 	width: 48px;
 `

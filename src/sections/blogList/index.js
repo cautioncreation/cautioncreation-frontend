@@ -3,14 +3,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 
 import { SectionStatic, Column } from '../../components/grid'
 
-import {
-	StyledRow,
-	StyledImage,
-	StyledTextWrapper,
-	StyledTitle,
-	StyledMetaWrapper,
-	StyledMetaText,
-} from './style'
+import * as S from './style'
 
 export const BlogList = () => {
 	const data = useStaticQuery(graphql`
@@ -45,30 +38,30 @@ export const BlogList = () => {
 		<SectionStatic>
 
 			{articles.map(({ node }) => (
-				<StyledRow>
+				<S.Row>
 					<Column xs="0" lg="1.5" spacer />
 					<Column xs="12" lg="4">
 						<a href={"/blog/" + node.fields.slug}>
-							<StyledImage sizes={{...node.frontmatter.image.childImageSharp.fluid, aspectRatio: 21/9}} />
+							<S.BlogImage sizes={{...node.frontmatter.image.childImageSharp.fluid, aspectRatio: 21/9}} />
 						</a>
 					</Column>
 					<Column xs="12" lg="5">
-						<StyledTextWrapper>
+						<S.TextWrapper>
 							<a href={"/blog/" + node.fields.slug}>
-								<StyledTitle>{node.frontmatter.title}</StyledTitle>
+								<S.Title>{node.frontmatter.title}</S.Title>
 							</a>
-							<StyledMetaWrapper>
-								<StyledMetaText>
+							<S.MetaWrapper>
+								<S.MetaText>
 									Author: {node.frontmatter.author}
-								</StyledMetaText>
-								<StyledMetaText>
+								</S.MetaText>
+								<S.MetaText>
 									Published: {node.frontmatter.date}
-								</StyledMetaText>
-							</StyledMetaWrapper>
-						</StyledTextWrapper>
+								</S.MetaText>
+							</S.MetaWrapper>
+						</S.TextWrapper>
 					</Column>
 					<Column xs="0" lg="1.5" spacer />
-				</StyledRow>
+				</S.Row>
 			))}
 
 		</SectionStatic>

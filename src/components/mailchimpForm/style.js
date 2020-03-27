@@ -1,10 +1,10 @@
 import styled from 'styled-components'
 
-export const StyledForm = styled.form`
+export const Form = styled.form`
 
 `
 
-export const StyledFormTitle = styled.label`
+export const FormTitle = styled.label`
 	color: ${props => props.theme.colors.white};
 	text-align: center;
 	display: block;
@@ -13,12 +13,12 @@ export const StyledFormTitle = styled.label`
 	font-weight: 500;
 `
 
-export const StyledInputWrapper = styled.div`
+export const InputWrapper = styled.div`
 	display: flex;
 	margin-bottom: 1rem;
 `
 
-export const StyledInput = styled.input`
+export const Input = styled.input`
 	flex-grow: 2;
 	height: 36px;
 	border: none;
@@ -28,7 +28,7 @@ export const StyledInput = styled.input`
 	}
 `
 
-export const StyledSubmit = styled.input`
+export const Submit = styled.input`
 	height: 36px;
 	padding: 4px 16px;
 	border: none;

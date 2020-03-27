@@ -1,35 +1,35 @@
 import styled from 'styled-components'
 
-export const StyledTitle = styled.h1`
+export const Title = styled.h1`
 	text-align: center;
 	margin: 1rem 0;
 `
-export const StyledSubtext = styled.h4`
+export const Subtext = styled.h4`
 	text-align: center;
 	margin: 0 0 0.5rem;
 `
-export const StyledPrice = styled.h1`
+export const Price = styled.h1`
 	text-align: center;
 	margin: 0 0 1rem;
 	font-weight: 700;
 `
-export const StyledParagraph = styled.p`
+export const Paragraph = styled.p`
 	text-align: center;
 	padding: 0 15px;
 `
-export const StyledSubtitle = styled.h2`
+export const Subtitle = styled.h2`
 	text-align: center;
 	margin: 0 0 1rem;
 	display: ${props => props.hideFeatures ? 'none' : 'block'};
 `
-export const StyledScrollWrapper = styled.div`
+export const ScrollWrapper = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	margin: 0 0 2rem;
 	display: ${props => props.hideFeatures ? 'none' : 'flex'};
 `
-export const StyledScrollContainer = styled.div`
+export const ScrollContainer = styled.div`
 	padding-right: 10px;
 	display: inline-block;
 	max-height: 10rem;
@@ -46,7 +46,7 @@ export const StyledScrollContainer = styled.div`
 	  background-color: ${props => props.theme.colors.lightGrey};
 	}
 `
-export const StyledScrollText = styled.p`
+export const ScrollText = styled.p`
 	margin-top: 0;
 	&:before {
 		content: "\u2713";
@@ -58,12 +58,12 @@ export const StyledScrollText = styled.p`
 		background: ${props => props.theme.colors.mediumGrey};
 	}
 `
-export const StyledLinkContainer = styled.div`
+export const LinkContainer = styled.div`
 	display: flex;
 	align-items: flex-end;
 	padding: 0 15px;
 `
-export const StyledLink = styled.a`
+export const Link = styled.a`
 	display: inline-block;
 	margin-left: auto;
 	text-align: right;

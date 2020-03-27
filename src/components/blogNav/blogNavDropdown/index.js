@@ -1,12 +1,6 @@
 import React, { useState } from 'react'
 
-import {
-	StyledDropdownWrapper,
-	StyledDropdownContainer,
-	StyledTitle,
-	StyledDropdown,
-	StyledLink,
-} from './style'
+import * as S from './style'
 
 export const BlogNavDropdown = ({ title, href, children }) => {
 	const [active, setActive] = useState(true)
@@ -14,17 +8,17 @@ export const BlogNavDropdown = ({ title, href, children }) => {
 
 
 	return (
-		<StyledDropdownWrapper>
-			<StyledTitle onClick={() => setActive(!active)} active={active}>{title}</StyledTitle>
-			<StyledDropdownContainer active={active}>
-				<StyledDropdown>
+		<S.DropdownWrapper>
+			<S.Title onClick={() => setActive(!active)} active={active}>{title}</S.Title>
+			<S.DropdownContainer active={active}>
+				<S.Dropdown>
 					{children}
-				</StyledDropdown>
-			</StyledDropdownContainer>
-		</StyledDropdownWrapper>
+				</S.Dropdown>
+			</S.DropdownContainer>
+		</S.DropdownWrapper>
 	)
 }
 
 export const BlogNavDropdownLink = ({ children, href }) => (
-	<StyledLink href={href}>{children}</StyledLink>
+	<S.Link href={href}>{children}</S.Link>
 )

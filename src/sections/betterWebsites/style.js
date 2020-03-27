@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
-import * as S from '../../components/grid/style'
+import {Row as StyledRow, Column as StyledColumn } from '../../components/grid/style'
 
-export const Row = styled(S.StyledRow)`
+export const Row = styled(StyledRow)`
 	padding-left: 15px;
 	padding-right: 15px;
 `
@@ -14,7 +14,7 @@ export const Header = styled.h1`
 	font-size: 2.5rem;
 `
 
-export const Column = styled(S.StyledColumn)`
+export const Column = styled(StyledColumn)`
 	display: flex;
 	flex-direction: column;
 	justify-content: center;

@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
-import { StyledColumn as Column } from '../../components/grid/style'
+import { Column as StyledColumn } from '../../components/grid/style'
 
-export const StyledHeroColumn = styled(Column)`
+export const HeroColumn = styled(StyledColumn)`
 	height: 100%;
 	padding-top: 64px;
 	padding-bottom: 54px;
@@ -13,7 +13,7 @@ export const StyledHeroColumn = styled(Column)`
 
 `
 
-export const StyledTitle = styled.h1`
+export const Title = styled.h1`
 	text-align: center;
 	font-family: ${props => props.theme.fonts.secondary};
 	color: ${props => props.theme.colors.white};
@@ -25,7 +25,7 @@ export const StyledTitle = styled.h1`
 	}
 `
 
-export const StyledText = styled.p`
+export const Text = styled.p`
 	text-align: center;
 	color: ${props => props.theme.colors.white};
 	font-size: 1.125rem;
@@ -37,13 +37,13 @@ export const StyledText = styled.p`
 	}
 `
 
-export const StyledContainer = styled.div`
+export const Container = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 `
 
-export const StyledSocialContainer = styled.div`
+export const SocialContainer = styled.div`
 	position: absolute;
 	bottom: 0;
 	left: 0;
@@ -57,7 +57,7 @@ export const StyledSocialContainer = styled.div`
 	}
 `
 
-export const StyledArrowContainer = styled.div`
+export const ArrowContainer = styled.div`
 	position: absolute;
 	bottom: 48px;
 	left: 0;
@@ -67,7 +67,7 @@ export const StyledArrowContainer = styled.div`
 	justify-content: center;
 `
 
-export const StyledArrowText = styled.span`
+export const ArrowText = styled.span`
 	display: none;
 	color: ${props => props.theme.colors.lightGrey};
 	font-weight: 700;
@@ -77,7 +77,7 @@ export const StyledArrowText = styled.span`
 	}
 `
 
-export const StyledArrowIcon = styled.img`
+export const ArrowIcon = styled.img`
 	width: 48px;
 	height: 48px;
 	position: relative;

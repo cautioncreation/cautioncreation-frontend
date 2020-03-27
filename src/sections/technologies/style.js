@@ -1,13 +1,13 @@
 import styled from 'styled-components'
-import { StyledColumn as Column } from '../../components/grid/style'
+import { Column as StyledColumn } from '../../components/grid/style'
 
-export const StyledColumn = styled(Column)`
+export const Column = styled(StyledColumn)`
 	display: flex;
 	justify-content: center;
 	align-items: center;
 `
 
-export const StyledTitle = styled.h1`
+export const Title = styled.h1`
 	color: ${props => props.theme.colors.black};
 	font-family: ${props => props.theme.fonts.secondary};
 	font-weight: 700;
@@ -18,7 +18,7 @@ export const StyledTitle = styled.h1`
 	}
 `
 
-export const StyledVectorContainer = styled.div`
+export const VectorContainer = styled.div`
 	padding: 0 0.5rem;
 	display: flex;
 	flex-direction: column;
@@ -34,6 +34,6 @@ export const StyledVectorContainer = styled.div`
 	}
 `
 
-export const StyledVector = styled.img`
+export const Vector = styled.img`
 	width: 100%;
 `

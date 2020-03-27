@@ -1,18 +1,18 @@
 import styled from 'styled-components'
 
-export const StyledWrapper = styled.div`
+export const Wrapper = styled.div`
 	width: 100%;
 	position: relative;
 	overflow: hidden;
 `
 
-export const StyledContainer = styled.div`
+export const Container = styled.div`
 	position: relative;
 	display: flex;
 	padding: ${props => props.hideIcons ? '15px 0' : '30px 0'};
 `
 
-export const StyledIconContainer = styled.div`
+export const IconContainer = styled.div`
 	display: ${props => props.hideIcons ? 'none' : 'flex'};
 	justify-content: center;
 	align-items: center;
@@ -22,7 +22,7 @@ export const StyledIconContainer = styled.div`
 	right: 0;
 `
 
-export const StyledIcon = styled.div`
+export const Icon = styled.div`
 	width: 16px;
 	height: 16px;
 	background: ${props => props.theme.colors.white};
@@ -41,7 +41,7 @@ export const StyledIcon = styled.div`
 }
 `
 
-export const StyledIconSlider = styled.div`
+export const IconSlider = styled.div`
 	width: 0%;
 	height: 100%;
 	background: ${props => props.theme.colors.lightBlue};

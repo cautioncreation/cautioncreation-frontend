@@ -1,15 +1,15 @@
 import styled from 'styled-components'
-import Image from 'gatsby-image'
+import StyledImage from 'gatsby-image'
 
-export const StyledImageWrapper = styled.div`
+export const ImageWrapper = styled.div`
 	overflow: hidden;
 	max-height: 100%;
 `
 
-export const StyledImage = styled(Image)`
+export const Image = styled(StyledImage)`
 `
 
-export const StyledTextWrapper = styled.div`
+export const TextWrapper = styled.div`
 	height: 100%;
 	padding: 2rem 0;
 	display: flex;
@@ -20,7 +20,7 @@ export const StyledTextWrapper = styled.div`
 		padding: 0;
 	}
 `
-export const StyledTitle = styled.h1`
+export const Title = styled.h1`
 	padding-left: 10px;
 	text-align: center;
 	margin: 0 0 1.5rem;
@@ -29,7 +29,7 @@ export const StyledTitle = styled.h1`
 		font-size: 3rem;
 	}
 `
-export const StyledText = styled.p`
+export const Text = styled.p`
 	font-size: 1.125rem;
 	margin-top: 0;
 	text-align: center;

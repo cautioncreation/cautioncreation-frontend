@@ -1,12 +1,6 @@
 import React, {useState} from 'react'
 
-import {
-	StyledButton,
-	StyledVector,
-	StyledRect1,
-	StyledRect2,
-	StyledRect3,
-} from './style'
+import * as S from './style'
 
 export const BlogMenuIcon = (props) => {
 	const [className, setClassName] = useState(false)
@@ -18,12 +12,12 @@ export const BlogMenuIcon = (props) => {
 
 
 	return (
-		<StyledButton onClick={handleClick} aria-label="Open Menu">
-			<StyledVector viewBox="0 0 100 100" alt="Menu">
-	  		<StyledRect1 className={className} x="10" y="20" width="80" height="10" ry="7.5" />
-	  		<StyledRect2 className={className} x="10" y="45" width="80" height="10" ry="7.5" />
-		  	<StyledRect3 className={className} x="10" y="70" width="80" height="10" ry="7.5" />
-			</StyledVector>
-		</StyledButton>
+		<S.Button onClick={handleClick} aria-label="Open Menu">
+			<S.Vector viewBox="0 0 100 100" alt="Menu">
+	  		<S.Rect1 className={className} x="10" y="20" width="80" height="10" ry="7.5" />
+	  		<S.Rect2 className={className} x="10" y="45" width="80" height="10" ry="7.5" />
+		  	<S.Rect3 className={className} x="10" y="70" width="80" height="10" ry="7.5" />
+			</S.Vector>
+		</S.Button>
 	)
 }

@@ -1,7 +1,7 @@
 import styled from 'styled-components'
-import Image from 'gatsby-image'
+import StyledImage from 'gatsby-image'
 
-export const StyledTitle = styled.h1`
+export const Title = styled.h1`
 	text-align: center;
 	font-weight: 700;
 	margin: 0 0 3rem;
@@ -11,16 +11,16 @@ export const StyledTitle = styled.h1`
 	}
 `
 
-export const StyledWrapperLink = styled.a`
+export const WrapperLink = styled.a`
 	display: block;
 `
 
-export const StyledBackground = styled(Image)`
+export const Background = styled(StyledImage)`
 	margin-bottom: 30px;
 	border-radius: 1rem;
 `
 
-export const StyledTextContainer = styled.div`
+export const TextContainer = styled.div`
 	margin-bottom: 3rem;
 	border-radius: 1rem;
 	@media(min-width: ${props => props.theme.breakpoints.lg}) {
@@ -44,14 +44,14 @@ export const StyledTextContainer = styled.div`
 	}
 `
 
-export const StyledService = styled.h4`
+export const Service = styled.h4`
 	margin-bottom: 0;
 	@media(min-width: ${props => props.theme.breakpoints.lg}) {
 		color: ${props => props.theme.colors.white};
 	}
 `
 
-export const StyledCompany = styled.h1`
+export const Company = styled.h1`
 	margin: 0;
 	@media(min-width: ${props => props.theme.breakpoints.lg}) {
 		font-size: 2.5rem;
@@ -59,7 +59,7 @@ export const StyledCompany = styled.h1`
 	}
 `
 
-export const StyledDescription = styled.p`
+export const Description = styled.p`
 	margin-top: 0.5rem;
 	@media(min-width: ${props => props.theme.breakpoints.lg}) {
 		color: ${props => props.theme.colors.white};

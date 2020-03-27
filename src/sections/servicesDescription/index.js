@@ -7,67 +7,57 @@ import WorkInProgress from '../../images/svg/undraw_work_in_progress.svg'
 import MobileWireframe from '../../images/svg/undraw_mobile_wireframe.svg'
 import CleanUp from '../../images/svg/undraw_clean_up.svg'
 
-import {
-	StyledRow,
-	StyledColumn,
-	StyledColumnRight,
-	StyledVector,
-	StyledVectorWrapper,
-	StyledHeader,
-	StyledHeaderRight,
-	StyledParagraph,
-	StyledParagraphRight,
-} from './style'
+import * as S from './style'
 
 export const ServicesDescription = ({ src }) => (
 	<SectionStatic>
-		<StyledRow>
+		<S.Row>
 			<Column xs="0" lg="1"/>
-			<StyledColumn xs="12" lg="6">
-				<StyledHeader>Development</StyledHeader>
-				<StyledParagraph>
+			<S.Column xs="12" lg="6">
+				<S.Header>Development</S.Header>
+				<S.Paragraph>
 					Our experienced development team has the experience to ensure that your website or application has the speed, simplicity and style to increase web traffic, conversions and every other metric important to your businesses success. We understand not only your businesses needs, but the needs of your customers as well, and it shows in our development practices.
-				</StyledParagraph>
+				</S.Paragraph>
 				<Button href="/development">Development</Button>
-			</StyledColumn>
+			</S.Column>
 			<Column xs="12" lg="4">
-				<StyledVectorWrapper>
-					<StyledVector src={WorkInProgress} alt="Illustration of woman painting" />
-				</StyledVectorWrapper>
+				<S.VectorWrapper>
+					<S.Vector src={WorkInProgress} alt="Illustration of woman painting" />
+				</S.VectorWrapper>
 			</Column>
 			<Column xs="0" lg="1"/>
-		</StyledRow>
-		<StyledRow>
+		</S.Row>
+		<S.Row>
 			<Column xs="0" lg="1"/>
 			<Column xs="12" lg="4">
-				<StyledVectorWrapper>
-					<StyledVector src={MobileWireframe} alt="Illustration of two people working" />
-				</StyledVectorWrapper>
+				<S.VectorWrapper>
+					<S.Vector src={MobileWireframe} alt="Illustration of two people working" />
+				</S.VectorWrapper>
 			</Column>
-			<StyledColumnRight xs="12" lg="6">
-				<StyledHeaderRight>Branding & Design</StyledHeaderRight>
-				<StyledParagraphRight>
+			<S.ColumnRight xs="12" lg="6">
+				<S.HeaderRight>Branding & Design</S.HeaderRight>
+				<S.ParagraphRight>
 					In today's digital world, brand identity matters. We work hard to ensure that when new visitors view your site they not only have a smooth experience, but they remember your brand identity as well. We do this by ensuring not only that the colours, fonts and logos match your brand, but that the imagery and content speak to your comapanies vision as well.
-				</StyledParagraphRight>
+				</S.ParagraphRight>
 				<Button href="/branding-and-design">Branding & Design</Button>
-			</StyledColumnRight>
+			</S.ColumnRight>
 			<Column xs="0" lg="1"/>
-		</StyledRow>
-		<StyledRow>
+		</S.Row>
+		<S.Row>
 			<Column xs="0" lg="1"/>
-			<StyledColumn xs="12" lg="6">
-				<StyledHeader>Maintenance</StyledHeader>
-				<StyledParagraph>
+			<S.Column xs="12" lg="6">
+				<S.Header>Maintenance</S.Header>
+				<S.Paragraph>
 					Keeping your websites content and security updated can be a huge undertaking. In a lot of cases it can impede on your ability to run your business, especially if you aren't particularly web literate. Thankfully, Caution Creation is here to step in and take over. Content, security, backups, updates, SEO and more. No matter the size or complexity, we've got your businesses online needs covered.
-				</StyledParagraph>
+				</S.Paragraph>
 				<Button href="/maintenance">Maintenance</Button>
-			</StyledColumn>
+			</S.Column>
 			<Column xs="12" lg="4">
-				<StyledVectorWrapper>
-					<StyledVector src={CleanUp}  alt="Illustration of a man cleaning a screen" />
-				</StyledVectorWrapper>
+				<S.VectorWrapper>
+					<S.Vector src={CleanUp}  alt="Illustration of a man cleaning a screen" />
+				</S.VectorWrapper>
 			</Column>
 			<Column xs="0" lg="1"/>
-		</StyledRow>
+		</S.Row>
 	</SectionStatic>
 )

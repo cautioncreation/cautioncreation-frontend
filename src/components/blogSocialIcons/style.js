@@ -1,17 +1,17 @@
 import styled from 'styled-components'
 
-export const StyledSocialContainer = styled.div`
+export const SocialContainer = styled.div`
 
 `
 
-export const StyledTitle = styled.h1`
+export const Title = styled.h1`
 	text-align: center;
 	@media(min-width: ${props => props.theme.breakpoints.md}) {
 		display: none;
 	}
 `
 
-export const StyledSocialWrapper = styled.div`
+export const SocialWrapper = styled.div`
 	display: flex;
 	justify-content: space-around;
 	@media(min-width: ${props => props.theme.breakpoints.md}) {

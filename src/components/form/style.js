@@ -1,10 +1,10 @@
 import styled from 'styled-components'
 
-export const StyledForm = styled.form`
+export const Form = styled.form`
 	width: 100%;
 `
 
-export const StyledLabel = styled.label`
+export const Label = styled.label`
 	font-size: 20px;
 	top: ${props => props.isFocused ? '0px' : '34px'};
 	cursor: text;
@@ -12,7 +12,7 @@ export const StyledLabel = styled.label`
 	transition: top 0.5s;
 `
 
-export const StyledInput = styled.input`
+export const Input = styled.input`
 	background: none;
 	height: 40px;
 	width: 100%;
@@ -22,7 +22,7 @@ export const StyledInput = styled.input`
 	border-bottom: 1px solid ${props => props.theme.colors.accent};
 `
 
-export const StyledTextarea = styled.textarea`
+export const Textarea = styled.textarea`
 	background: none;
 	width: 100%;
 	height: 40px;
@@ -32,19 +32,19 @@ export const StyledTextarea = styled.textarea`
 	border-bottom: 1px solid ${props => props.theme.colors.accent};
 `
 
-export const StyledCheckboxContainer = styled.div`
+export const CheckboxContainer = styled.div`
 	margin-bottom: 1rem;
 `
 
-export const StyledCheckbox = styled.input`
+export const Checkbox = styled.input`
 	margin-right: 4px;
 `
 
-export const StyledCheckboxLabel = styled.label`
+export const CheckboxLabel = styled.label`
 	margin: auto;
 `
 
-export const StyledFile = styled.input`
+export const File = styled.input`
 	margin-bottom: 1rem;
 	vertical-align: center;
 `

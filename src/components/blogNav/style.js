@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-export const StyledNav = styled.nav`
+export const Nav = styled.nav`
 	display: flex;
 	justify-content: space-between;
 	position: fixed;
@@ -17,14 +17,14 @@ export const StyledNav = styled.nav`
 	}
 	transition: background 1s;
 `
-export const StyledBrand = styled.a`
+export const Brand = styled.a`
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	height: 48px;
 	text-decoration: none;
 `
-export const StyledLogo = styled.img`
+export const Logo = styled.img`
 	height: 48px;
 	float: left;
 	&:hover {

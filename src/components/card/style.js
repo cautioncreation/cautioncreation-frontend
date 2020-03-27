@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const StyledCard = styled.div`
+export const Card = styled.div`
 	margin: 0 0 30px;
 	position: relative;
 	padding: 15px;

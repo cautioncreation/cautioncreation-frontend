@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
-import { StyledColumn as Column } from '../../components/grid/style'
+import { Column as StyledColumn } from '../../components/grid/style'
 
-export const StyledQuestionColumn = styled(Column)`
+export const QuestionColumn = styled(StyledColumn)`
 	display: flex;
 	flex-wrap: wrap;
 	padding-top: 2rem;
@@ -11,7 +11,7 @@ export const StyledQuestionColumn = styled(Column)`
 	}
 `
 
-export const StyledTitle = styled.h1`
+export const Title = styled.h1`
 	font-size: 2.5rem;
 	font-weight: 700;
 	text-align: center;
@@ -21,14 +21,14 @@ export const StyledTitle = styled.h1`
 	}
 `
 
-export const StyledLine = styled.hr`
+export const Line = styled.hr`
 	margin: 0.5rem auto 0;
 	width: 40%;
 	border: none;
 	border-bottom: 5px solid ${props => props.theme.colors.yellow};
 `
 
-export const StyledParagraph = styled.p`
+export const Paragraph = styled.p`
 	font-size: 1.125rem;
 	margin: 0;
 	@media(min-width: ${props => props.theme.breakpoints.lg}) {

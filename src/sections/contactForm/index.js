@@ -4,16 +4,11 @@ import { Form, Input, Textarea, Checkbox } from '../../components/form'
 import { Button } from '../../components/button'
 import { SectionStatic, Row, Column } from '../../components/grid'
 
-import {
-	StyledPageTitle,
-	StyledInfoContainer,
-	StyledTitle,
-	StyledInfo,
-} from './style'
+import * as S from './style'
 
 export const ContactForm = ({ data }) => (
 	<SectionStatic>
-		<StyledPageTitle>Contact Us</StyledPageTitle>
+		<S.PageTitle>Contact Us</S.PageTitle>
 		<Row>
 			<Column xs="12" md="8">
 				<Form>
@@ -45,26 +40,26 @@ export const ContactForm = ({ data }) => (
 				</Form>
 			</Column>
 			<Column xs="12" md="4">
-				<StyledInfoContainer>
-					<StyledTitle>Phone</StyledTitle>
-					<StyledInfo href="tel: 780-618-6340">
+				<S.InfoContainer>
+					<S.Title>Phone</S.Title>
+					<S.Info href="tel: 780-618-6340">
 						+1 (780) 618 6340
-					</StyledInfo>
-				</StyledInfoContainer>
-				<StyledInfoContainer>
-					<StyledTitle>Email</StyledTitle>
-					<StyledInfo href="mailto: hi@cautioncreation.com">
+					</S.Info>
+				</S.InfoContainer>
+				<S.InfoContainer>
+					<S.Title>Email</S.Title>
+					<S.Info href="mailto: hi@cautioncreation.com">
 						hi@cautioncreation.com
-					</StyledInfo>
-				</StyledInfoContainer>
-				<StyledInfoContainer>
-					<StyledTitle>Address</StyledTitle>
-					<StyledInfo href="https://www.google.com/maps/place/13035+200+St+NW,+Edmonton,+AB+T5S+0E1/@53.5916904,-113.6666143,17z/data=!3m1!4b1!4m5!3m4!1s0x53a0271e4125eb8b:0x248ede7059613225!8m2!3d53.5916904!4d-113.6644256">
+					</S.Info>
+				</S.InfoContainer>
+				<S.InfoContainer>
+					<S.Title>Address</S.Title>
+					<S.Info href="https://www.google.com/maps/place/13035+200+St+NW,+Edmonton,+AB+T5S+0E1/@53.5916904,-113.6666143,17z/data=!3m1!4b1!4m5!3m4!1s0x53a0271e4125eb8b:0x248ede7059613225!8m2!3d53.5916904!4d-113.6644256">
 						13035 200 St NW,
 						<br />
 						Edmonton AB, T5S 0E1
-					</StyledInfo>
-				</StyledInfoContainer>
+					</S.Info>
+				</S.InfoContainer>
 			</Column>
 		</Row>
 	</SectionStatic>

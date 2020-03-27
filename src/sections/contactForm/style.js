@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const StyledPageTitle = styled.h1`
+export const PageTitle = styled.h1`
 	margin: 0 0 3rem;
 	font-size: 3rem;
 	font-weight: 600;
@@ -9,18 +9,18 @@ export const StyledPageTitle = styled.h1`
 	padding-left: 10px;
 `
 
-export const StyledInfoContainer = styled.div`
+export const InfoContainer = styled.div`
 	text-align: right;
 	padding-bottom: 1rem;
 `
 
-export const StyledTitle = styled.h1`
+export const Title = styled.h1`
 	margin: 0 0 0.5rem;
 	font-size: 2rem;
 	font-weight: 600;
 	font-family: ${props => props.theme.fonts.secondary};
 `
 
-export const StyledInfo = styled.a`
+export const Info = styled.a`
 	font-size: 1.25rem;
 `

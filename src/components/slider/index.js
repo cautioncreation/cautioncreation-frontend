@@ -1,12 +1,6 @@
 import React, { Component } from 'react'
 
-import {
-	StyledWrapper,
-	StyledContainer,
-	StyledIconContainer,
-	StyledIcon,
-	StyledIconSlider,
-} from './style'
+import * as S from './style'
 
 export class Slider extends Component {
 	constructor(props) {
@@ -108,25 +102,25 @@ export class Slider extends Component {
 	}
 	render() {
 		return (
-			<StyledWrapper>
-				<StyledContainer hideIcons={this.props.hideIcons} id={(this.props.prefix + "Container")}>
+			<S.Wrapper>
+				<S.Container hideIcons={this.props.hideIcons} id={(this.props.prefix + "Container")}>
 					{this.props.children}
-				</StyledContainer>
-				<StyledIconContainer id={(this.props.prefix + "IconContainer")} hideIcons={this.props.hideIcons}>
+				</S.Container>
+				<S.IconContainer id={(this.props.prefix + "IconContainer")} hideIcons={this.props.hideIcons}>
 					{this.props.children.map((item, i) => (
-						<StyledIcon
+						<S.Icon
 							key={i}
 							onClick={() => this.handleClick(i)}
 							className={i === 0 ? this.props.prefix + "-icon active" : this.props.prefix + "-icon"}
 							>
-							<StyledIconSlider
+							<S.IconSlider
 								time={this.props.interval + "s"}
 								className={i === 0 ? this.props.prefix + "-slider active" : this.props.prefix + "-slider"}
 							/>
-						</StyledIcon>
+						</S.Icon>
 					))}
-				</StyledIconContainer>
-			</StyledWrapper>
+				</S.IconContainer>
+			</S.Wrapper>
 		)
 	}
 }

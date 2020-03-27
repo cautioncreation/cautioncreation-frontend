@@ -3,13 +3,11 @@ import React from 'react'
 import { SectionStatic, Row } from '../../components/grid'
 import { ServiceCard } from '../../components/serviceCard'
 
-import {
-	StyledTitle,
-} from './style'
+import * as S from './style'
 
 export const DevelopmentServices = () => (
 	<SectionStatic>
-		<StyledTitle>Development Services</StyledTitle>
+		<S.Title>Development Services</S.Title>
 		<Row>
 			<ServiceCard
 				hideFeatures

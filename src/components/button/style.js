@@ -1,11 +1,11 @@
 import styled, { css } from 'styled-components'
 
-export const StyledLink = styled.a`
+export const Link = styled.a`
 	display: inline-block;
 	text-decoration: none;
 `
 
-export const StyledButton = styled.button`
+export const Button = styled.button`
 	font-weight: 600;
 	font-size: 1.25rem;
 	font-family: ${props => props.theme.fonts.secondary};

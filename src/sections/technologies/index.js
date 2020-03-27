@@ -5,12 +5,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 import { SectionStatic, Row, Column } from '../../components/grid'
 import { Slider } from '../../components/slider'
 
-import {
-	StyledColumn,
-	StyledTitle,
-	StyledVectorContainer,
-	StyledVector,
-} from './style'
+import * as S from './style'
 
 export const Technologies = withTheme(({ theme }) => {
 	const data = useStaticQuery(graphql`
@@ -50,43 +45,43 @@ export const Technologies = withTheme(({ theme }) => {
 
 	return (
 		<SectionStatic background={theme.colors.lightGrey}>
-			<StyledTitle>A Few of Our Favourite Technologies</StyledTitle>
+			<S.Title>A Few of Our Favourite Technologies</S.Title>
 			<Row>
 				<Column xs="0" lg="1" spacer />
-				<StyledColumn xs="12" lg="10">
+				<S.Column xs="12" lg="10">
 					<Slider interval="2" prefix="technologies" show="5" hideIcons>
-						<StyledVectorContainer>
-							<StyledVector src={data.sass.publicURL} alt="Sass logo" />
-						</StyledVectorContainer>
-						<StyledVectorContainer>
-							<StyledVector src={data.nodejs.publicURL} alt="Node.js logo" />
-						</StyledVectorContainer>
-						<StyledVectorContainer>
-							<StyledVector src={data.mysql.publicURL} alt="mySQL logo" />
-						</StyledVectorContainer>
-						<StyledVectorContainer>
-							<StyledVector src={data.react.publicURL} alt="React.js logo" />
-						</StyledVectorContainer>
-						<StyledVectorContainer>
-							<StyledVector src={data.php.publicURL} alt="PHP logo" />
-						</StyledVectorContainer>
-						<StyledVectorContainer>
-							<StyledVector src={data.gatsby.publicURL} alt="Gatsby.js logo" />
-						</StyledVectorContainer>
-						<StyledVectorContainer>
-							<StyledVector src={data.netlify.publicURL} alt="Netlify logo" />
-						</StyledVectorContainer>
-						<StyledVectorContainer>
-							<StyledVector src={data.strapi.publicURL} alt="Strapi logo" />
-						</StyledVectorContainer>
-						<StyledVectorContainer>
-							<StyledVector src={data.heroku.publicURL} alt="Heroku logo" />
-						</StyledVectorContainer>
-						<StyledVectorContainer>
-							<StyledVector src={data.bootstrap.publicURL} alt="Bootstrap logo" />
-						</StyledVectorContainer>
+						<S.VectorContainer>
+							<S.Vector src={data.sass.publicURL} alt="Sass logo" />
+						</S.VectorContainer>
+						<S.VectorContainer>
+							<S.Vector src={data.nodejs.publicURL} alt="Node.js logo" />
+						</S.VectorContainer>
+						<S.VectorContainer>
+							<S.Vector src={data.mysql.publicURL} alt="mySQL logo" />
+						</S.VectorContainer>
+						<S.VectorContainer>
+							<S.Vector src={data.react.publicURL} alt="React.js logo" />
+						</S.VectorContainer>
+						<S.VectorContainer>
+							<S.Vector src={data.php.publicURL} alt="PHP logo" />
+						</S.VectorContainer>
+						<S.VectorContainer>
+							<S.Vector src={data.gatsby.publicURL} alt="Gatsby.js logo" />
+						</S.VectorContainer>
+						<S.VectorContainer>
+							<S.Vector src={data.netlify.publicURL} alt="Netlify logo" />
+						</S.VectorContainer>
+						<S.VectorContainer>
+							<S.Vector src={data.strapi.publicURL} alt="Strapi logo" />
+						</S.VectorContainer>
+						<S.VectorContainer>
+							<S.Vector src={data.heroku.publicURL} alt="Heroku logo" />
+						</S.VectorContainer>
+						<S.VectorContainer>
+							<S.Vector src={data.bootstrap.publicURL} alt="Bootstrap logo" />
+						</S.VectorContainer>
 					</Slider>
-				</StyledColumn>
+				</S.Column>
 				<Column xs="0" lg="1" spacer />
 			</Row>
 		</SectionStatic>

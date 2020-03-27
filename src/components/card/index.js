@@ -1,11 +1,9 @@
 import React from 'react'
 
-import {
-	StyledCard,
-} from './style'
+import * as S from './style'
 
 export const Card = ({ children, background }) => (
-	<StyledCard background={background}>
+	<S.Card background={background}>
 		{children}
-	</StyledCard>
+	</S.Card>
 )

@@ -4,12 +4,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 import { SectionStatic, Row, Column } from '../../components/grid'
 import { Accordion } from '../../components/accordion'
 
-import {
-	StyledQuestionColumn,
-	StyledTitle,
-	StyledLine,
-	StyledText,
-} from './style'
+import * as S from './style'
 
 export const FrequentlyAskedQuestions = () => {
 	const data = useStaticQuery(graphql`
@@ -31,23 +26,23 @@ export const FrequentlyAskedQuestions = () => {
 		<SectionStatic>
 			<Row>
 				<Column xs="12" lg="4">
-					<StyledTitle>
+					<S.Title>
 						Frequently Asked Questions
-						<StyledLine />
-					</StyledTitle>
+						<S.Line />
+					</S.Title>
 				</Column>
-				<StyledQuestionColumn xs="12" lg="8">
+				<S.QuestionColumn xs="12" lg="8">
 					<Row>
 						{data.allMarkdownRemark.edges.map(({ node }, i) => (
 							<Column key={i} xs="12">
 								<Accordion title={node.frontmatter.question}>
-									<StyledText dangerouslySetInnerHTML={{__html: node.html}}>
-									</StyledText>
+									<S.Text dangerouslySetInnerHTML={{__html: node.html}}>
+									</S.Text>
 								</Accordion>
 							</Column>
 						))}
 					</Row>
-				</StyledQuestionColumn>
+				</S.QuestionColumn>
 			</Row>
 		</SectionStatic>
 	)

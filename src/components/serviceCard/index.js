@@ -3,37 +3,26 @@ import React from 'react'
 import { Column } from '../grid'
 import { Card } from '../card'
 
-import {
-	StyledTitle,
-	StyledSubtext,
-	StyledPrice,
-	StyledParagraph,
-	StyledSubtitle,
-	StyledScrollWrapper,
-	StyledScrollContainer,
-	StyledScrollText,
-	StyledLinkContainer,
-	StyledLink,
-} from './style'
+import * as S from './style'
 
 export const ServiceCard = ({ service, price, paragraph, subtitle, features, hideFeatures }) => (
 	<Column xs="12" md="6" lg="4">
 		<Card>
-			<StyledTitle dangerouslySetInnerHTML={{__html: service}}/>
-			<StyledSubtext>Starting At</StyledSubtext>
-			<StyledPrice dangerouslySetInnerHTML={{__html: price}}/>
-			<StyledParagraph dangerouslySetInnerHTML={{__html: paragraph}}/>
-			<StyledSubtitle hideFeatures={hideFeatures} dangerouslySetInnerHTML={{__html: subtitle}}/>
-			<StyledScrollWrapper hideFeatures={hideFeatures}>
-				<StyledScrollContainer>
+			<S.Title dangerouslySetInnerHTML={{__html: service}}/>
+			<S.Subtext>Starting At</S.Subtext>
+			<S.Price dangerouslySetInnerHTML={{__html: price}}/>
+			<S.Paragraph dangerouslySetInnerHTML={{__html: paragraph}}/>
+			<S.Subtitle hideFeatures={hideFeatures} dangerouslySetInnerHTML={{__html: subtitle}}/>
+			<S.ScrollWrapper hideFeatures={hideFeatures}>
+				<S.ScrollContainer>
 					{features.map((text) => (
-						<StyledScrollText dangerouslySetInnerHTML={{__html: text}}/>
+						<S.ScrollText dangerouslySetInnerHTML={{__html: text}}/>
 					))}
-				</StyledScrollContainer>
-			</StyledScrollWrapper>
-			<StyledLinkContainer>
-				<StyledLink href="/contact">Get Started</StyledLink>
-			</StyledLinkContainer>
+				</S.ScrollContainer>
+			</S.ScrollWrapper>
+			<S.LinkContainer>
+				<S.Link href="/contact">Get Started</S.Link>
+			</S.LinkContainer>
 		</Card>
 	</Column>
 )

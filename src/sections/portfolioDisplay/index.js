@@ -3,43 +3,35 @@ import React from 'react'
 import { SectionStatic, Row, Column } from '../../components/grid'
 import { Button } from '../../components/button'
 
-import {
-		StyledTitle,
-		StyledWrapperLink,
-		StyledBackground,
-		StyledTextContainer,
-		StyledService,
-		StyledCompany,
-		StyledDescription,
-} from './style'
+import * as S from './style'
 
 export const PortfolioDisplay = ({ data }) => (
 	<SectionStatic>
 		<Row>
 			<Column xs="0" lg="2" spacer />
 			<Column xs="12" lg="8">
-				<StyledTitle>Some of Our Best Works</StyledTitle>
+				<S.Title>Some of Our Best Works</S.Title>
 			</Column>
 			<Column xs="0" lg="2" spacer />
 		</Row>
 		<Row>
 			{data.map(({ node }, i) => (
 				<Column xs="12" lg="6">
-					<StyledWrapperLink>
-						<StyledBackground fluid={node.frontmatter.image.childImageSharp.fluid} alt={node.frontmatter.company}/>
-					</StyledWrapperLink>
-					<StyledTextContainer>
-						<StyledService>
+					<S.WrapperLink>
+						<S.Background fluid={node.frontmatter.image.childImageSharp.fluid} alt={node.frontmatter.company}/>
+					</S.WrapperLink>
+					<S.TextContainer>
+						<S.Service>
 							{node.frontmatter.services}
-						</StyledService>
-						<StyledCompany>
+						</S.Service>
+						<S.Company>
 							{node.frontmatter.company}
-						</StyledCompany>
-						<StyledDescription>
+						</S.Company>
+						<S.Description>
 							{node.frontmatter.industry}
-						</StyledDescription>
+						</S.Description>
 						<Button href={node.frontmatter.link} target="_blank" rel="noreferrer">Go To Site</Button>
-					</StyledTextContainer>
+					</S.TextContainer>
 				</Column>
 			))}
 		</Row>

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const StyledDropdownWrapper = styled.div`
+export const DropdownWrapper = styled.div`
 	display: flex;
 	position: relative;
 	flex-direction: column;
@@ -8,7 +8,7 @@ export const StyledDropdownWrapper = styled.div`
 `
 
 
-export const StyledTitle = styled.a`
+export const Title = styled.a`
 	padding: 16px;
 	font-size: 1.25rem;
 	color: ${props => props.theme.colors.white};
@@ -25,7 +25,7 @@ export const StyledTitle = styled.a`
 			content: "";
 			margin-left: 0;
 		}
-		${StyledDropdownWrapper}:hover & {
+		${DropdownWrapper}:hover & {
 			position: relative;
 			padding-bottom: 6px;
 			&:after {
@@ -44,7 +44,7 @@ export const StyledTitle = styled.a`
 	}
 `
 
-export const StyledDropdownContainer = styled.div`
+export const DropdownContainer = styled.div`
 	max-height: 0;
 	overflow: hidden;
 	transition: max-height 0.5s;
@@ -55,13 +55,13 @@ export const StyledDropdownContainer = styled.div`
 		position: absolute;
 		left: 8px;
 		top: 100%;
-		${StyledDropdownWrapper}:hover & {
+		${DropdownWrapper}:hover & {
 			max-height: 400px;
 		}
 	}
 `
 
-export const StyledDropdown = styled.div`
+export const Dropdown = styled.div`
 	display: flex;
 	position: relative;
 	flex-direction: column;
@@ -75,7 +75,7 @@ export const StyledDropdown = styled.div`
 	}
 `
 
-export const StyledLink = styled.a`
+export const Link = styled.a`
 	padding: 16px 0;
 	margin: 0px 16px;
 	font-size: 1.125rem;

@@ -1,18 +1,18 @@
 import styled from 'styled-components'
-import BackgroundImage from 'gatsby-background-image'
+import StyledBackgroundImage from 'gatsby-background-image'
 
 import {
-	StyledColumn as Column,
-	StyledSection as Section,
-	StyledContainerStatic as ContainerStatic
+	Column as StyledColumn,
+	Section as StyledSection,
+	ContainerStatic as StyledContainerStatic
 } from '../../components/grid/style'
 
-export const StyledContainer = styled(Section)`
+export const Container = styled(StyledSection)`
 	padding-top: 0;
 	padding-bottom: 0;
 `
 
-export const StyledBackground = styled(BackgroundImage)`
+export const Background = styled(StyledBackgroundImage)`
 	display: flex;
 	position: relative;
 	justify-content: center;
@@ -24,13 +24,13 @@ export const StyledBackground = styled(BackgroundImage)`
 	margin-right: -15px;
 `
 
-export const StyledSmallBackground = styled(StyledBackground)`
+export const SmallBackground = styled(Background)`
 	min-height: 35vh;
 	height: auto;
 	background-position: ${props => props.position} !important;
 `
 
-export const StyledTint = styled.span`
+export const Tint = styled.span`
 &:before {
 	position: absolute;
 	content: "";
@@ -42,12 +42,12 @@ export const StyledTint = styled.span`
 }
 `
 
-export const StyledTextColumn = styled(Column)`
+export const TextColumn = styled(StyledColumn)`
 	padding-top: 2rem;
 	padding-bottom: 2rem;
 `
 
-export const StyledSubtitle = styled.h2`
+export const Subtitle = styled.h2`
 	text-align: center;
 	font-weight: 700;
 	font-family: ${props => props.theme.fonts.secondary};
@@ -58,7 +58,7 @@ export const StyledSubtitle = styled.h2`
 	}
 `
 
-export const StyledTitle = styled.h1`
+export const Title = styled.h1`
 	text-align: center;
 	line-height: 1;
 	font-family: ${props => props.theme.fonts.secondary};
@@ -71,15 +71,15 @@ export const StyledTitle = styled.h1`
 	}
 `
 
-export const StyledCartoonContainer = styled(Section)`
+export const CartoonContainer = styled(StyledSection)`
 	background: ${props => props.theme.colors.mediumBlue};
 `
 
-export const StyledCartoonContainerStatic = styled(ContainerStatic)`
+export const CartoonContainerStatic = styled(StyledContainerStatic)`
 
 `
 
-export const StyledCartoonTextColumn = styled(Column)`
+export const CartoonTextColumn = styled(StyledColumn)`
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -89,12 +89,12 @@ export const StyledCartoonTextColumn = styled(Column)`
 	}
 `
 
-export const StyledCartoonTextWrapper = styled.div`
+export const CartoonTextWrapper = styled.div`
 	border-left: 4px solid ${props => props.theme.colors.yellow};
 	padding-left: 10px;
 `
 
-export const StyledCartoonSubTitle = styled.h3`
+export const CartoonSubTitle = styled.h3`
 	color: ${props => props.theme.colors.white};
 	margin: 0;
 	@media(min-width: ${props => props.theme.breakpoints.lg}) {
@@ -102,7 +102,7 @@ export const StyledCartoonSubTitle = styled.h3`
 	}
 `
 
-export const StyledCartoonTitle = styled.h1`
+export const CartoonTitle = styled.h1`
 	color: ${props => props.theme.colors.white};
 	font-family: ${props => props.theme.fonts.secondary};
 	margin: 0;
@@ -112,7 +112,7 @@ export const StyledCartoonTitle = styled.h1`
 	}
 `
 
-export const StyledCartoonVector = styled.img`
+export const CartoonVector = styled.img`
 	max-width: 100%;
 	max-height: 100%;
 `

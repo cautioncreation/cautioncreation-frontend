@@ -1,13 +1,6 @@
 import React, {useState} from 'react'
 
-import {
-	StyledWrapper,
-	StyledHeaderContainer,
-	StyledTextContainer,
-	StyledTitle,
-	StyledVector,
-	StyledRect,
-} from './style'
+import * as S from './style'
 
 export const FooterItem = ({ title, children, open }) => {
 	const [isActive, setIsActive] = useState(open === true ? true : false)
@@ -16,17 +9,17 @@ export const FooterItem = ({ title, children, open }) => {
 		setIsActive(isActive === false ? true : false)
 	}
 	return (
-		<StyledWrapper>
-			<StyledHeaderContainer active={isActive} onClick={handleClick}>
-				<StyledTitle>{title}</StyledTitle>
-					<StyledVector viewBox="0 0 100 100">
-			  		<StyledRect active={isActive} x="45" y="10" width="10" height="80" ry="7.5" />
-			  		<StyledRect active={isActive} x="10" y="45" width="80" height="10" ry="7.5" />
-					</StyledVector>
-			</StyledHeaderContainer>
-			<StyledTextContainer active={isActive}>
+		<S.Wrapper>
+			<S.HeaderContainer active={isActive} onClick={handleClick}>
+				<S.Title>{title}</S.Title>
+					<S.Vector viewBox="0 0 100 100">
+			  		<S.Rect active={isActive} x="45" y="10" width="10" height="80" ry="7.5" />
+			  		<S.Rect active={isActive} x="10" y="45" width="80" height="10" ry="7.5" />
+					</S.Vector>
+			</S.HeaderContainer>
+			<S.TextContainer active={isActive}>
 				{children}
-			</StyledTextContainer>
-		</StyledWrapper>
+			</S.TextContainer>
+		</S.Wrapper>
 	)
 }

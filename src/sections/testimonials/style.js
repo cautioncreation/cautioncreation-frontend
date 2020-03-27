@@ -1,15 +1,15 @@
 import styled from 'styled-components'
 
-import { StyledColumn as Column } from '../../components/grid/style'
+import { Column as StyledColumn } from '../../components/grid/style'
 
-export const StyledColumn = styled(Column)`
+export const Column = styled(StyledColumn)`
 	display: flex;
 	justify-content: center;
 	align-items: center;
 `
 
 
-export const StyledTitle = styled.h1`
+export const Title = styled.h1`
 	font-size: 2.5rem;
 	color: ${props => props.theme.colors.white};
 	font-weight: 700;
@@ -20,14 +20,14 @@ export const StyledTitle = styled.h1`
 	}
 `
 
-export const StyledLine = styled.hr`
+export const Line = styled.hr`
 	margin: 0.5rem auto 0;
 	width: 40%;
 	border: none;
 	border-bottom: 5px solid ${props => props.theme.colors.yellow};
 `
 
-export const StyledTestimonial = styled.div`
+export const Testimonial = styled.div`
 	background: ${props => props.theme.colors.background};
 	border-radius: 0.5rem;
 	padding: 1rem;
@@ -40,7 +40,7 @@ export const StyledTestimonial = styled.div`
 	}
 `
 
-export const StyledText = styled.p`
+export const Text = styled.p`
 	font-size: 1rem;
 	text-align: left;
 	margin-top: 0;
@@ -50,14 +50,14 @@ export const StyledText = styled.p`
 	}
 `
 
-export const StyledName = styled.h2`
+export const Name = styled.h2`
 	margin: 0;
 	margin-top: auto;
 	font-weight: 500;
 	text-align: center;
 `
 
-export const StyledCompany = styled.p`
+export const Company = styled.p`
 	margin: 0;
 	font-size: 1.125rem;
 	text-align: center;

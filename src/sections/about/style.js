@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const StyledTitle = styled.h1`
+export const Title = styled.h1`
 	margin: 0 0 1.5rem;
 	span {
 		color: ${props => props.theme.colors.accent};
@@ -11,7 +11,7 @@ export const StyledTitle = styled.h1`
 	}
 `
 
-export const StyledText = styled.p`
+export const Text = styled.p`
 	margin-top: 0.5rem;
 	@media(min-width: ${props => props.theme.breakpoints.lg}) {
 		font-size: 1.25rem;

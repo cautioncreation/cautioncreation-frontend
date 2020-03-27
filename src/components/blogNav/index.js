@@ -3,17 +3,13 @@ import React from "react"
 import { BlogNavMenu } from './blogNavMenu'
 import Logo from "../../images/svg/logo.svg"
 
-import {
-	StyledNav,
-	StyledBrand,
-	StyledLogo,
-} from './style'
+import * as S from './style'
 
 export const BlogNav = () => (
-	<StyledNav>
-		<StyledBrand href="/">
-			<StyledLogo src={Logo} alt="Logo"/>
-		</StyledBrand>
+	<S.Nav>
+		<S.Brand href="/">
+			<S.Logo src={Logo} alt="Logo"/>
+		</S.Brand>
 		<BlogNavMenu />
-	</StyledNav>
+	</S.Nav>
 )

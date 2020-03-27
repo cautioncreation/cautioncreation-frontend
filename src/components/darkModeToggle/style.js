@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
 
-export const StyledToggleContainer = styled.div`
+export const ToggleContainer = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -8,7 +8,7 @@ export const StyledToggleContainer = styled.div`
 	padding: 0 8px;
 `
 
-export const StyledToggle = styled.button`
+export const Toggle = styled.button`
 	cursor: pointer;
 	height: 24px;
 	width: 64px;
@@ -38,7 +38,7 @@ export const StyledToggle = styled.button`
 	}
 `
 
-export const StyledToggleIcon = styled.span`
+export const ToggleIcon = styled.span`
 	display: block;
 	background-color: black;
 	position: absolute;
@@ -53,6 +53,6 @@ export const StyledToggleIcon = styled.span`
 	` : null}
 `
 
-export const StyledToggleImage = styled.img`
+export const ToggleImage = styled.img`
 	width: 100%;
 `

@@ -1,15 +1,15 @@
 import styled from 'styled-components'
 
 import {
-	StyledColumn as Column,
-	StyledRow as Row,
+	Column as StyledColumn,
+	Row as StyledRow,
  } from '../../components/grid/style'
 
-export const StyledRow = styled(Row)`
+export const Row = styled(StyledRow)`
 	padding-bottom: 3rem;
 `
 
-export const StyledColumn = styled(Column)`
+export const Column = styled(StyledColumn)`
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
@@ -20,17 +20,17 @@ export const StyledColumn = styled(Column)`
 	}
 `
 
-export const StyledColumnRight = styled(StyledColumn)`
+export const ColumnRight = styled(StyledColumn)`
 	align-items: flex-end;
 `
 
-export const StyledVectorWrapper = styled.div`
+export const VectorWrapper = styled.div`
 	height: 100%;
 	display: flex;
 	align-items: center;
 `
 
-export const StyledVector = styled.img`
+export const Vector = styled.img`
 	max-width: 100%;
 	max-height: 100%;
 	padding-top: 2rem;
@@ -40,7 +40,7 @@ export const StyledVector = styled.img`
 `
 
 
-export const StyledHeader = styled.h1`
+export const Header = styled.h1`
 	font-size: 2.5rem;
 	font-weight: 500;
 	display: inline-block;
@@ -56,14 +56,14 @@ export const StyledHeader = styled.h1`
 	}
 `
 
-export const StyledHeaderRight = styled(StyledHeader)`
+export const HeaderRight = styled(Header)`
 	text-align: right;
 	&:after {
 		margin-left: auto;
 	}
 `
 
-export const StyledParagraph = styled.p`
+export const Paragraph = styled.p`
 	font-size: 1.125rem;
 	font-weight: 300;
 	@media(min-width: ${props => props.theme.breakpoints.md}) {
@@ -72,6 +72,6 @@ export const StyledParagraph = styled.p`
 	}
 `
 
-export const StyledParagraphRight = styled(StyledParagraph)`
+export const ParagraphRight = styled(Paragraph)`
 	text-align: right;
 `

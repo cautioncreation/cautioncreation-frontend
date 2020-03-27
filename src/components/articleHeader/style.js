@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const StyledTitle = styled.h1`
+export const Title = styled.h1`
 	font-size: 2.5rem;
 	text-align: center;
 	@media(min-width: ${props => props.theme.breakpoints.lg}) {
@@ -9,12 +9,12 @@ export const StyledTitle = styled.h1`
 	}
 `
 
-export const StyledMetaContainer = styled.div`
+export const MetaContainer = styled.div`
 	display: flex;
 	align-items: center;
 `
 
-export const StyledMetaTextContainer = styled.div`
+export const MetaTextContainer = styled.div`
 	display: inline-block;
 	height: 100%;
 	flex-direction: column;
@@ -22,7 +22,7 @@ export const StyledMetaTextContainer = styled.div`
 	justify-content: space-around;
 `
 
-export const StyledPortrait = styled.div`
+export const Portrait = styled.div`
 	width: 60px;
 	height: 60px;
 	background: ${props => props.theme.colors.lightGrey};
@@ -31,10 +31,10 @@ export const StyledPortrait = styled.div`
 	display: inline-block;
 `
 
-export const StyledAuthor = styled.h4`
+export const Author = styled.h4`
 	margin: 0 0 0.5rem;
 `
 
-export const StyledDate = styled.h4`
+export const Date = styled.h4`
 margin: 0;
 `

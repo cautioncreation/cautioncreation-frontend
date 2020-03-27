@@ -3,13 +3,11 @@ import React from 'react'
 import { SectionStatic, Row } from '../../components/grid'
 import { ServiceCard } from '../../components/serviceCard'
 
-import {
-	StyledTitle,
-} from './style'
+import * as S from './style'
 
 export const MaintenancePackages = () => (
 	<SectionStatic>
-		<StyledTitle>WordPress Packages</StyledTitle>
+		<S.Title>WordPress Packages</S.Title>
 		<Row>
 			<ServiceCard
 				service="Proprietor Package"

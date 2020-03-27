@@ -3,11 +3,7 @@ import React, { useState, useLayoutEffect } from "react"
 import { NavMenu } from './navMenu'
 import Logo from "../../images/svg/logo.svg"
 
-import {
-	StyledNav,
-	StyledBrand, 
-	StyledLogo,
-} from './style'
+import * as S from './style'
 
 export const Nav = ({ transparentNav, isDarkMode, setDarkMode }) => {
 	const [scrollPosition, setScrollPosition] = useState(0)
@@ -25,11 +21,11 @@ export const Nav = ({ transparentNav, isDarkMode, setDarkMode }) => {
 	})
 
 	return (
-		<StyledNav scrollPosition={scrollPosition} transparentNav={transparentNav}>
-			<StyledBrand href="/">
-				<StyledLogo src={Logo} alt="Logo"/>
-			</StyledBrand>
+		<S.Nav scrollPosition={scrollPosition} transparentNav={transparentNav}>
+			<S.Brand href="/">
+				<S.Logo src={Logo} alt="Logo"/>
+			</S.Brand>
 			<NavMenu />
-		</StyledNav>
+		</S.Nav>
 	)
 }

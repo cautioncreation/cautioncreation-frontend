@@ -1,13 +1,13 @@
 import styled from 'styled-components'
 
-export const StyledRow = styled.div`
+export const Row = styled.div`
 	display: flex;
 	flex-wrap: wrap;
 	margin-left: -15px;
 	margin-right: -15px;
 `
 
-export const StyledColumn = styled.div`
+export const Column = styled.div`
 	position: relative;
 	width: 100%;
 	min-height: 1px;
@@ -44,7 +44,7 @@ export const StyledColumn = styled.div`
 	}
 `
 
-export const StyledSection = styled.section`
+export const Section = styled.section`
 	width: 100%;
 	padding: 15px;
 	margin: 0 0 120px;
@@ -55,13 +55,13 @@ export const StyledSection = styled.section`
 	}
 `
 
-export const StyledContainer = styled.div`
+export const Container = styled.div`
 	width: 100%;
 	padding: 15px;
 	background: ${props => props.background};
 `
 
-export const StyledContainerStatic = styled(StyledContainer)`
+export const ContainerStatic = styled(Container)`
 	margin-right: auto;
 	margin-left: auto;
 	padding: 0;

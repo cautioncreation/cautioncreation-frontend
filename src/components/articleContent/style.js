@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const StyledArticle = styled.div`
+export const Article = styled.div`
 	max-width: calc(70ch);
 	margin-left: auto;
 	margin-right: auto;

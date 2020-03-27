@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const StyledButton = styled.button`
+export const Button = styled.button`
 	height: 48px;
 	width: 48px;
 	border: none;
@@ -12,32 +12,32 @@ export const StyledButton = styled.button`
 	}
 `
 
-export const StyledVector = styled.svg`
+export const Vector = styled.svg`
 	height: 48px;
 	width: 48px;
 	padding: 4px;
 	transform-origin: center;
 `
 
-const StyledRect = styled.rect`
+const Rect = styled.rect`
 	transform-origin: center;
 	transition-duration: 0.4s;
 	fill: ${props => props.theme.colors.white};
 `
 
-export const StyledRect1 = styled(StyledRect)`
+export const Rect1 = styled(Rect)`
 	&.active {
 		transform: translate(-20px, 17.5px) rotate(-315deg);
 	}
 `
 
-export const StyledRect2 = styled(StyledRect)`
+export const Rect2 = styled(Rect)`
 	&.active {
 		opacity: 0;
 	}
 `
 
-export const StyledRect3 = styled(StyledRect)`
+export const Rect3 = styled(Rect)`
  	&.active {
 		transform: translate(-20px, -17.5px) rotate(315deg);
 	}

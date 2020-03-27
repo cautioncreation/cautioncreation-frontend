@@ -1,10 +1,10 @@
 import styled, { css } from 'styled-components'
 
-export const StyledWrapper = styled.div`
+export const Wrapper = styled.div`
 	padding-bottom: 15px;
 `
 
-export const StyledHeaderContainer = styled.div`
+export const HeaderContainer = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -15,7 +15,7 @@ export const StyledHeaderContainer = styled.div`
 	}
 `
 
-export const StyledTextContainer = styled.div`
+export const TextContainer = styled.div`
 	border-top: none;
 	opacity: 0;
 	height: 0;
@@ -35,7 +35,7 @@ export const StyledTextContainer = styled.div`
 	}
 `
 
-export const StyledTitle = styled.h3`
+export const Title = styled.h3`
 	margin: 0;
 	font-weight: 600;
 	font-size: 1.25rem;
@@ -46,7 +46,7 @@ export const StyledTitle = styled.h3`
 	}
 `
 
-export const StyledVector = styled.svg`
+export const Vector = styled.svg`
 	height: 36px;
 	width: 36px;
 	min-width: 36px;
@@ -57,7 +57,7 @@ export const StyledVector = styled.svg`
 	}
 `
 
-export const StyledRect = styled.rect`
+export const Rect = styled.rect`
 	transform-origin: center;
 	transition-duration: 0.5s;
 	fill: ${props => props.theme.colors.white};

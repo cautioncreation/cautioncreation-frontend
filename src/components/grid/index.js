@@ -1,49 +1,43 @@
 import React from 'react'
 
-import {
-	StyledRow,
-	StyledColumn,
-	StyledSection,
-	StyledContainer,
-	StyledContainerStatic,
-} from './style'
+import * as S from './style'
 
 export const Row = ({ children }) => (
-	<StyledRow>
+	<S.Row>
 		{children}
-	</StyledRow>
+	</S.Row>
 )
 
 export const Column = ({ children, xs, sm, md, lg, xl, spacer }) => (
-	<StyledColumn xs={xs} sm={sm} md={md} lg={lg} xl={xl} spacer={spacer}>
+	<S.Column xs={xs} sm={sm} md={md} lg={lg} xl={xl} spacer={spacer}>
 		{children}
-	</StyledColumn>
+	</S.Column>
 )
 
 export const Section = ({ children, background }) => (
-	<StyledSection background={background}>
+	<S.Section background={background}>
 		{children}
-	</StyledSection>
+	</S.Section>
 )
 
 export const Container = ({ children, background }) => (
-	<StyledContainer background={background}>
+	<S.Container background={background}>
 		{children}
-	</StyledContainer>
+	</S.Container>
 )
 
 export const SectionStatic = ({ children, background }) => (
-	<StyledSection background={background}>
-		<StyledContainerStatic>
+	<S.Section background={background}>
+		<S.ContainerStatic>
 			{children}
-		</StyledContainerStatic>
-	</StyledSection>
+		</S.ContainerStatic>
+	</S.Section>
 )
 
 export const ContainerStatic = ({ children, background }) => (
-	<StyledContainer background={background}>
-		<StyledContainerStatic>
+	<S.Container background={background}>
+		<S.ContainerStatic>
 			{children}
-		</StyledContainerStatic>
-	</StyledContainer>
+		</S.ContainerStatic>
+	</S.Container>
 )

@@ -2,17 +2,13 @@ import React from 'react'
 
 import { SocialIcons } from '../socialIcons'
 
-import {
-	StyledSocialContainer,
-	StyledTitle,
-	StyledSocialWrapper,
-} from './style'
+import * as S from './style'
 
 export const BlogSocialIcons = () => (
-	<StyledSocialContainer>
-		<StyledTitle>Follow us on social!</StyledTitle>
-		<StyledSocialWrapper>
+	<S.SocialContainer>
+		<S.Title>Follow us on social!</S.Title>
+		<S.SocialWrapper>
 			<SocialIcons />
-		</StyledSocialWrapper>
-	</StyledSocialContainer>
+		</S.SocialWrapper>
+	</S.SocialContainer>
 )

@@ -1,21 +1,12 @@
 import React, { useState } from 'react'
 
-import {
-	StyledForm,
-	StyledLabel,
-	StyledInput,
-	StyledTextarea,
-	StyledCheckboxContainer,
-	StyledCheckbox,
-	StyledCheckboxLabel,
-	StyledFile,
-} from './style'
+import * as S from './style'
 
 export const Form = ({ children }) => (
-	<StyledForm method="post" netlify-honeypot="bot-field" data-netlify="true">
+	<S.Form method="post" netlify-honeypot="bot-field" data-netlify="true">
 		<input type="hidden" name="bot-field" />
 		{children}
-	</StyledForm>
+	</S.Form>
 )
 
 export const Input = ({ id, label, type, name, required, placeholder }) => {
@@ -23,8 +14,8 @@ export const Input = ({ id, label, type, name, required, placeholder }) => {
 
 	return (
 		<>
-		<StyledLabel isFocused={isFocused} htmlFor={id}>{placeholder}</StyledLabel>
-		<StyledInput
+		<S.Label isFocused={isFocused} htmlFor={id}>{placeholder}</S.Label>
+		<S.Input
 			type={type}
 			id={id}
 			name={name}
@@ -46,8 +37,8 @@ export const Textarea = ({ id, label, name, required, rows, placeholder }) => {
 
 	return (
 		<>
-		<StyledLabel isFocused={isFocused} htmlFor={id}>{placeholder}</StyledLabel>
-		<StyledTextarea
+		<S.Label isFocused={isFocused} htmlFor={id}>{placeholder}</S.Label>
+		<S.Textarea
 			id={id}
 			name={name}
 			required={required}
@@ -64,16 +55,16 @@ export const Textarea = ({ id, label, name, required, rows, placeholder }) => {
 }
 
 export const Checkbox = ({ id, label, type, name, required }) => (
-	<StyledCheckboxContainer>
-		<StyledCheckbox type="checkbox" id={id} name={name} required={required} />
-		<StyledCheckboxLabel htmlFor={id} required={required}>
+	<S.CheckboxContainer>
+		<S.Checkbox type="checkbox" id={id} name={name} required={required} />
+		<S.CheckboxLabel htmlFor={id} required={required}>
 			{label}
-		</StyledCheckboxLabel>
-	</StyledCheckboxContainer>
+		</S.CheckboxLabel>
+	</S.CheckboxContainer>
 )
 
 export const File = ({ id, type, name, required, children }) => (
 	<>
-		<StyledFile type="file" id={id} name={name} required={required} />
+		<S.File type="file" id={id} name={name} required={required} />
 	</>
 )

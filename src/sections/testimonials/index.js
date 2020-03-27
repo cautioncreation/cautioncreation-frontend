@@ -5,15 +5,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 import { SectionStatic, Row } from '../../components/grid'
 import { Slider } from '../../components/slider'
 
-import {
-	StyledColumn,
-	StyledTitle,
-	StyledLine,
-	StyledTestimonial,
-	StyledText,
-	StyledName,
-	StyledCompany,
-} from './style'
+import * as S from './style'
 
 export const Testimonials = withTheme(({ theme }) => {
 	const data = useStaticQuery(graphql`
@@ -39,25 +31,25 @@ export const Testimonials = withTheme(({ theme }) => {
 	return (
 		<SectionStatic background={theme.colors.darkBlue}>
 				<Row>
-					<StyledColumn xs="12" lg="4">
-						<StyledTitle>
+					<S.Column xs="12" lg="4">
+						<S.Title>
 							What Our Clients Are Saying
-							<StyledLine />
-						</StyledTitle>
-					</StyledColumn>
-					<StyledColumn xs="12" lg="8">
+							<S.Line />
+						</S.Title>
+					</S.Column>
+					<S.Column xs="12" lg="8">
 						<Slider interval="12" prefix="testimonials">
 							{data.allMarkdownRemark.edges.map(({ node }, i) => (
-								<StyledTestimonial key={node.frontmatter.id}>
-									<StyledText>"{node.frontmatter.testimonial}"</StyledText>
-									<StyledName>{node.frontmatter.name}</StyledName>
-									<StyledCompany>
+								<S.Testimonial key={node.frontmatter.id}>
+									<S.Text>"{node.frontmatter.testimonial}"</S.Text>
+									<S.Name>{node.frontmatter.name}</S.Name>
+									<S.Company>
 										<span>{node.frontmatter.position}</span> at <span>{node.frontmatter.company}</span>
-									</StyledCompany>
-								</StyledTestimonial>
+									</S.Company>
+								</S.Testimonial>
 							))}
 						</Slider>
-					</StyledColumn>
+					</S.Column>
 				</Row>
 		</SectionStatic>
 	)

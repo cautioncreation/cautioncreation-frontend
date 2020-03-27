@@ -1,28 +1,25 @@
 import React from 'react'
 
-import {
-	StyledLink,
-	StyledButton,
-} from './style'
+import * as S from './style'
 
 export const Button = (props) => {
   const { href, target, rel, children, disabled, isLoading, ...rest } = props
 
   const button = (
-    <StyledButton disabled={disabled || isLoading} {...rest}>
+    <S.Button disabled={disabled || isLoading} {...rest}>
       {children}
-    </StyledButton>
+    </S.Button>
   )
 
   if(href) {
     return (
-      <StyledLink
+      <S.Link
         href={href}
         target={target || null}
         rel={rel}
       >
         {button}
-      </StyledLink>
+      </S.Link>
     )
 	}
 	else return button

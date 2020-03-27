@@ -1,13 +1,13 @@
 import styled from 'styled-components'
 
-export const StyledTitle = styled.h1`
+export const Title = styled.h1`
 	text-align: center;
 	margin: 0 0 1rem;
 	font-weight: 600;
 	font-size: 2.5rem;
 `
 
-export const StyledText = styled.p`
+export const Text = styled.p`
 	text-align: center;
 	font-size: 1.125rem;
 	margin: 0;

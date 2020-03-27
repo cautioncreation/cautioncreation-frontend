@@ -1,16 +1,19 @@
 import React, { useState, useEffect } from 'react'
+import { graphql, useStaticQuery } from 'gatsby'
 
-import MoonIcon from '../../images/svg/moon.svg'
-import SunIcon from '../../images/svg/sun.svg'
-
-import {
-	StyledToggleContainer,
-	StyledToggle,
-	StyledToggleIcon,
-	StyledToggleImage,
-} from './style'
+import * as S from './style'
 
 export const DarkModeToggle = () => {
+	const data = useStaticQuery(graphql`
+		query darkModeToggleQuery {
+			Sun: file(relativePath: {eq: "svg/sun.svg"}) {
+				publicURL
+			}
+			Moon: file(relativePath: {eq: "svg/moon.svg"}) {
+				publicURL
+			}
+		}
+	`)
 	const [isDarkMode, setDarkMode] = useState()
 
 	const handleClick = () => {
@@ -57,12 +60,12 @@ export const DarkModeToggle = () => {
 	}, [])
 
 	return (
-		<StyledToggleContainer title={"Enable " + (isDarkMode === "true" ? "light" : "dark") + " mode"}>
-			<StyledToggle active={isDarkMode} onClick={() => handleClick()} aria-label="Toggle Dark Mode">
-				<StyledToggleIcon active={isDarkMode}>
-					<StyledToggleImage src={(isDarkMode === "true" ? MoonIcon : SunIcon)} alt={(isDarkMode === "true" ? "Moon Icon" : "Sun Icon")}/>
-				</StyledToggleIcon>
-			</StyledToggle>
-		</StyledToggleContainer>
+		<S.ToggleContainer title={"Enable " + (isDarkMode === "true" ? "light" : "dark") + " mode"}>
+			<S.Toggle active={isDarkMode} onClick={() => handleClick()} aria-label="Toggle Dark Mode">
+				<S.ToggleIcon active={isDarkMode}>
+					<S.ToggleImage src={(isDarkMode === "true" ? data.Moon.publicURL : data.Sun.publicURL)} alt={(isDarkMode === "true" ? "Moon Icon" : "Sun Icon")}/>
+				</S.ToggleIcon>
+			</S.Toggle>
+		</S.ToggleContainer>
 	)
 }
