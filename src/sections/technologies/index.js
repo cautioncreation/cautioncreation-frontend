@@ -2,7 +2,7 @@ import React from 'react'
 import { withTheme } from 'styled-components'
 import { useStaticQuery, graphql } from 'gatsby'
 
-import { ContainerStatic, Row, Column } from '../../components/grid'
+import { SectionStatic, Row, Column } from '../../components/grid'
 import { Slider } from '../../components/slider'
 
 import {
@@ -49,7 +49,7 @@ export const Technologies = withTheme(({ theme }) => {
   `)
 
 	return (
-		<ContainerStatic background={theme.colors.lightGrey}>
+		<SectionStatic background={theme.colors.lightGrey}>
 			<StyledTitle>A Few of Our Favourite Technologies</StyledTitle>
 			<Row>
 				<Column xs="0" lg="1" spacer />
@@ -89,6 +89,6 @@ export const Technologies = withTheme(({ theme }) => {
 				</StyledColumn>
 				<Column xs="0" lg="1" spacer />
 			</Row>
-		</ContainerStatic>
+		</SectionStatic>
 	)
 })

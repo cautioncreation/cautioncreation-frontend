@@ -1,9 +1,7 @@
 import styled, { css } from 'styled-components'
 
 export const StyledLink = styled.a`
-	display: flex;
-	flex: none;
-	align-items: center;
+	display: inline-block;
 	text-decoration: none;
 `
 

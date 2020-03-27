@@ -9,10 +9,10 @@ import { Testimonials } from '../sections/testimonials'
 import { ServicesDescription } from '../sections/servicesDescription'
 import { FrequentlyAskedQuestions } from '../sections/frequentlyAskedQuestions'
 import { CallToAction } from '../sections/callToAction'
-import { Technologies } from '../sections/technologies'
+import { BetterWebsites } from '../sections/betterWebsites'
 
 const IndexPage = ({ data }) => (
-	<MainLayout transparentNav> 
+	<MainLayout transparentNav>
 		<Helmet>
 			<title>Caution Creation | Edmonton Web Development</title>
 			<meta name="description" content="Caution Creation is a web development agency that specializes in streamlined web applications for small businesses & startups. We offer development, branding & design, as well as maintenance services."></meta>
@@ -21,7 +21,7 @@ const IndexPage = ({ data }) => (
 		<HomeIntro />
 		<Testimonials />
 		<ServicesDescription />
-		<Technologies />
+		<BetterWebsites />
 		<FrequentlyAskedQuestions />
 		<CallToAction />
 	</MainLayout>

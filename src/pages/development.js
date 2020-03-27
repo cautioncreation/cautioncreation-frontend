@@ -8,6 +8,7 @@ import { OurApproach } from '../sections/ourApproach'
 import { Technologies } from '../sections/technologies'
 import { DevelopmentServices } from '../sections/developmentServices'
 import { CallToAction } from '../sections/callToAction'
+import { BetterWebsites } from '../sections/betterWebsites'
 
 const developmentPage = ({ theme, data }) => (
 	<MainLayout>
@@ -21,8 +22,9 @@ const developmentPage = ({ theme, data }) => (
 			src={data.heroImage.publicURL}
 		/>
 		<OurApproach />
-		<Technologies />
+		<BetterWebsites />
 		<DevelopmentServices />
+		<Technologies />
 		<CallToAction />
 	</MainLayout>
 )

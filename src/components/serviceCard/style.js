@@ -27,7 +27,7 @@ export const StyledScrollWrapper = styled.div`
 	align-items: center;
 	justify-content: center;
 	margin: 0 0 2rem;
-	display: ${props => props.hideFeatures ? 'none' : 'block'};
+	display: ${props => props.hideFeatures ? 'none' : 'flex'};
 `
 export const StyledScrollContainer = styled.div`
 	padding-right: 10px;

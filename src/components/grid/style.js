@@ -47,11 +47,11 @@ export const StyledColumn = styled.div`
 export const StyledSection = styled.section`
 	width: 100%;
 	padding: 15px;
-	margin: 40px 0;
+	margin: 0 0 120px;
 	background: ${props => props.background};
 
 	@media(min-width: ${props => props.theme.breakpoints.sm}) {
-		margin: 60px 0;
+		margin: 0 0 60px;
 	}
 `
 

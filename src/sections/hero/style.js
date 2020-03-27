@@ -3,14 +3,13 @@ import BackgroundImage from 'gatsby-background-image'
 
 import {
 	StyledColumn as Column,
-	StyledContainer as Container,
+	StyledSection as Section,
 	StyledContainerStatic as ContainerStatic
 } from '../../components/grid/style'
 
-export const StyledContainer = styled.section`
-	width: 100%;
-	padding-left: 15px;
-	padding-right: 15px;
+export const StyledContainer = styled(Section)`
+	padding-top: 0;
+	padding-bottom: 0;
 `
 
 export const StyledBackground = styled(BackgroundImage)`
@@ -72,7 +71,7 @@ export const StyledTitle = styled.h1`
 	}
 `
 
-export const StyledCartoonContainer = styled(Container)`
+export const StyledCartoonContainer = styled(Section)`
 	background: ${props => props.theme.colors.mediumBlue};
 `
 
