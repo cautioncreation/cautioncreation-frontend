@@ -3,8 +3,8 @@ import { graphql } from "gatsby"
 import { Helmet } from 'react-helmet'
 
 import { BlogLayout } from '../layouts/blog'
-import { ArticleHeader } from '../components/articleHeader'
-import { ArticleContent } from '../components/articleContent'
+import { ArticleHeader } from '../sections/articleHeader'
+import { ArticleContent } from '../sections/articleContent'
 
 export const query = graphql`
   query ArticleTemplateQuery($id: String!) {

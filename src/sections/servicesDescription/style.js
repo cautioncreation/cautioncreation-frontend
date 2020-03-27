@@ -20,7 +20,7 @@ export const Column = styled(StyledColumn)`
 	}
 `
 
-export const ColumnRight = styled(StyledColumn)`
+export const ColumnRight = styled(Column)`
 	align-items: flex-end;
 `
 
@@ -43,7 +43,6 @@ export const Vector = styled.img`
 export const Header = styled.h1`
 	font-size: 2.5rem;
 	font-weight: 500;
-	display: inline-block;
 	margin: 0;
 	@media(min-width: ${props => props.theme.breakpoints.md}) {
 		font-size: 3rem;
@@ -58,6 +57,7 @@ export const Header = styled.h1`
 
 export const HeaderRight = styled(Header)`
 	text-align: right;
+	justify-content: flex-end;
 	&:after {
 		margin-left: auto;
 	}

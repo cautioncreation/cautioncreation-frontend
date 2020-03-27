@@ -1,9 +1,9 @@
 import React from 'react'
 import Image from 'gatsby-image'
 
-import { ContainerStatic, Row, Column } from '../grid'
+import { ContainerStatic, Row, Column } from '../../components/grid'
 
-import { BlogSocialIcons } from '../blogSocialIcons'
+import { BlogSocialIcons } from '../../components/blogSocialIcons'
 
 import * as S from './style'
 

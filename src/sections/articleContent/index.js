@@ -1,7 +1,6 @@
 import React from 'react'
 
-import { SectionStatic, Row, Column } from '../grid'
-import { CodeRenderer } from '../codeRenderer'
+import { SectionStatic, Row, Column } from '../../components/grid'
 import * as S from './style'
 
 export const ArticleContent = ({ data }) => (

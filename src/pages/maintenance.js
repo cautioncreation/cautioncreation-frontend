@@ -1,5 +1,6 @@
 import React from "react"
 import { Helmet } from 'react-helmet'
+import { graphql } from 'gatsby'
 
 import { MainLayout } from '../layouts/main'
 import { CartoonHero } from '../sections/hero'

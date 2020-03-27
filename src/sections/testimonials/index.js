@@ -13,6 +13,7 @@ export const Testimonials = withTheme(({ theme }) => {
 			allMarkdownRemark(filter: {fields: {sourceName: {eq: "testimonials"}}}) {
 				edges {
 					node {
+						id
 						fields {
 							sourceName
 						}
@@ -40,7 +41,7 @@ export const Testimonials = withTheme(({ theme }) => {
 					<S.Column xs="12" lg="8">
 						<Slider interval="12" prefix="testimonials">
 							{data.allMarkdownRemark.edges.map(({ node }, i) => (
-								<S.Testimonial key={node.frontmatter.id}>
+								<S.Testimonial key={node.id}>
 									<S.Text>"{node.frontmatter.testimonial}"</S.Text>
 									<S.Name>{node.frontmatter.name}</S.Name>
 									<S.Company>

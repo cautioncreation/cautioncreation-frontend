@@ -14,10 +14,17 @@ module.exports = {
 		`gatsby-plugin-sitemap`,
 		`gatsby-transformer-remark`,
 		`gatsby-remark-source-name`,
+		`gatsby-plugin-svg-sprite-loader`,
 		{
-      resolve: 'gatsby-plugin-html-attributes',
+			resolve: `gatsby-plugin-mailchimp`,
+			options: {
+				endpoint: `https://cautioncreation.us19.list-manage.com/subscribe/post?u=5beb28088a2412ca5a7539c07&amp;id=42bc8764dd`,
+			},
+		},
+		{
+      resolve: `gatsby-plugin-html-attributes`,
       options: {
-        lang: 'en'
+        lang: `en`
       },
     },
     {
