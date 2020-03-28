@@ -3,9 +3,9 @@ import React from 'react'
 import { SectionStatic, Column } from '../../components/grid'
 import { Button } from '../../components/button'
 
-import WorkInProgress from '../../images/svg/undraw_work_in_progress.svg'
+import Programming from '../../images/svg/undraw_programming.svg'
 import MobileWireframe from '../../images/svg/undraw_mobile_wireframe.svg'
-import CleanUp from '../../images/svg/undraw_clean_up.svg'
+import Dashboard from '../../images/svg/undraw_dashboard.svg'
 
 import * as S from './style'
 
@@ -22,7 +22,7 @@ export const ServicesDescription = ({ src }) => (
 			</S.Column>
 			<Column xs="12" lg="4">
 				<S.VectorWrapper>
-					<S.Vector src={WorkInProgress} alt="Illustration of woman painting" />
+					<S.Vector src={Programming} alt="Illustration of man looking at multiple screens" />
 				</S.VectorWrapper>
 			</Column>
 			<Column xs="0" lg="1"/>
@@ -54,7 +54,7 @@ export const ServicesDescription = ({ src }) => (
 			</S.Column>
 			<Column xs="12" lg="4">
 				<S.VectorWrapper>
-					<S.Vector src={CleanUp}  alt="Illustration of a man cleaning a screen" />
+					<S.Vector src={Dashboard}  alt="Illustration of a man in front of a computer screen" />
 				</S.VectorWrapper>
 			</Column>
 			<Column xs="0" lg="1"/>
