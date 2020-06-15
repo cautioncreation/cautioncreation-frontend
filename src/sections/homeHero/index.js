@@ -27,7 +27,7 @@ export const HomeHero = ({ src }) => (
 					<S.Text>
 						Caution Creation is a web development firm that specializes in performant, responsive web applications for modern businesses.
 					</S.Text>
-					<Button href='/hello' outline pill large lightBlue>Request A Quote</Button>
+					<Button href='/contact' outline pill large lightBlue>Request A Quote</Button>
 				</S.Container>
 			</S.HeroColumn>
 			<Column xs='0' md='1' lg='2'/>

@@ -23,7 +23,7 @@ export const ArticleHeader = ({ data }) => (
 							<S.MetaTextContainer>
 								<S.Author>Author: <span>{data.author}</span></S.Author>
 								<S.Date>
-									Published: {data.date}
+									Published: <span>{data.date}</span>
 								</S.Date>
 							</S.MetaTextContainer>
 						</S.MetaContainer>

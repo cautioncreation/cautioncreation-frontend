@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import * as S from './style'
 
 export const NavDropdown = ({ title, href, children }) => {
-	const [active, setActive] = useState(true)
+	const [active, setActive] = useState(false)
 
 	return (
 		<S.DropdownWrapper>

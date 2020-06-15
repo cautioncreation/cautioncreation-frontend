@@ -52,10 +52,10 @@ export const BlogList = () => {
 							</a>
 							<S.MetaWrapper>
 								<S.MetaText>
-									Author: {node.frontmatter.author}
+									Author: <span>{node.frontmatter.author}</span>
 								</S.MetaText>
 								<S.MetaText>
-									Published: {node.frontmatter.date}
+									Published: <span>{node.frontmatter.date}</span>
 								</S.MetaText>
 							</S.MetaWrapper>
 						</S.TextWrapper>

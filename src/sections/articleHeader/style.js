@@ -36,5 +36,8 @@ export const Author = styled.h4`
 `
 
 export const Date = styled.h4`
-margin: 0;
+	margin: 0;
+	& span {
+		
+	}
 `
