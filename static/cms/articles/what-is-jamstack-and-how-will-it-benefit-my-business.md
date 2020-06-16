@@ -30,3 +30,16 @@ If increased sales and decreased loading times aren't enough to sway you, JAMSta
 * Separation of concerns
 * Increased website security
 * Ability to rapidly scale
+
+#### Lower Maintenance Costs
+As explained above, because JAMStack websites use a build process they no longer require expensive databases and dynamic servers to operate. In many cases the files for your site can be hosted for FREE using services such as [Netlify](https://netlify.com).
+
+#### Increased Website Security
+Not only are databases and dynamic servers expensive but they are also more vulnerable to attack due to the amount of moving parts - and the potentially sensitive information passing between them. 
+
+We should clarify, JAMStack doesn't mean that there are no dynamic servers or databases, it means that in cases when they are required we mainly rely on SaaS (software as a service) companies to provide them, no coding required. Companies such as [Contentful](https://contentful.com) and [Shopify](https://shopify.com) will meet our requirements while lowering our monthly costs and increasing our security. Because these reputable companies are taking care of our servers, we can rest assured that security is of utmost importance.
+
+#### Ability to Rapidly Scale
+Because we aren't dealing with custom code on our servers every time we need a new functionality on our site, and instead are relying on SaaS companies, we can scale faster than ever before. Adding a new feature to our site is as simple as finding a SaaS provider that supports it and setting up an account.
+
+Rapidly scaling also means that your business can handle any amount of traffic
