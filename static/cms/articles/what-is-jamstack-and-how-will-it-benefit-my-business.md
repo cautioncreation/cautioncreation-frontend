@@ -22,4 +22,7 @@ At first glance, the benefits may not appear to be worth it, but let me explain 
 
 ## What Else Can JAMStack do?
 If increased sales and decreased loading times aren't enough to sway you, JAMStack has a bunch more to offer. I'll list them, and then go into detail below:
-
+> Lower maintenance costs
+> Separation of concerns
+> Increased website security
+> Ability to rapidly scale
