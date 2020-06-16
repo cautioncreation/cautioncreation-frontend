@@ -4,7 +4,7 @@ alt: Image by Igor Miske on Unsplash
 title: What Is JAMStack and How Will it Benefit My Business?
 author: Byron Hill
 date: 'June 16th, 2020'
-meta: |+
+meta: This is the article description
 ---
 JAMStack has been taking the online world by storm, but if you don't build websites for a living you've probably never heard of it. Even international companies such as Shopify are expressing support for this new way of building modern, reliable websites. Read on to learn how JAMstack can transform your online business.
 
@@ -16,4 +16,4 @@ With traditional websites, when the server receives the request, it grabs the te
 JAMStack works differently. Instead of recreating the page every time someone wants to view it, JAMStack uses a build process. A build process means that any time a change is made to the data that a website needs - for example a new product is added to an online store - JAMStack will automatically re-build the site and store the results.
 
 ## Okay, But Why Does That Matter?
-At first glance, the benefits may not appear to be worth it
+At first glance, the benefits may not appear to be worth it, but let me explain to you why they are. I will do that using an important fact: For each second your website load time increases, your online business will lose 7% of their customers. So, while three seconds may not seem like a lot of time, it can mean a 21% increase in sales, which can be the difference between a business breaking even or thriving.
