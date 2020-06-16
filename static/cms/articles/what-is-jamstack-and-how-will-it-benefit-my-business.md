@@ -21,8 +21,12 @@ JAMStack works differently. Instead of recreating the page every time someone wa
 At first glance, the benefits may not appear to be worth it, but let me explain to you why they are. I will do that using an important fact: For each second your website load time increases, your online business will lose 7% of their customers. So, while three seconds may not seem like a lot of time, it can mean a 21% increase in sales, which can be the difference between a business breaking even or thriving.
 
 ## What Else Can JAMStack do?
-If increased sales and decreased loading times aren't enough to sway you, JAMStack has a bunch more to offer. I'll list them, and then go into detail below:
-> Lower maintenance costs
-> Separation of concerns
-> Increased website security
-> Ability to rapidly scale
+
+If increased sales and decreased loading times aren't enough to sway you, JAMStack has a bunch more to offer. I'll list them, and then go into detail below:﻿﻿
+* Lower maintenance costs 
+
+
+* Lower maintenance costs 
+* Separation of concerns
+* Increased website security
+* Ability to rapidly scale
